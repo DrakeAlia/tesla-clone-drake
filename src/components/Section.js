@@ -1,21 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Section() {
+function Section({title, description, leftBtnText, rightBtnText, backgroundImg}) {
+    // console.log(props)
     return (
-        <Wrap>
+        <Wrap bgImage={backgroundImg}>
             <ItemText>
-                <h1>Model S</h1>
-                <p>Order Online for Touchless Delivery</p>
+                <h1>{title}</h1>
+                <p>{description}</p>
             </ItemText>
             <Buttons>
             <ButtonGroup>
                 <LeftButton>
-                    Custom Order
+                    {leftBtnText}
                 </LeftButton>
+                {rightBtnText && 
                 <RightButton>
-                    Existing Inventory
+                    {rightBtnText}
                 </RightButton>
+                }
             </ButtonGroup>
             <DownArrow src="/images/down-arrow.svg" />
             </Buttons>
@@ -30,13 +33,13 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-
     width: 100vw;
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('/images/teslaModelS.png');
+    background-image: ${props => `url('/images/${props.bgImage}')`}
 `
 
 const ItemText = styled.div`
@@ -44,9 +47,13 @@ const ItemText = styled.div`
     text-align: center;
     `
 
+// meida for mobile/small screen
 const ButtonGroup = styled.div`
     display: flex;
     margin-bottom: 30px;
+    @media (max-width: 823px) {
+        flex-direction: column;
+    }
 `
 
 const LeftButton = styled.div`
@@ -66,10 +73,12 @@ const LeftButton = styled.div`
 `
 
 const RightButton = styled(LeftButton)` 
+    color: black;
+    background: white;
+    opacity: 0.65;
 `
 
 const DownArrow = styled.img`
-    
     height: 40px;
     animation: animateDown infinite 1.5s;
     overflow-x: hidden;
