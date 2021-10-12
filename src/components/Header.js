@@ -1,8 +1,11 @@
 import React from 'react'
+import { useState } from 'react';
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
 
 function Header() {
+    const [menuStatus, setMenuStatus] = useState(false)
+
     return (
         <Container>
             <a>
@@ -20,11 +23,12 @@ function Header() {
             <RightMenu>
                 <a href="#">Shop</a>
                 <a href="#">Account</a>
-                <a href="#">Menu</a>
+                <a href="#" onClick={() => setMenuStatus(true)}>Menu</a>
+               
             </RightMenu>
-            <MenuNav>
+            <MenuNav show={menuStatus}>
             <CloseWrapper>
-            <CustomClose />
+            <CustomClose onClick={() => setMenuStatus(false)}/>
             </CloseWrapper>
                 <li><a href='#'>Existing Inventory</a></li>
                 <li><a href='#'>Used Inventory</a></li>
@@ -72,7 +76,8 @@ const Menu = styled.div`
         padding: 0 10px;
         flex-wrap: nowrap;
     }
-`
+    `
+
 
 const RightMenu = styled.div`
     display: flex;
@@ -82,7 +87,11 @@ const RightMenu = styled.div`
         margin-right: 10px;
     }
 `
+
 const MenuNav = styled.div`
+    display: flex;
+    text-align: start;
+    flex-direction: column;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -92,9 +101,8 @@ const MenuNav = styled.div`
     z-index: 16;
     list-style: none;
     padding: 20px;
-    display: flex;
-    text-align: start;
-    flex-direction: column;
+    transform: ${props => props.show ? 'translateX(0)': 'translateX(100%)'};
+    transition: transform 0.2s;
     li {
         padding: 15px 0;
         border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -106,7 +114,7 @@ const MenuNav = styled.div`
 `
 
 const CustomClose = styled(CloseIcon)`
-
+    cursor: pointer;
 `
 
 const CloseWrapper = styled.div`
