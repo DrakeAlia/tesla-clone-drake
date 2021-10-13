@@ -15,21 +15,21 @@ function Home() {
             <Section 
                 title='Model Y'
                 description='Order Online for Touchless Delivery'
-                backgroundImg='teslaModelY.png'
+                backgroundImg='teslaYBlue.png'
                 leftBtnText='Custom Order'
                 rightBtnText='Existing Inventory'
             />
             <Section 
                 title='Model 3'
                 description='Order Online for Touchless Delivery'
-                backgroundImg='teslaModel3.png'
+                backgroundImg='tesla3.png'
                 leftBtnText='Custom Order'
                 rightBtnText='Existing Inventory'
             />
             <Section 
                 title='Model X'
                 description='Order Online for Touchless Delivery'
-                backgroundImg='teslaModelX.png'
+                backgroundImg='teslaX.png'
                 leftBtnText='Custom Order'
                 rightBtnText='Existing Inventory'
             />

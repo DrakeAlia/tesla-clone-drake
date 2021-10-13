@@ -2,22 +2,22 @@ import React from 'react'
 import { useState } from 'react';
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
-import {selectCars} from '../features/carSlice';
+import {selectItems} from '../features/carSlice';
 import {useSelector} from 'react-redux'
 
 function Header() {
     const [menuStatus, setMenuStatus] = useState(false)
-    // const cars = useSelector(selectCars)
-    // console.log(cars)
+    // const items = useSelector(selectItems)
+    // console.log(items)
 
     return (
         <Container>
             <a>
-                <img src="/images/teslaFont.png" alt="" />
+                <img src='/images/logo.svg' alt="" />
             </a>
             <Menu>
-                {/* {cars && cars.map((car, index) => (
-                    <a key={index} href="#">{car}</a>
+                {/* {items && items.map((item, index) => (
+                    <a key={index} href="#">{item}</a>
                 ))} */}
                 <a href="#">Model S</a>
                 <a href="#">Model 3</a>
@@ -62,13 +62,16 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     min-height: 60px;
-    /* justify-content: space-between; */
     position: fixed;
     padding: 0 20px;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1;
+
+    a {
+        cursor: pointer;
+    }
 `
 
 const Menu = styled.div`

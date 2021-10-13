@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initalState = {
-    cars: [ "Model S",  "Model 3",  "Model X",  "Model Y", "Solar Roof", "Solar Panels" ]
+    items: [ "Model S",  "Model 3",  "Model X",  "Model Y", "Solar Roof", "Solar Panels" ]
 }
 
 const carSlice = createSlice({
-    name: 'car',
+    name: 'item',
     initalState,
     reducers: {}
 })
 
-export const selectCars = state => state.car.cars
+export const selectItems = state => state.item.items
 
 export default carSlice.reducer
