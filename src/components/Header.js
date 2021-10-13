@@ -2,8 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
-import {selectItems} from '../features/carSlice';
-import {useSelector} from 'react-redux'
+// import {selectItems} from '../features/carSlice';
+// import {useSelector} from 'react-redux'
 
 function Header() {
     const [menuStatus, setMenuStatus] = useState(false)
@@ -79,6 +79,7 @@ const Menu = styled.div`
     align-items: center;
     justify-content: center;
     flex: 1;
+    padding-left: 70px;
 
     a {
         font-weight: 500;
