@@ -52,7 +52,7 @@ const ItemText = styled.div`
     text-align: center;
     `
 
-// meida for mobile/small screen
+// media for mobile/small screen
 const ButtonGroup = styled.div`
     display: flex;
     margin-bottom: 30px;
@@ -83,6 +83,7 @@ const RightButton = styled(LeftButton)`
     opacity: 0.65;
 `
 
+// arrow icon at bootm page
 const DownArrow = styled.img`
     height: 40px;
     animation: animateDown infinite 1.5s;
