@@ -17,31 +17,27 @@ const Header = () => {
                 <img src='/images/logo.svg' alt="" />
             </a>
             <MainMenu>
-                {/* {items && items.map((item, index) => (
-                    <a key={index} href="#">{item}</a>
-                ))} */}
-
-                {/* old style: */}
                 <a href="#">Model S</a>
                 <a href="#">Model 3</a>
                 <a href="#">Model X</a>
                 <a href="#">Model Y</a>
                 <a href="#">Solar Roof</a>
                 <a href="#">Solar Panels</a>
-                {/* link style: */}
-                {/* <Link to='/models'>
+            </MainMenu>
+            {/* <MainMenu>
+                <Link to='/models'>
                 <MenuItem>Model S</MenuItem>
                 <MenuItem>Model 3</MenuItem>
                 <MenuItem>Model X</MenuItem>
                 <MenuItem>Model Y</MenuItem>
                 </Link> */}
-                {/* <Link to='/solarroof'>
+                 {/* <Link to='/solarroof'>
                 <MenuItem>Solar Roof</MenuItem>
                 </Link>
                 <Link to='/solarpanels'>
                 <MenuItem>Solar Panels</MenuItem>
-                </Link>  */}
-            </MainMenu>
+                </Link> 
+            </MainMenu> */}
             <RightMenu>
                 <a href="#">Shop</a>
                 <a href="#">Account</a>
@@ -106,13 +102,13 @@ const MainMenu = styled.div`
     `
 
 // // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// const MenuItem = styled.div`
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     flex: 1;
-//     padding-left: 70px;
-//     `
+const MenuItem = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding-left: 70px;
+    `
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const RightMenu = styled.div`
