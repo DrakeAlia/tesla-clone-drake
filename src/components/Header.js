@@ -6,32 +6,42 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 // import {selectItems} from '../features/carSlice';
 // import {useSelector} from 'react-redux'
 
-function Header() {
+const Header = () => {
     const [menuStatus, setMenuStatus] = useState(false)
     // const items = useSelector(selectItems)
     // console.log(items)
+
     return (
         <Container>
             <a>
                 <img src='/images/logo.svg' alt="" />
             </a>
-            <Menu>
+            <MainMenu>
                 {/* {items && items.map((item, index) => (
                     <a key={index} href="#">{item}</a>
                 ))} */}
+
+                {/* old style: */}
                 <a href="#">Model S</a>
                 <a href="#">Model 3</a>
                 <a href="#">Model X</a>
                 <a href="#">Model Y</a>
                 <a href="#">Solar Roof</a>
                 <a href="#">Solar Panels</a>
-                <Link to='/'>Model S</Link>
-                <a href="#">Model 3</a>
-                <a href="#">Model X</a>
-                <a href="#">Model Y</a>
-                <a href="#">Solar Roof</a>
-                <a href="#">Solar Panels</a> */}
-            </Menu>
+                {/* link style: */}
+                {/* <Link to='/models'>
+                <MenuItem>Model S</MenuItem>
+                <MenuItem>Model 3</MenuItem>
+                <MenuItem>Model X</MenuItem>
+                <MenuItem>Model Y</MenuItem>
+                </Link> */}
+                {/* <Link to='/solarroof'>
+                <MenuItem>Solar Roof</MenuItem>
+                </Link>
+                <Link to='/solarpanels'>
+                <MenuItem>Solar Panels</MenuItem>
+                </Link>  */}
+            </MainMenu>
             <RightMenu>
                 <a href="#">Shop</a>
                 <a href="#">Account</a>
@@ -81,7 +91,7 @@ const Container = styled.div`
     }
 `
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const Menu = styled.div`
+const MainMenu = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,8 +102,17 @@ const Menu = styled.div`
         font-weight: 500;
         padding: 0 10px;
         flex-wrap: nowrap;
-    }
+    } 
     `
+
+// // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// const MenuItem = styled.div`
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex: 1;
+//     padding-left: 70px;
+//     `
 
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const RightMenu = styled.div`

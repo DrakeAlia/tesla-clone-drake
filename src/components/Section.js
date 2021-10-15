@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 
-function Section({title, description, leftBtnText, rightBtnText, backgroundImg}) {
+const Section = ({title, description, leftBtnText, rightBtnText, backgroundImg}) => {
     // console.log(props)
     return (
         <Wrap bgImage={backgroundImg}>
