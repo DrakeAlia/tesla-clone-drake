@@ -67,6 +67,43 @@ const Header = () => {
     )
 }
 
+// other method:
+// const Header = () => {
+// return (
+//     <div className='header'>
+//         <div className='header-logo'>
+//             <Link to='/'>
+//             <img 
+//                 className='header-logoImg'
+//                 src=''
+//                 alt=''
+//             />
+//             </Link>
+//         </div>
+//         <Link to='/'>Model S</Link>
+//         <Link to='/'>Model 3</Link>
+//         <Link to='/'>Model X</Link>
+//         <Link to='/'>Model Y</Link>
+//         <Link to='/'>Solar Roof</Link>
+//         <Link to='/'>Solar Panels</Link>
+//     </div>
+// <div className='header-right'>
+//         <Link to='/' className={isMenuOpen && 'header__link--hidden'}>
+//           Shop
+//         </Link>
+//         <Link to='/login' className={isMenuOpen && 'header__link--hidden'}>
+//           Tesla Account
+//         </Link>
+//         <div
+//           className='header-menu'
+//           onClick={() => setIsMenuOpen(!isMenuOpen)}
+//         >
+//           {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+//         </div>
+//       </div>
+//     </div>
+//  )
+// }
 
 export default Header
 
