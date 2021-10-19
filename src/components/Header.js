@@ -67,19 +67,20 @@ const Header = () => {
     )
 }
 
-// other method:
-// const Header = () => {
+// Other method:
+// const Header = ({ isMenuOpen, setIsMenuOpen }) => {
 // return (
 //     <div className='header'>
 //         <div className='header-logo'>
 //             <Link to='/'>
 //             <img 
 //                 className='header-logoImg'
-//                 src=''
+//                 src='/images/logo.svg'
 //                 alt=''
 //             />
 //             </Link>
 //         </div>
+//          <div className='header-links'>
 //         <Link to='/'>Model S</Link>
 //         <Link to='/'>Model 3</Link>
 //         <Link to='/'>Model X</Link>
@@ -167,7 +168,8 @@ const MenuNav = styled.div`
     right: 0;
     background: white;
     width: 300px;
-    z-index: 16;
+    /* z-index: 16;  */
+    z-index: 1;
     list-style: none;
     padding: 20px;
     transform: ${props => props.show ? 'translateX(0)': 'translateX(100%)'};
@@ -180,7 +182,7 @@ const MenuNav = styled.div`
             font-weight: 600;
         }
     }
-`
+    `
 // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const CustomClose = styled(CloseIcon)`
     cursor: pointer;
