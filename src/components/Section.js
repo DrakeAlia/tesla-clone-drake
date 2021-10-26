@@ -82,7 +82,7 @@ const LeftButton = styled.div`
 const RightButton = styled(LeftButton)` 
     color: black;
     background: white;
-    opacity: 0.65;
+    opacity: 0.85;
 `
 
 // arrow icon at bootm page 
