@@ -7,18 +7,14 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const App = () => {
   return (
-    // <div>
     <Router>
      <div className="App">
+     <Switch>
+      <Route exact path='/'> 
     <Header />
-    {/* <Switch> */}
-     {/* <Route exact path='/'>  */}
     <Home />
-     {/* </Route> */}
-     {/* <Route path='/models' component={} />
-     <Route path='/solarroof' component={} />
-     <Route path='/solarpanels' component={} /> */}
-    {/* </Switch> */}
+      </Route>
+     </Switch>
     </div>
     </Router>
   );
