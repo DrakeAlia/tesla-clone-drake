@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const Header = () => {
     const [menuStatus, setMenuStatus] = useState(false)
-
     return (
         <Container>
             <a>
@@ -21,20 +20,6 @@ const Header = () => {
                 <a href="#">Solar Roof</a>
                 <a href="#">Solar Panels</a>
             </MainMenu>
-            {/* <MainMenu>
-                <Link to='/models'>
-                <MenuItem>Model S</MenuItem>
-                <MenuItem>Model 3</MenuItem>
-                <MenuItem>Model X</MenuItem>
-                <MenuItem>Model Y</MenuItem>
-                </Link> */}
-                 {/* <Link to='/solarroof'>
-                <MenuItem>Solar Roof</MenuItem>
-                </Link>
-                <Link to='/solarpanels'>
-                <MenuItem>Solar Panels</MenuItem>
-                </Link> 
-            </MainMenu> */}
             <RightMenu>
                 <a href="#">Shop</a>
                 <a href="#">Account</a>
@@ -64,47 +49,62 @@ const Header = () => {
     )
 }
 
-// Other method:
-// const Header = ({ isMenuOpen, setIsMenuOpen }) => {
-// return (
-//     <div className='header'>
-//         <div className='header-logo'>
-//             <Link to='/'>
-//             <img 
-//                 className='header-logoImg'
-//                 src='/images/logo.svg'
-//                 alt=''
-//             />
-//             </Link>
-//         </div>
-//          <div className='header-links'>
-//         <Link to='/'>Model S</Link>
-//         <Link to='/'>Model 3</Link>
-//         <Link to='/'>Model X</Link>
-//         <Link to='/'>Model Y</Link>
-//         <Link to='/'>Solar Roof</Link>
-//         <Link to='/'>Solar Panels</Link>
-//     </div>
-// <div className='header-right'>
-//         <Link to='/' className={isMenuOpen && 'header__link--hidden'}>
-//           Shop
-//         </Link>
-//         <Link to='/login' className={isMenuOpen && 'header__link--hidden'}>
-//           Tesla Account
-//         </Link>
-//         <div
-//           className='header-menu'
-//           onClick={() => setIsMenuOpen(!isMenuOpen)}
-//         >
-//           {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
-//         </div>
-//       </div>
-//     </div>
-//  )
-// }
-
 export default Header
 
+// Other method:
+
+// const Header = () => {
+//     const [menuStatus, setMenuStatus] = useState(false)
+
+//     return (
+//         <Container>
+//             <a>
+//                 <img src='/images/logo.svg' alt="" />
+//             </a>
+// <MainMenu>
+// <Link to='/models'>
+// <MenuItem>Model S</MenuItem>
+// <MenuItem>Model 3</MenuItem>
+// <MenuItem>Model X</MenuItem>
+// <MenuItem>Model Y</MenuItem>
+// </Link>
+//  <Link to='/solarroof'>
+// <MenuItem>Solar Roof</MenuItem>
+// </Link>
+// <Link to='/solarpanels'>
+// <MenuItem>Solar Panels</MenuItem>
+// </Link> 
+// </MainMenu>
+// <RightMenu>
+//                 <a href="#">Shop</a>
+//                 <a href="#">Account</a>
+//                 <a href="#" onClick={() => setMenuStatus(true)}>Menu</a>
+               
+//             </RightMenu>
+//             <MenuNav show={menuStatus}>
+//             <CloseWrapper>
+//             <CustomClose onClick={() => setMenuStatus(false)}/>
+//             </CloseWrapper>
+//                 <li><a href='#'>Existing Inventory</a></li>
+//                 <li><a href='#'>Used Inventory</a></li>
+//                 <li><a href='#'>Trade-In</a></li>
+//                 <li><a href='#'>Test Drive</a></li>
+//                 <li><a href='#'>Cybertruck</a></li>
+//                 <li><a href='#'>Roadster</a></li>
+//                 <li><a href='#'>Semi</a></li>
+//                 <li><a href='#'>Charging</a></li>
+//                 <li><a href='#'>Powerwall</a></li>
+//                 <li><a href='#'>Commercial Energy</a></li>
+//                 <li><a href='#'>Utilities</a></li>
+//                 <li><a href='#'>Find Us</a></li>
+//                 <li><a href='#'>Support</a></li>
+//                 <li><a href='#'>Invenstor Relations</a></li>
+//             </MenuNav>
+//         </Container>
+//     )
+// }
+
+// export default Header
 
 const Container = styled.div`
     display: flex;
@@ -143,6 +143,9 @@ const MenuItem = styled.div`
     justify-content: center;
     flex: 1;
     padding-left: 70px;
+    /* font-weight: 500;
+    padding: 0 10px;
+    flex-wrap: nowrap; */
     `
 
 const RightMenu = styled.div`
@@ -164,7 +167,6 @@ const MenuNav = styled.div`
     right: 0;
     background: white;
     width: 300px;
-    /* z-index: 16;  */
     z-index: 1;
     list-style: none;
     padding: 20px;

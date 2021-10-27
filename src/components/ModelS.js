@@ -8,8 +8,6 @@ const ModelS = ({title, description, rightBtnText, backgroundImg}) => {
             <Fade bottom>
             <h1>test</h1>
             <ItemText>
-                <h1>{title}</h1>
-                <p>{description}</p>
             </ItemText>
         </Fade>
             <Buttons>
