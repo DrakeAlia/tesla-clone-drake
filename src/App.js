@@ -1,8 +1,8 @@
 import React from 'react';
-// import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
+import ModelS from './components/ModelS';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const App = () => {
@@ -14,21 +14,17 @@ const App = () => {
     <Header />
     <Home />
       </Route>
+      <Route path='/models' component={ModelS} />
      </Switch>
     </div>
     </Router>
   );
 }
 
+export default App;
 
-// const App = () => {
-//   return (
-//     <div className="App">
-//     <Header />
-//     <Home />
-//     </div>
-//   );
-// }
+
+
 
 // return (
 //   <Router>
@@ -62,6 +58,4 @@ const App = () => {
 //     </div>
 //   </Router>
 // )
-// }
 
-export default App;

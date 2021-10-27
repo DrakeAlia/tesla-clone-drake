@@ -50,7 +50,6 @@ const Home = () => {
             />
             <Section 
                 title='Accessories'
-                description=''
                 backgroundImg='accessories.jpg'
                 leftBtnText='Shop Now'
             />
