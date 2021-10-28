@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
 
-const ModelS = ({title, description, rightBtnText, backgroundImg}) => {
+const ModelS = ({backgroundImg}) => {
     return (
-        <Wrap2 bgImage={backgroundImg}>
+        <ModelContainer bgImage={backgroundImg}>
         <Header />
             <Fade bottom>
             <ItemText>
@@ -17,7 +17,14 @@ const ModelS = ({title, description, rightBtnText, backgroundImg}) => {
             <Fade bottom>
             <ButtonGroup>
             <Footer>
-            <p>Test</p>
+            <FooterItem>396 mi
+            <p>Range (EPA est)</p></FooterItem>
+            <FooterItem>1.99s
+            <p>0-60 mph</p></FooterItem>
+            <FooterItem>200 mph
+            <p>Top Speed</p></FooterItem>
+            <FooterItem>1,020 hp
+            <p>Peak Power</p></FooterItem>
             </Footer>
                 <RightButton>
                 <p>Order Now</p>
@@ -25,14 +32,14 @@ const ModelS = ({title, description, rightBtnText, backgroundImg}) => {
             </ButtonGroup>
             </Fade>
             </Buttons>
-        </Wrap2>
+        </ModelContainer>
     )
 }
 
 export default ModelS
 
 
-const Wrap2 = styled.div`
+const ModelContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -49,6 +56,7 @@ const Wrap2 = styled.div`
 const ItemText = styled.div`
     padding-top: 15vh;
     text-align: center;
+    
 `
 
 // media for mobile/small screen 
@@ -64,9 +72,9 @@ const RightButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(23, 26, 32, 0.8);
+    background-color: gray;
     height: 40px;
-    width: 256px;
+    width: 195px;
     color: white;
     border-radius: 100px;
     opacity: 1.15;
@@ -83,8 +91,15 @@ const Footer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: white;
-    font-size: 12px;
+    justify-content: space-between;
+    font-size: 16px;
     cursor: pointer;
     margin: 8px;
+    width: 517px;
+`
+
+const FooterItem = styled.div`
+    display: flex;
+    flex-direction: column;
+    /* color: white; */
 `
