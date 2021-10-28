@@ -1,25 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
+import Header from './Header';
 
 const ModelS = ({title, description, rightBtnText, backgroundImg}) => {
     return (
         <Wrap2 bgImage={backgroundImg}>
+        <Header />
             <Fade bottom>
-            <h1>test</h1>
             <ItemText>
+            <h1>Model S</h1>
+            <p>Plaid</p>
             </ItemText>
         </Fade>
             <Buttons>
             <Fade bottom>
             <ButtonGroup>
+            <Footer>
+            <p>Test</p>
+            </Footer>
                 <RightButton>
+                <p>Order Now</p>
                 </RightButton>
-                {rightBtnText && 
-                <RightButton>
-                    {rightBtnText}
-                </RightButton>
-                }
             </ButtonGroup>
             </Fade>
             </Buttons>
@@ -67,15 +69,22 @@ const RightButton = styled.div`
     width: 256px;
     color: white;
     border-radius: 100px;
-    opacity: 0.85;
+    opacity: 1.15;
     text-transform: uppercase;
     font-size: 12px;
     cursor: pointer;
     margin: 8px;
 `
 
-
-
 const Buttons = styled.div`
 `
 
+const Footer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 8px;
+`
