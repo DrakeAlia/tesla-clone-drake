@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
+import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 const ModelS = ({backgroundImg}) => {
     return (
@@ -13,7 +14,7 @@ const ModelS = ({backgroundImg}) => {
             <p>Plaid</p>
             </ItemText>
         </Fade>
-            <Buttons>
+            {/* <Buttons> */}
             <Fade bottom>
             <ButtonGroup>
             <Footer>
@@ -31,14 +32,14 @@ const ModelS = ({backgroundImg}) => {
                 </RightButton>
             </ButtonGroup>
             </Fade>
-            </Buttons>
+            {/* </Buttons> */}
         </ModelContainer>
     )
 }
 
 export default ModelS
 
-
+// Container for the Model S page
 const ModelContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -67,7 +68,7 @@ const ButtonGroup = styled.div`
         flex-direction: column;
     }
 `
-
+// Container for right button
 const RightButton = styled.div`
     display: flex;
     justify-content: center;
@@ -84,9 +85,10 @@ const RightButton = styled.div`
     margin: 8px;
 `
 
-const Buttons = styled.div`
-`
+// const Buttons = styled.div`
+// `
 
+// Container at the bottom of the page
 const Footer = styled.div`
     display: flex;
     flex-direction: row;
@@ -98,6 +100,7 @@ const Footer = styled.div`
     width: 517px;
 `
 
+// items inside the footer container 
 const FooterItem = styled.div`
     display: flex;
     flex-direction: column;
