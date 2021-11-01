@@ -4,12 +4,105 @@ import Fade from 'react-reveal/Fade';
 import Header from './Header';
 import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-export const ModelX = () => {
+ const ModelX = ({backgroundImg}) => {
     return (
-        <div>
-            
-        </div>
+        <ModelContainer bgImage={backgroundImg}>
+        <Header />
+            <Fade bottom>
+            <ItemText>
+            <h1>Model X</h1>
+            <p>Plaid</p>
+            </ItemText>
+        </Fade>
+            {/* <Buttons> */}
+            <Fade bottom>
+            <ButtonGroup>
+            <Footer>
+            <FooterItem>340 mi
+            <p>Range (est.)</p></FooterItem>
+            <FooterItem>2.5s
+            <p>0-60 mph*</p></FooterItem>
+            <FooterItem>9.9s
+            <p>1/4 Mile</p></FooterItem>
+            <FooterItem>1,020 hp
+            <p>Peak Power</p></FooterItem>
+            </Footer>
+                <RightButton>
+                <p>Order Now</p>
+                </RightButton>
+            </ButtonGroup>
+            </Fade>
+            {/* </Buttons> */}
+        </ModelContainer>
     )
 }
 
 export default ModelX
+
+// Container for the Model X page
+const ModelContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/images/teslaModelS.png');
+    background-image: ${props => `url('/images/${props.bgImage}')`}
+`
+
+const ItemText = styled.div`
+    padding-top: 15vh;
+    text-align: center;
+    
+`
+
+// media for mobile/small screen 
+const ButtonGroup = styled.div`
+    display: flex;
+    margin-bottom: 40px;
+    @media (max-width: 823px) {
+        flex-direction: column;
+    }
+`
+// Container for right button
+const RightButton = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    height: 40px;
+    width: 195px;
+    color: white;
+    border-radius: 100px;
+    opacity: 1.15;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 8px;
+`
+
+// const Buttons = styled.div`
+// `
+
+// Container at the bottom of the page
+const Footer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 8px;
+    width: 517px;
+`
+
+// items inside the footer container 
+const FooterItem = styled.div`
+    display: flex;
+    flex-direction: column;
+    /* color: white; */
+`
