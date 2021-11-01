@@ -28,7 +28,9 @@ const ModelS = ({backgroundImg}) => {
             <p>Peak Power</p></FooterItem>
             </Footer>
                 <RightButton>
+                <Link to='/models/design'>
                 <p>Order Now</p>
+                </Link>
                 </RightButton>
             </ButtonGroup>
             </Fade>

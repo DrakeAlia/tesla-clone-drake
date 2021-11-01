@@ -28,7 +28,9 @@ import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
             <p>Peak Power</p></FooterItem>
             </Footer>
                 <RightButton>
+                <Link to='/modelx/design'>
                 <p>Order Now</p>
+                </Link>
                 </RightButton>
             </ButtonGroup>
             </Fade>

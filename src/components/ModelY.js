@@ -26,7 +26,9 @@ const ModelY = ({backgroundImg}) => {
             <p>Dual Motor</p></FooterItem>
             </Footer>
                 <RightButton>
+                <Link to='/modely/design'>
                 <p>Order Now</p>
+                </Link>
                 </RightButton>
             </ButtonGroup>
             </Fade>

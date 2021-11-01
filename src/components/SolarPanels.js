@@ -11,7 +11,7 @@ const SolarPanels = ({backgroundImg}) => {
             <Fade bottom>
             <ItemText>
             <h1>Solar for Existing Roofs</h1>
-            <p>Lowest Cost Solar Panels in America—Money-back guarantee</p>
+            <p>Lowest Cost Solar Panels in America — Money-back guarantee</p>
             </ItemText>
         </Fade>
             {/* <Buttons> */}

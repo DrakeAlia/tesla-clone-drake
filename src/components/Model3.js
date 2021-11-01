@@ -25,7 +25,9 @@ const Model3 = ({backgroundImg}) => {
             <p>Dual Motor</p></FooterItem>
             </Footer>
                 <RightButton>
+                <Link to='/model3/design'>
                 <p>Order Now</p>
+                </Link>
                 </RightButton>
             </ButtonGroup>
             </Fade>
