@@ -47,6 +47,8 @@ const Wrap = styled.div`
     background-repeat: no-repeat;
     background-image: url('/images/teslaModelS.png');
     background-image: ${props => `url('/images/${props.bgImage}')`}
+    /* background-image: url('/media/teslaModelS.png');
+    background-image: ${props => `url('/media/${props.bgImage}')`} */
 `
 
 const ItemText = styled.div`

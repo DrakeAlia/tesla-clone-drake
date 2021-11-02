@@ -50,7 +50,7 @@ const ModelContainer = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/images/teslaModelS.png');
+    background-image: url('/images/teslaModel3.png');
     background-image: ${props => `url('/images/${props.bgImage}')`}
 `
 

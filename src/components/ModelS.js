@@ -55,6 +55,7 @@ const ModelContainer = styled.div`
     background-repeat: no-repeat;
     background-image: url('/images/teslaModelS.png');
     background-image: ${props => `url('/images/${props.bgImage}')`}
+    
 `
 
 const ItemText = styled.div`
