@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import ModelSDesign from '../modeldesigns/ModelSDesign';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 const ModelS = ({backgroundImg}) => {
     return (

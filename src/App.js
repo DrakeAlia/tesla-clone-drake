@@ -8,7 +8,7 @@ import ModelX from './components/ModelX';
 import ModelY from './components/ModelY';
 import SolarRoof from './components/SolarRoof';
 import SolarPanels from './components/SolarPanels';
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
