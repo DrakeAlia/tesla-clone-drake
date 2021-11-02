@@ -18,10 +18,5 @@ const Wrap = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('/images/teslaModelS.png');
-    background-image: ${props => `url('/images/${props.bgImage}')`}
 `
 
