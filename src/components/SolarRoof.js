@@ -1,4 +1,3 @@
-
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
@@ -29,7 +28,9 @@ const SolarRoof = ({backgroundImg}) => {
             <p>Peak Power</p></FooterItem>
             </Footer>
                 <RightButton>
-                <p>Order Now</p>
+                <Link to='/engery/design'>
+                Order Now
+                </Link>
                 </RightButton>
             </ButtonGroup>
             </Fade>

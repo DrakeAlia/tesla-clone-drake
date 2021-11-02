@@ -10,7 +10,9 @@ const Header = () => {
     return (
         <Container>
             <a>
+            <Link to='/'>
                 <img src='/images/logo.svg' alt="" />
+                </Link>
             </a>
             <MainMenu>
                 <Link to='/models'>

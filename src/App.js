@@ -34,38 +34,3 @@ const App = () => {
 export default App;
 
 
-
-
-// return (
-//   <Router>
-//     <div className='app'>
-//       <Switch>
-//         <Route exact path='/'>
-//           <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-//           {isMenuOpen && <Menu />}
-//           <HeaderBlock />
-//         </Route>
-//         <Route exact path='/login'>
-//           {user ? <Redirect to='/teslaaccount' /> : <Login />}
-//         </Route>
-//         <Route exact path='/signup'>
-//           <Signup />
-//         </Route>
-//         <Route exact path='/teslaaccount'>
-//           {!user ? (
-//             <Redirect to='/login' />
-//           ) : (
-//             <>
-//               <TeslaAccount
-//                 isMenuOpen={isMenuOpen}
-//                 setIsMenuOpen={setIsMenuOpen}
-//               />
-//               {isMenuOpen && <Menu />}
-//             </>
-//           )}
-//         </Route>
-//       </Switch>
-//     </div>
-//   </Router>
-// )
-

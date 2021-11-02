@@ -27,7 +27,7 @@ const ModelY = ({backgroundImg}) => {
             </Footer>
                 <RightButton>
                 <Link to='/modely/design'>
-                <p>Order Now</p>
+                Order Now
                 </Link>
                 </RightButton>
             </ButtonGroup>
@@ -63,6 +63,7 @@ const ItemText = styled.div`
 // media for mobile/small screen 
 const ButtonGroup = styled.div`
     display: flex;
+    margin-left: 35px;
     margin-bottom: 40px;
     @media (max-width: 823px) {
         flex-direction: column;
@@ -83,6 +84,8 @@ const RightButton = styled.div`
     font-size: 12px;
     cursor: pointer;
     margin: 8px;
+    margin-left: 35px;
+    
 `
 
 // const Buttons = styled.div`

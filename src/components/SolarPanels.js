@@ -28,7 +28,9 @@ const SolarPanels = ({backgroundImg}) => {
             <p>Peak Power</p></FooterItem>
             </Footer>
                 <RightButton>
-                <p>Order Now</p>
+                <Link to='/energy/design'>
+                Order Now
+                </Link>
                 </RightButton>
             </ButtonGroup>
             </Fade>

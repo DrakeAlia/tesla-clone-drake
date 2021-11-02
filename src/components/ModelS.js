@@ -1,8 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import {BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import ModelSDesign from '../modeldesigns/ModelSDesign';
 
 const ModelS = ({backgroundImg}) => {
     return (
@@ -29,7 +30,8 @@ const ModelS = ({backgroundImg}) => {
             </Footer>
                 <RightButton>
                 <Link to='/models/design'>
-                <p>Order Now</p>
+                Order Now
+                {/* <Route path='/models/design' component={ModelSDesign} /> */}
                 </Link>
                 </RightButton>
             </ButtonGroup>
@@ -65,11 +67,13 @@ const ItemText = styled.div`
 // media for mobile/small screen 
 const ButtonGroup = styled.div`
     display: flex;
+    margin-left: 35px;
     margin-bottom: 40px;
     @media (max-width: 823px) {
         flex-direction: column;
     }
 `
+
 // Container for right button
 const RightButton = styled.div`
     display: flex;
@@ -85,10 +89,12 @@ const RightButton = styled.div`
     font-size: 12px;
     cursor: pointer;
     margin: 8px;
+    margin-left: 35px;
 `
 
 // const Buttons = styled.div`
 // `
+
 
 // Container at the bottom of the page
 const Footer = styled.div`
