@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
 import { BrowserRouter as Link } from 'react-router-dom';
-// import ModelSDesign from '../designs/ModelSDesign';
+// import ModelSDesign from './designs/ModelSDesign';
 
 const ModelS = ({backgroundImg}) => {
     return (
@@ -15,7 +15,6 @@ const ModelS = ({backgroundImg}) => {
             <p>Plaid</p>
             </ItemText>
         </Fade>
-            {/* <Buttons> */}
             <Fade bottom>
             <ButtonGroup>
             <Footer>
@@ -29,14 +28,15 @@ const ModelS = ({backgroundImg}) => {
             <p>Peak Power</p></FooterItem>
             </Footer>
                 <RightButton>
+                {/* <a href='/models/design'>Order Here</a> */}
+                {/* <a href='/some/valid/uri'>Order Here</a> */}
                 <Link to='/models/design'>
-                Order Now
+                Order Here
                 </Link>
-                {/* <Route path='/models/design' component={ModelSDesign} /> */}
+                {/* <Route path='/models/designs' designs={ModelSDesign} /> */}
                 </RightButton>
             </ButtonGroup>
             </Fade>
-            {/* </Buttons> */}
         </ModelContainer>
     )
 }
@@ -93,10 +93,6 @@ const RightButton = styled.div`
     margin-left: 35px;
 `
 
-// const Buttons = styled.div`
-// `
-
-
 // Container at the bottom of the page
 const Footer = styled.div`
     display: flex;
@@ -113,5 +109,4 @@ const Footer = styled.div`
 const FooterItem = styled.div`
     display: flex;
     flex-direction: column;
-    /* color: white; */
 `

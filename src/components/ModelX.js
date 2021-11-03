@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { BrowserRouter as  Link } from 'react-router-dom';
+// import ModelXDesign from './designs/ModelXDesign';
 
  const ModelX = ({backgroundImg}) => {
     return (
@@ -14,7 +15,6 @@ import { BrowserRouter as Link } from 'react-router-dom';
             <p>Plaid</p>
             </ItemText>
         </Fade>
-            {/* <Buttons> */}
             <Fade bottom>
             <ButtonGroup>
             <Footer>
@@ -34,7 +34,6 @@ import { BrowserRouter as Link } from 'react-router-dom';
                 </RightButton>
             </ButtonGroup>
             </Fade>
-            {/* </Buttons> */}
         </ModelContainer>
     )
 }
@@ -90,9 +89,6 @@ const RightButton = styled.div`
     margin-left: 35px;
 `
 
-// const Buttons = styled.div`
-// `
-
 // Container at the bottom of the page
 const Footer = styled.div`
     display: flex;
@@ -109,5 +105,4 @@ const Footer = styled.div`
 const FooterItem = styled.div`
     display: flex;
     flex-direction: column;
-    /* color: white; */
 `

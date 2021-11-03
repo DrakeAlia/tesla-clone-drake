@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
 import { BrowserRouter as Link } from 'react-router-dom';
-
+// import ModelYDesign from './designs/ModelYDesign';
 
 const ModelY = ({backgroundImg}) => {
     return (
@@ -14,7 +14,6 @@ const ModelY = ({backgroundImg}) => {
             <h1>Model Y</h1>
             </ItemText>
         </Fade>
-            {/* <Buttons> */}
             <Fade bottom>
             <ButtonGroup>
             <Footer>
@@ -32,7 +31,6 @@ const ModelY = ({backgroundImg}) => {
                 </RightButton>
             </ButtonGroup>
             </Fade>
-            {/* </Buttons> */}
         </ModelContainer>
     )
 }
@@ -88,9 +86,6 @@ const RightButton = styled.div`
     
 `
 
-// const Buttons = styled.div`
-// `
-
 // Container at the bottom of the page
 const Footer = styled.div`
     display: flex;
@@ -107,5 +102,4 @@ const Footer = styled.div`
 const FooterItem = styled.div`
     display: flex;
     flex-direction: column;
-    /* color: white; */
 `
