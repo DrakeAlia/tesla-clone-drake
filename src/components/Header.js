@@ -2,16 +2,14 @@ import React from 'react'
 import { useState } from 'react';
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [menuStatus, setMenuStatus] = useState(false)
     return (
         <Container>
-            <a>
-            <Link to='/'>
+            <a href='/'>
                 <img src='/images/logo.svg' alt="" />
-                </Link>
             </a>
             <MainMenu>
                 <Link to='/models'>
