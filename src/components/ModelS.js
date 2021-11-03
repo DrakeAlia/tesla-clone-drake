@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
 import { BrowserRouter as Link } from 'react-router-dom';
+// import ModelSDesign from '../designs/ModelSDesign';
 
 const ModelS = ({backgroundImg}) => {
     return (
@@ -30,8 +31,8 @@ const ModelS = ({backgroundImg}) => {
                 <RightButton>
                 <Link to='/models/design'>
                 Order Now
-                {/* <Route path='/models/design' component={ModelSDesign} /> */}
                 </Link>
+                {/* <Route path='/models/design' component={ModelSDesign} /> */}
                 </RightButton>
             </ButtonGroup>
             </Fade>

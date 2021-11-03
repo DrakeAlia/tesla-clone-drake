@@ -71,6 +71,7 @@ const ButtonGroup = styled.div`
         flex-direction: column;
     }
 `
+
 // Container for right button
 const RightButton = styled.div`
     display: flex;

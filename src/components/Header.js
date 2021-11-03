@@ -1,71 +1,224 @@
+// import React from 'react';
+// import { useState } from 'react';
+// import styled from 'styled-components';
+// import CloseIcon from '@mui/icons-material/Close';
+// import { BrowserRouter as Link } from 'react-router-dom';
+
+// const Header = () => {
+//     const [menuStatus, setMenuStatus] = useState(false)
+//     return (
+//         <Container>
+//             {/* <Logo src={banner}></Logo>
+//             <Link to='/'>
+//             </Link> */}
+//             <Logo>
+//             <Link to='/'>
+//                 <img src='/images/logo.svg' alt="" />
+//                 </Link>
+//                 </Logo>
+//             <MainMenu>
+//                 <Link to='/models'>
+//                 <HeaderItem>Model S</HeaderItem>
+//                 </Link>
+//                 <Link to='/model3'>
+//                 <HeaderItem>Model 3</HeaderItem>
+//                 </Link>
+//                 <Link to='/modelx'>
+//                 <HeaderItem>Model X</HeaderItem>
+//                 </Link>
+//                 <Link to='/modely'>
+//                 <HeaderItem>Model Y</HeaderItem>
+//                 </Link>
+//                 <Link to='/solarroof'>
+//                 <HeaderItem>Solar Roof</HeaderItem>
+//                 </Link>
+//                 <Link to='/solarpanels'>
+//                 <HeaderItem>Solar Panels</HeaderItem>
+//                 </Link>
+//             </MainMenu>
+//             <RightMenu>
+//                 <MenuRightItem>Shop</MenuRightItem>
+//                 <MenuRightItem>Account</MenuRightItem>
+//                 <MenuTab onClick={() => setMenuStatus(true)}>Menu</MenuTab>
+//             </RightMenu>
+//             <MenuNavWidget show={menuStatus}>
+//             <CloseWrapper>
+//             <CustomClose onClick={() => setMenuStatus(false)}/>
+//             </CloseWrapper>
+//                 <MenuNavWidgetItem>Existing Inventory</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Used Inventory</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Trade-In</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Test Drive</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Cybertruck</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Roadster</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Semi</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Charging</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Powerwall</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Commercial Energy</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Utilities</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Find Us</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Support</MenuNavWidgetItem>
+//                 <MenuNavWidgetItem>Invenstor Relations</MenuNavWidgetItem>
+//             </MenuNavWidget>
+//         </Container>
+//     )
+// }
+
+// export default Header
+
+// const Container = styled.div`
+//     display: flex;
+//     align-items: center;
+//     min-height: 60px;
+//     position: fixed;
+//     padding: 0 20px;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 1;
+// `
+
+// const Logo = styled.div`
+//     cursor: pointer;
+// `
+
+// const MainMenu = styled.div`
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     flex: 1;
+//     padding-left: 70px;
+//     font-weight: 500;
+//     padding: 0 10px;
+//     flex-wrap: nowrap;
+// `
+
+// const HeaderItem = styled.div`
+//     display: flex;
+//     padding-left: 30px;
+//     align-items: center;
+//     justify-content: space-between;
+//     cursor: pointer;
+// `
+
+
+// const RightMenu = styled.div`
+//     display: flex;
+//     align-items: center;
+//     font-weight: 500;
+//     margin-right: 10px;
+
+// `
+
+// const MenuRightItem = styled.div`
+//     font-weight: 500;
+//     margin-right: 10px;
+//     cursor: pointer;
+// `
+
+// const MenuTab = styled.div`
+//     font-weight: 500;
+//     margin-right: 10px;
+//     cursor: pointer;
+// `
+
+// const CustomClose = styled(CloseIcon)`
+//     cursor: pointer;
+// `
+
+// const MenuNavWidget = styled.div`
+//     display: flex;
+//     text-align: start;
+//     flex-direction: column;
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     background: white;
+//     width: 300px;
+//     z-index: 1;
+//     list-style: none;
+//     padding: 20px;
+//     transform: ${props => props.show ? 'translateX(0)': 'translateX(100%)'};
+//     transition: transform 0.2s;
+    
+// `
+
+// const MenuNavWidgetItem = styled.div`
+//     padding: 15px 0;
+//     border-bottom: 1px solid rgba(0, 0, 0, .2);
+//     font-weight: 600;
+//     cursor: pointer;
+// `
+
+
+// const CloseWrapper = styled.div`
+//     display: flex;
+//     justify-content: flex-end;
+// `
+
 import React from 'react'
 import { useState } from 'react';
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
-// import banner from './images/teslaFont.png';
-import { BrowserRouter as Link } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 const Header = () => {
     const [menuStatus, setMenuStatus] = useState(false)
     return (
         <Container>
-            {/* <Logo src={banner}></Logo>
-            <Link to='/'>
-            </Link> */}
-            <Logo>
+            <a>
             <Link to='/'>
                 <img src='/images/logo.svg' alt="" />
                 </Link>
-                </Logo>
+            </a>
             <MainMenu>
                 <Link to='/models'>
-                <HeaderItem>Model S</HeaderItem>
+                Model S
                 </Link>
                 <Link to='/model3'>
-                <HeaderItem>Model 3</HeaderItem>
+                Model 3
                 </Link>
                 <Link to='/modelx'>
-                <HeaderItem>Model X</HeaderItem>
+                Model X
                 </Link>
                 <Link to='/modely'>
-                <HeaderItem>Model Y</HeaderItem>
+                Model Y
                 </Link>
                 <Link to='/solarroof'>
-                <HeaderItem>Solar Roof</HeaderItem>
+                Solar Roof
                 </Link>
                 <Link to='/solarpanels'>
-                <HeaderItem>Solar Panels</HeaderItem>
+                Solar Panels
                 </Link>
             </MainMenu>
             <RightMenu>
-                <MenuRightItem>Shop</MenuRightItem>
-                <MenuRightItem>Account</MenuRightItem>
+                <a href="/some/valid/uri">Shop</a>
+                <a href="/some/valid/uri">Account</a>
                 <MenuTab onClick={() => setMenuStatus(true)}>Menu</MenuTab>
             </RightMenu>
-            <MenuNavWidget show={menuStatus}>
+            <MenuNav show={menuStatus}>
             <CloseWrapper>
             <CustomClose onClick={() => setMenuStatus(false)}/>
             </CloseWrapper>
-                <MenuNavWidgetItem>Existing Inventory</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Used Inventory</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Trade-In</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Test Drive</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Cybertruck</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Roadster</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Semi</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Charging</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Powerwall</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Commercial Energy</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Utilities</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Find Us</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Support</MenuNavWidgetItem>
-                <MenuNavWidgetItem>Invenstor Relations</MenuNavWidgetItem>
-            </MenuNavWidget>
+                <li><a href="/some/valid/uri">Existing Inventory</a></li>
+                <li><a href="/some/valid/uri">Used Inventory</a></li>
+                <li><a href="/some/valid/uri">Trade-In</a></li>
+                <li><a href="/some/valid/uri">Test Drive</a></li>
+                <li><a href="/some/valid/uri">Cybertruck</a></li>
+                <li><a href="/some/valid/uri">Roadster</a></li>
+                <li><a href="/some/valid/uri">Semi</a></li>
+                <li><a href="/some/valid/uri">Charging</a></li>
+                <li><a href="/some/valid/uri">Powerwall</a></li>
+                <li><a href="/some/valid/uri">Commercial Energy</a></li>
+                <li><a href="/some/valid/uri">Utilities</a></li>
+                <li><a href="/some/valid/uri">Find U</a></li>
+                <li><a href="/some/valid/uri">Support</a></li>
+                <li><a href="/some/valid/uri">Invenstor Relations</a></li>
+            </MenuNav>
         </Container>
     )
 }
-
 export default Header
 
 const Container = styled.div`
@@ -78,10 +231,9 @@ const Container = styled.div`
     left: 0;
     right: 0;
     z-index: 1;
-`
-
-const Logo = styled.div`
-    cursor: pointer;
+    a {
+        cursor: pointer;
+    }
 `
 
 const MainMenu = styled.div`
@@ -90,45 +242,23 @@ const MainMenu = styled.div`
     justify-content: center;
     flex: 1;
     padding-left: 70px;
-    font-weight: 500;
-    padding: 0 10px;
-    flex-wrap: nowrap;
+    a {
+        font-weight: 500;
+        padding: 0 10px;
+        flex-wrap: nowrap;
+    } 
 `
-
-const HeaderItem = styled.div`
-    display: flex;
-    padding-left: 30px;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-`
-
 
 const RightMenu = styled.div`
     display: flex;
     align-items: center;
-    font-weight: 500;
-    margin-right: 10px;
-
+    a {
+        font-weight: 500;
+        margin-right: 10px;
+    }
 `
 
-const MenuRightItem = styled.div`
-    font-weight: 500;
-    margin-right: 10px;
-    cursor: pointer;
-`
-
-const MenuTab = styled.div`
-    font-weight: 500;
-    margin-right: 10px;
-    cursor: pointer;
-`
-
-const CustomClose = styled(CloseIcon)`
-    cursor: pointer;
-`
-
-const MenuNavWidget = styled.div`
+const MenuNav = styled.div`
     display: flex;
     text-align: start;
     flex-direction: column;
@@ -143,17 +273,26 @@ const MenuNavWidget = styled.div`
     padding: 20px;
     transform: ${props => props.show ? 'translateX(0)': 'translateX(100%)'};
     transition: transform 0.2s;
-    
+    li {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        a {
+            font-weight: 600;
+        }
+    }
 `
 
-const MenuNavWidgetItem = styled.div`
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
-    font-weight: 600;
+const CustomClose = styled(CloseIcon)`
+    cursor: pointer;
 `
-
 
 const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
+`
+
+const MenuTab = styled.div`
+    font-weight: 500;
+    margin-right: 10px;
+    cursor: pointer;
 `

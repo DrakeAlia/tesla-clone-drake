@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import Section from './Section'
+import React from 'react';
+import styled from 'styled-components';
+import Section from './Section';
 // import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const Home = () => {
