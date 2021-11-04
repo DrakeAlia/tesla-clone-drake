@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
+// import { BrowserRouter as Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -32,28 +33,28 @@ const Header = () => {
                 </Link>
             </MainMenu>
             <RightMenu>
-                <a href="/some/valid/uri">Shop</a>
-                <a href="/some/valid/uri">Account</a>
+                <a href="/tesla/shop">Shop</a>
+                <a href="/tesla/account">Account</a>
                 <MenuTab onClick={() => setMenuStatus(true)}>Menu</MenuTab>
             </RightMenu>
             <MenuNav show={menuStatus}>
             <CloseWrapper>
             <CustomClose onClick={() => setMenuStatus(false)}/>
             </CloseWrapper>
-                <li><a href="/some/valid/uri">Existing Inventory</a></li>
-                <li><a href="/some/valid/uri">Used Inventory</a></li>
-                <li><a href="/some/valid/uri">Trade-In</a></li>
-                <li><a href="/some/valid/uri">Test Drive</a></li>
-                <li><a href="/some/valid/uri">Cybertruck</a></li>
-                <li><a href="/some/valid/uri">Roadster</a></li>
-                <li><a href="/some/valid/uri">Semi</a></li>
-                <li><a href="/some/valid/uri">Charging</a></li>
-                <li><a href="/some/valid/uri">Powerwall</a></li>
-                <li><a href="/some/valid/uri">Commercial Energy</a></li>
-                <li><a href="/some/valid/uri">Utilities</a></li>
-                <li><a href="/some/valid/uri">Find U</a></li>
-                <li><a href="/some/valid/uri">Support</a></li>
-                <li><a href="/some/valid/uri">Invenstor Relations</a></li>
+                <li><a href="/inventory/new">Existing Inventory</a></li>
+                <li><a href="/inventory/used">Used Inventory</a></li>
+                <li><a href="/tradein">Trade-In</a></li>
+                <li><a href="/drive">Test Drive</a></li>
+                <li><a href="/cybertruck">Cybertruck</a></li>
+                <li><a href="/roadster">Roadster</a></li>
+                <li><a href="/semi">Semi</a></li>
+                <li><a href="/charging">Charging</a></li>
+                <li><a href="/powerwall">Powerwall</a></li>
+                <li><a href="/commercial">Commercial Energy</a></li>
+                <li><a href="/utilities">Utilities</a></li>
+                <li><a href="/googlemaps">Find Us</a></li>
+                <li><a href="/support">Support</a></li>
+                <li><a href="/tab-quarterly-disclosure">Invenstor Relations</a></li>
             </MenuNav>
         </Container>
     )

@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
-// import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 const Section = ({title, description, leftBtnText, rightBtnText, backgroundImg}) => {
-    // console.log(props)
     return (
         <Wrap bgImage={backgroundImg}>
         <Fade bottom>
@@ -96,7 +94,3 @@ const DownArrow = styled.img`
 
 const Buttons = styled.div`
 `
-
-// const u = styled.p`
-//     text-decoration: underline;
-// `

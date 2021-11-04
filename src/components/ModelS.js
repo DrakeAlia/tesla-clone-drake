@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import { BrowserRouter as Link } from 'react-router-dom';
-// import ModelSDesign from './designs/ModelSDesign';
+import { BrowserRouter as Link, Route } from 'react-router-dom';
+import ModelSDesign from '../designs/ModelSDesign';
 
 const ModelS = ({backgroundImg}) => {
     return (
@@ -30,10 +30,10 @@ const ModelS = ({backgroundImg}) => {
                 <RightButton>
                 {/* <a href='/models/design'>Order Here</a> */}
                 {/* <a href='/some/valid/uri'>Order Here</a> */}
-                <Link to='/models/design'>
+                {/* <Link to='/models/design'>
                 Order Here
-                </Link>
-                {/* <Route path='/models/designs' designs={ModelSDesign} /> */}
+                </Link> */}
+                <Route path='/models/design' component={ModelSDesign} />
                 </RightButton>
             </ButtonGroup>
             </Fade>

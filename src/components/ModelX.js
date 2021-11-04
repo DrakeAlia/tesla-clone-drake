@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import { BrowserRouter as  Link } from 'react-router-dom';
-// import ModelXDesign from './designs/ModelXDesign';
+import { BrowserRouter as Link } from 'react-router-dom';
+// import ModelXDesign from '../designs/ModelXDesign';
 
  const ModelX = ({backgroundImg}) => {
     return (

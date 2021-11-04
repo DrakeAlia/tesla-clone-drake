@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
 import { BrowserRouter as Link } from 'react-router-dom';
-// import ModelYDesign from './designs/ModelYDesign';
+// import ModelYDesign from '../designs/ModelYDesign';
 
 const ModelY = ({backgroundImg}) => {
     return (
