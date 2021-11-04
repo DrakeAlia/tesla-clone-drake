@@ -6,7 +6,7 @@ import { BrowserRouter as Link } from 'react-router-dom';
 
 const SolarRoof = ({backgroundImg}) => {
     return (
-        <ModelContainer bgImage={backgroundImg}>
+        <Container bgImage={backgroundImg}>
         <Header />
             <Fade bottom>
             <ItemText>
@@ -14,7 +14,6 @@ const SolarRoof = ({backgroundImg}) => {
             <p>Transform your roof and produce clean energy</p>
             </ItemText>
         </Fade>
-            {/* <Buttons> */}
             <Fade bottom>
             <ButtonGroup>
             <Footer>
@@ -34,15 +33,14 @@ const SolarRoof = ({backgroundImg}) => {
                 </RightButton>
             </ButtonGroup>
             </Fade>
-            {/* </Buttons> */}
-        </ModelContainer>
+        </Container>
     )
 }
 
 export default SolarRoof
 
 // Container for the Model X page
-const ModelContainer = styled.div`
+const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,7 +57,6 @@ const ModelContainer = styled.div`
 const ItemText = styled.div`
     padding-top: 15vh;
     text-align: center;
-    
 `
 
 // media for mobile/small screen 
@@ -70,6 +67,7 @@ const ButtonGroup = styled.div`
         flex-direction: column;
     }
 `
+
 // Container for right button
 const RightButton = styled.div`
     display: flex;
@@ -87,8 +85,6 @@ const RightButton = styled.div`
     margin: 8px;
 `
 
-// const Buttons = styled.div`
-// `
 
 // Container at the bottom of the page
 const Footer = styled.div`
@@ -106,7 +102,6 @@ const Footer = styled.div`
 const FooterItem = styled.div`
     display: flex;
     flex-direction: column;
-    /* color: white; */
 `
 
 

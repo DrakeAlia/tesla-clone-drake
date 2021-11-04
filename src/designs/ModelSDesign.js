@@ -4,7 +4,9 @@ import styled from 'styled-components'
 
 const ModelSDesign = () => {
     return (
-        <Wrap>Test</Wrap>
+        <Wrap>
+        <ItemText>Test</ItemText>
+        </Wrap>
     )
 }
 
@@ -20,3 +22,7 @@ const Wrap = styled.div`
     height: 100vh;
 `
 
+const ItemText = styled.div`
+    padding-top: 15vh;
+    text-align: center;
+`

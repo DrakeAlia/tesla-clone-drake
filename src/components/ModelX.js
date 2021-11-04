@@ -7,7 +7,7 @@ import { BrowserRouter as  Link } from 'react-router-dom';
 
  const ModelX = ({backgroundImg}) => {
     return (
-        <ModelContainer bgImage={backgroundImg}>
+        <Container bgImage={backgroundImg}>
         <Header />
             <Fade bottom>
             <ItemText>
@@ -34,14 +34,14 @@ import { BrowserRouter as  Link } from 'react-router-dom';
                 </RightButton>
             </ButtonGroup>
             </Fade>
-        </ModelContainer>
+        </Container>
     )
 }
 
 export default ModelX
 
 // Container for the Model X page
-const ModelContainer = styled.div`
+const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -58,7 +58,6 @@ const ModelContainer = styled.div`
 const ItemText = styled.div`
     padding-top: 15vh;
     text-align: center;
-    
 `
 
 // media for mobile/small screen 
