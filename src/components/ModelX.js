@@ -78,7 +78,7 @@ const RightButton = styled.div`
     background-color: gray;
     height: 40px;
     width: 195px;
-    color: white;
+    color: #ffffff;
     border-radius: 100px;
     opacity: 1.15;
     text-transform: uppercase;

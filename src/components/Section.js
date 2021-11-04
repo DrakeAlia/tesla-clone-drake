@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 
-const Section = ({title, description, leftBtnText, rightBtnText, backgroundImg}) => {
+const Section = ({title, description, leftBtnText, rightBtnInven, rightBtnText, backgroundImg}) => {
     return (
         <Wrap bgImage={backgroundImg}>
         <Fade bottom>
@@ -15,13 +15,14 @@ const Section = ({title, description, leftBtnText, rightBtnText, backgroundImg})
             <Fade bottom>
             <ButtonGroup>
                 <LeftButton>
-                    {leftBtnText}
+                    <a href="/model/design">{leftBtnText}</a>
                 </LeftButton>
-                {rightBtnText && 
+                 <a href="/inventory/new">{rightBtnInven && 
                 <RightButton>
-                    {rightBtnText}
+                    {rightBtnInven}
                 </RightButton>
                 }
+                </a>
             </ButtonGroup>
             </Fade>
             <DownArrow src="/images/down-arrow.svg" />
@@ -70,7 +71,7 @@ const LeftButton = styled.div`
     background-color: rgba(23, 26, 32, 0.8);
     height: 40px;
     width: 256px;
-    color: white;
+    color: #ffffff;
     border-radius: 100px;
     opacity: 0.85;
     text-transform: uppercase;
@@ -80,8 +81,8 @@ const LeftButton = styled.div`
 `
 
 const RightButton = styled(LeftButton)` 
-    color: black;
-    background: white;
+    color: #393c41;
+    background: #ffffff;
     opacity: 0.85;
 `
 
