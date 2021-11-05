@@ -10,28 +10,28 @@ const Home = () => {
                 description='Order Online for Touchless Delivery'
                 backgroundImg='teslaModelS.png'
                 leftBtnText='Custom Order'
-                rightBtnInven='Existing Inventory'
+                 rightBtnText='Existing Inventory'
             />
             <Section 
                 title='Model Y'
                 description='Order Online for Touchless Delivery'
                 backgroundImg='teslaYBlue.png'
                 leftBtnText='Custom Order'
-                rightBtnInven='Existing Inventory'
+                 rightBtnText='Existing Inventory'
             />
             <Section 
                 title='Model 3'
                 description='Order Online for Touchless Delivery'
                 backgroundImg='tesla3.png'
                 leftBtnText='Custom Order'
-                rightBtnInven='Existing Inventory'
+                 rightBtnText='Existing Inventory'
             />
             <Section 
                 title='Model X'
                 description='Order Online for Touchless Delivery'
                 backgroundImg='teslaX.png'
                 leftBtnText='Custom Order'
-                rightBtnInven='Existing Inventory'
+                 rightBtnText='Existing Inventory'
             />
             <Section 
                 title='Solar Panels'

@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -13,7 +14,9 @@ import ModelYDesign from './components/designs/ModelYDesign';
 import SolarRoof from './components/SolarRoof';
 import SolarPanels from './components/SolarPanels';
 import EnergyDesign from './components/designs/EnergyDesign'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Shop from './components/Shop'
+import Account from './components/Account';
+import NewInventory from './components/NewInventory';
 
 const App = () => {
   return (
@@ -30,11 +33,19 @@ const App = () => {
           <Route path='/modely' component={ModelY} />
           <Route path='/solarroof' component={SolarRoof} />
           <Route path='/solarpanels' component={SolarPanels} />
+
+          <Route path='/shop' component={Shop} />
+          <Route path='/account' component={Account} />
+
+          
+
           <Route path='/energy/design' component={EnergyDesign} />
           <Route path='/modelSDesign' component={ModelSDesign} />
           <Route path='/model3Design' component={Model3Design} />
           <Route path='/modelXDesign' component={ModelXDesign} />
           <Route path='/modelYDesign' component={ModelYDesign} />
+
+          <Route path='/inventory/new' component={NewInventory} />
 
           {/* <Route path='/models/design' component={ModelSDesign} /> */}
           {/* <Route path='/model3/design' component={Model3Design} /> */}

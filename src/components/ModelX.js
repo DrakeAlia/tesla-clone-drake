@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
 import { Link } from 'react-router-dom';
-// import ModelXDesign from '../designs/ModelXDesign';
+
 
  const ModelX = ({backgroundImg}) => {
     return (
