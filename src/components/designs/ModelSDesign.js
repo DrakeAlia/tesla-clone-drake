@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import React, { useState, useEffect } from 'react';
-
+import React, { useEffect } from 'react';
 
 
 
@@ -12,7 +11,8 @@ const ModelSDesign = () => {
 
     return (
         <Wrap>
-        <ItemText>Dog 🔥 </ItemText>
+        
+        <ItemText>Test</ItemText>
         </Wrap>
     )
 }

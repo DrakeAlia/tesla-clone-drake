@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import ModelXDesign from '../designs/ModelXDesign';
 
  const ModelX = ({backgroundImg}) => {
@@ -27,11 +27,12 @@ import { BrowserRouter as Link } from 'react-router-dom';
             <FooterItem>1,020 hp
             <p>Peak Power</p></FooterItem>
             </Footer>
+                {/* <Link to='/modelx/design'> */}
+                <Link to='/modelXDesign'>
                 <RightButton>
-                <Link to='/modelx/design'>
                 Order Now
-                </Link>
                 </RightButton>
+                </Link>
             </ButtonGroup>
             </Fade>
         </Container>

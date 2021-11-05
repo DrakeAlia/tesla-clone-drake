@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SolarRoof = ({backgroundImg}) => {
     return (
@@ -26,11 +26,11 @@ const SolarRoof = ({backgroundImg}) => {
             <FooterItem>1,020 hp
             <p>Peak Power</p></FooterItem>
             </Footer>
+                <Link to='/energy/design'>
                 <RightButton>
-                <Link to='/engery/design'>
                 Order Now
-                </Link>
                 </RightButton>
+                </Link>
             </ButtonGroup>
             </Fade>
         </Container>
@@ -39,7 +39,7 @@ const SolarRoof = ({backgroundImg}) => {
 
 export default SolarRoof
 
-// Container for the Model X page
+// Container for the Solar Roof page
 const Container = styled.div`
     display: flex;
     flex-direction: column;

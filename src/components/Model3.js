@@ -23,7 +23,8 @@ const Model3 = ({backgroundImg}) => {
             <FooterItem>AWD
             <p>Dual Motor</p></FooterItem>
             </Footer>
-                <Link to='/modelSDesign'>
+                {/* <Link to='/model3/design'> */}
+                <Link to='/model3Design'>
                 <RightButton>
                 Order Now
                 </RightButton>

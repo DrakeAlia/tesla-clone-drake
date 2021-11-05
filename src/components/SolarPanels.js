@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SolarPanels = ({backgroundImg}) => {
     return (
@@ -26,11 +26,11 @@ const SolarPanels = ({backgroundImg}) => {
             <FooterItem>1,020 hp
             <p>Peak Power</p></FooterItem>
             </Footer>
-                <RightButton>
                 <Link to='/energy/design'>
+                <RightButton>
                 Order Now
-                </Link>
                 </RightButton>
+                </Link>
             </ButtonGroup>
             </Fade>
         </Container>
@@ -39,7 +39,7 @@ const SolarPanels = ({backgroundImg}) => {
 
 export default SolarPanels
 
-// Container for the Model X page
+// Container for the Solar Panel page
 const Container = styled.div`
     display: flex;
     flex-direction: column;

@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import { BrowserRouter as Link, Route, Router, Switch } from 'react-router-dom';
-import ModelSDesign from '../designs/ModelSDesign';
+import { Link } from 'react-router-dom';
+
 
 const ModelS = ({backgroundImg}) => {
     return (
@@ -27,13 +27,12 @@ const ModelS = ({backgroundImg}) => {
             <FooterItem>1,020 hp
             <p>Peak Power</p></FooterItem>
             </Footer>
+            {/* <Link to ='/models/design'> */}
+            <Link to='/modelSDesign'>
                 <RightButton>
-              
-                <Link to='/modelSDesign'>Test!!</Link>
-              
-              
-
+                Order Now
                 </RightButton>
+                </Link>
             </ButtonGroup>
             </Fade>
         </Container>
