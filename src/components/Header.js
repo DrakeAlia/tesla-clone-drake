@@ -31,6 +31,7 @@ const Header = () => {
                 <Link to='/solarpanels'>
                 Solar Panels
                 </Link>
+                <Link to='/modelSDesign'>Design</Link>
             </MainMenu>
             <RightMenu>
                 <a href="/shop">Shop</a>

@@ -1,11 +1,18 @@
-import React from 'react'
 import styled from 'styled-components'
+import React, { useState, useEffect } from 'react';
+
+
 
 
 const ModelSDesign = () => {
+
+    useEffect(() => {        
+        console.log('im here')
+      },[]);
+
     return (
         <Wrap>
-        <ItemText>Test</ItemText>
+        <ItemText>Dog 🔥 </ItemText>
         </Wrap>
     )
 }

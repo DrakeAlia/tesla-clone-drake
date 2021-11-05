@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import { BrowserRouter as Link } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
-// import Model3Design from '../designs/Model3Design';
+import { Link } from 'react-router-dom';
 
 const Model3 = ({backgroundImg}) => {
     return (
@@ -18,18 +16,18 @@ const Model3 = ({backgroundImg}) => {
             <Fade bottom>
             <ButtonGroup>
             <Footer>
-            <FooterItem>3.1 s
+            <FooterItem>3.1 s            
             <p>0-60 mph*</p></FooterItem>
             <FooterItem>353
             <p>Range (EPA est.)</p></FooterItem>
             <FooterItem>AWD
             <p>Dual Motor</p></FooterItem>
             </Footer>
+                <Link to='/modelSDesign'>
                 <RightButton>
-                <Link to='/model3/design'>
                 Order Now
-                </Link>
                 </RightButton>
+                </Link>
             </ButtonGroup>
             </Fade>
         </Container> 
