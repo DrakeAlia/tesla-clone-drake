@@ -17,6 +17,20 @@ import EnergyDesign from './components/designs/EnergyDesign'
 import Shop from './components/Shop'
 import Account from './components/Account';
 import NewInventory from './components/NewInventory';
+import UsedInventory from './components/UsedInventory';
+import TradeIn from './components/TradeIn';
+import Drive from './components/Drive';
+import CyberTruck from './components/CyberTruck';
+import RoadSter from './components/RoadSter';
+import Semi from './components/Semi';
+import Charging from './components/Charging';
+import Powerwall from './components/PowerWall';
+import Commercial from './components/Commercial';
+import Utilities from './components/Utilities';
+import FindUs from './components/FindUs';
+import Support from './components/Support';
+import Invenstor from './components/Invenstor';
+
 
 const App = () => {
   return (
@@ -37,7 +51,22 @@ const App = () => {
           <Route path='/shop' component={Shop} />
           <Route path='/account' component={Account} />
 
-          
+          <Route path='/inventory/new' component={NewInventory} />
+          <Route path='/inventory/used' component={UsedInventory} />
+          <Route path='/tradein' component={TradeIn} />
+          <Route path='/drive' component={Drive} />
+          <Route path='/cybertruck' component={CyberTruck} />
+          <Route path='/roadster' component={RoadSter} />
+          <Route path='/semi' component={Semi} />
+          <Route path='/charging' component={Charging} />
+          <Route path='/powerwall' component={Powerwall} />
+          <Route path='/commercial' component={Commercial} />
+          <Route path='/utilities' component={Utilities} />
+          <Route path='/googlemaps' component={FindUs} />
+          <Route path='/support' component={Support} />
+          <Route path='/tab-quarterly-disclosure' component={Invenstor} />
+
+
 
           <Route path='/energy/design' component={EnergyDesign} />
           <Route path='/modelSDesign' component={ModelSDesign} />
