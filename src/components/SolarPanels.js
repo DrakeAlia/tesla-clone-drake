@@ -51,7 +51,6 @@ const Container = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('/images/teslaPanels.png');
-    background-image: ${props => `url('/images/${props.bgImage}')`}
 `
 
 const ItemText = styled.div`
@@ -102,5 +101,6 @@ const Footer = styled.div`
 const FooterItem = styled.div`
     display: flex;
     flex-direction: column;
+    color: #ffffff;
 `
 

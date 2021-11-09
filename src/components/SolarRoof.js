@@ -47,16 +47,17 @@ const Container = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
+    color: #ffffff;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/images/teslaRoof.png');
-    background-image: ${props => `url('/images/${props.bgImage}')`}
+    background-image: url('/images/teslaStormRoof.png');
 `
 
 const ItemText = styled.div`
     padding-top: 15vh;
     text-align: center;
+    color: #ffffff;
 `
 
 // media for mobile/small screen 
@@ -102,6 +103,7 @@ const Footer = styled.div`
 const FooterItem = styled.div`
     display: flex;
     flex-direction: column;
+    color: #ffffff;
 `
 
 

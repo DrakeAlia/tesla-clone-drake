@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 const Model3 = ({backgroundImg}) => {
     return (
         <Container bgImage={backgroundImg}>
+        {/* <HeaderBox> */}
         <Header />
+        {/* </HeaderBox> */}
             <Fade bottom>
             <ItemText>
             <h1>Model 3</h1>
@@ -49,13 +51,18 @@ const Container = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/images/teslaModel3.png');
-    background-image: ${props => `url('/images/${props.bgImage}')`}
+    background-image: url('/images/teslaModel3Design.png');
+    /* background-image: url('/src/media/teslaModel3.png'); */
 `
+
+// const HeaderBox = styled.div`
+//     color: #ffffff;
+// `
 
 const ItemText = styled.div`
     padding-top: 15vh;
     text-align: center;
+    color: #ffffff;
 `
 
 // media for mobile/small screen 
@@ -102,4 +109,5 @@ const Footer = styled.div`
 const FooterItem = styled.div`
     display: flex;
     flex-direction: column;
+    color: #ffffff;
 `
