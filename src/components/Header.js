@@ -2,15 +2,20 @@ import React from 'react'
 import { useState } from 'react';
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
+import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [menuStatus, setMenuStatus] = useState(false)
     return (
         <Container>
-            <Link to='/'>
+        {/* <Logo /> */}
+            {/* <Link to='/'>
                 <img src='/images/logo.svg' alt="" />
-            </Link>
+            </Link> */}
+            {/* <Link to='/'>
+                <Logo />
+            </Link> */}
             <MainMenu>
                 <Link to='/models'>
                 Model S
@@ -63,6 +68,7 @@ export default Header
 const Container = styled.div`
     display: flex;
     align-items: center;
+    align-content: center;
     min-height: 60px;
     position: fixed;
     padding: 0 20px;
@@ -70,17 +76,14 @@ const Container = styled.div`
     left: 0;
     right: 0;
     z-index: 1;
-    a {
-        cursor: pointer;
-    }
 `
 
 const MainMenu = styled.div`
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
-    flex: 1;
-    padding-left: 70px;
+    padding-left: 15%;
     a {
         font-weight: 500;
         color: #393c41;
@@ -91,11 +94,10 @@ const MainMenu = styled.div`
 
 const RightMenu = styled.div`
     display: flex;
-    align-items: center;
     a {
         font-weight: 500;
         color: #393c41;
-        margin-right: 10px;
+        margin-right: 15px;
     }
     `
 

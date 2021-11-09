@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
+import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
 
 const ModelS = ({backgroundImg}) => {
     return (
         <Container bgImage={backgroundImg}>
+        <Logo />
         <Header />
             <Fade bottom>
             <ItemText>
@@ -47,6 +49,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -57,7 +60,6 @@ const Container = styled.div`
 
 const ItemText = styled.div`
     padding-top: 15vh;
-    text-align: center;
 `
 
 // media for mobile/small screen 

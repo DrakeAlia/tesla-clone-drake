@@ -38,6 +38,7 @@ const Wrap = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -50,8 +51,7 @@ const Wrap = styled.div`
 `
 
 const ItemText = styled.div`
-    padding-top: 15vh;
-    text-align: center;
+    padding-top: 17vh;
 `
 
 // media for mobile/small screen 

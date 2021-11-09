@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
+import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
 const Model3 = ({backgroundImg}) => {
     return (
         <Container bgImage={backgroundImg}>
-        {/* <HeaderBox> */}
+        <Logo />
         <Header />
-        {/* </HeaderBox> */}
             <Fade bottom>
             <ItemText>
             <h1>Model 3</h1>
@@ -46,6 +46,7 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -55,13 +56,8 @@ const Container = styled.div`
     /* background-image: url('/src/media/teslaModel3.png'); */
 `
 
-// const HeaderBox = styled.div`
-//     color: #ffffff;
-// `
-
 const ItemText = styled.div`
     padding-top: 15vh;
-    text-align: center;
     color: #ffffff;
 `
 

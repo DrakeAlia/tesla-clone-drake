@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
+import Logo from './components/Logo';
 import ModelS from './components/ModelS';
 import Model3 from './components/Model3';
 import ModelX from './components/ModelX';
@@ -37,7 +38,8 @@ const App = () => {
     <Router>
       <div className="App">
       <Switch>
-        <Route exact path='/'>        
+        <Route exact path='/'>  
+      <Logo />   
       <Header />
           <Home />
         </Route>
