@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import Fade  from 'react-reveal/Fade';
 import { useEffect, useState } from 'react';
 import Logo from '../Logo';
 
 
 
-const ModelSDesign = () => {
-    useEffect(() => {        
+const ModelSDesign = ({backgroundImg}) => {
+    useEffect(() => {
+        // window.scrollTo(0, 0)        
         console.log('im here')
       },[]);
       
@@ -17,7 +17,7 @@ const ModelSDesign = () => {
     const [interior, setInterior] = useState(null)
 
     return (
-        <Wrap>
+        <Wrap bgImage={backgroundImg}>
         <Logo />
         <WidgetNav>
         <WidgetTitle>Model S</WidgetTitle>
@@ -37,7 +37,8 @@ const ModelSDesign = () => {
             {/* <DetailsSideItem>mph</DetailsSideItem> */}
             <DetailsSubItem>Top Speed</DetailsSubItem>
             </DetailsItem>
-            <DetailsItem>3.1sec
+            <DetailsItem>
+            3.1sec
             {/* <DetailsSideItem>sec</DetailsSideItem> */}
             <DetailsSubItem>0-60 mph</DetailsSubItem>
             </DetailsItem>
@@ -54,8 +55,7 @@ const ModelSDesign = () => {
         <MotorFeatureBtn>Feature Details</MotorFeatureBtn>
         <Paint>Paint</Paint>
         <PaintBtn></PaintBtn>
-        <PaintDesc>Solid Black</PaintDesc>
-        <TriMotorBtn>$1,500</TriMotorBtn>
+        <PaintDesc>Pearl White Multi-Coat Included</PaintDesc>
         <Wheels>Wheels</Wheels>
         <WheelBtn></WheelBtn>
         <WheelDesc>21" Arachnid Wheels</WheelDesc>
@@ -94,9 +94,8 @@ const ModelSDesign = () => {
         <PaymentBtn>Continue Payment</PaymentBtn>
         </WidgetNav>
         <FooterItemBox>
-            <FooterBtn></FooterBtn>
+            <FooterBtn>*</FooterBtn>
             <FooterItem>$100,990 Purchase price</FooterItem>
-                |
             <FooterItem>$95,490 After potential savings</FooterItem>
         </FooterItemBox>
         </Wrap>
@@ -113,6 +112,9 @@ const Wrap = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('/images/teslaModelSBlackDesign1.png') */
 `
 
 const WidgetNav = styled.div`
@@ -128,7 +130,7 @@ const WidgetNav = styled.div`
 `
 
 const WidgetTitle = styled.div`
-    padding-top: 15vh;
+    padding-top: 5vh;
     font-size: 40px;
     color: #393c41;
 `
@@ -170,9 +172,9 @@ const DetailsItem = styled.div`
     color: #393c41;
 `
 
-const DetailsSideItem = styled.div`
-    color: #393c41;
-`
+// const DetailsSideItem = styled.div`
+//     color: #393c41;
+// `
 
 const DetailsSubItem = styled.div`
     color: #393c41;
@@ -211,7 +213,6 @@ const MotorFeatureBtn = styled.div`
 `
 
 const Paint = styled.div`
-    padding-top: 15vh;
     font-size: 40px;
     color: #393c41;
 `
@@ -225,7 +226,6 @@ const PaintDesc = styled.div`
 `
 
 const Wheels = styled.div`
-    padding-top: 15vh;
     font-size: 40px;
     color: #393c41;
 `
@@ -289,6 +289,7 @@ const AutoSteer = styled.div`
 const SelfDrivingDesc = styled.div`
 
 `
+
 const SelfDrivingBtns = styled.div`
 
 `
@@ -314,14 +315,22 @@ const PaymentBtn = styled.div`
 `
 
 const FooterItemBox = styled.div`
-
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2vh;
 `
 
 const FooterBtn = styled.div`
-
+    padding-top: 2vh;
+    padding: 10px;
+    color: #393c41;
 `
 
 const FooterItem = styled.div`
-
+    padding-top: 2vh;
+    padding: 10px;
+    color: #393c41;
 `
 
