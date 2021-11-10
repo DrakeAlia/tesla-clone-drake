@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Fade  from 'react-reveal/Fade';
 import { useEffect, useState } from 'react';
 import Logo from '../Logo';
 
@@ -29,44 +28,47 @@ const ModelXDesign = ({backgroundImg}) => {
         </WidgetPriceTab>
         <WidgetCarDetails>
             <DetailsItem>
-            375 mi
-            {/* <DetailsSideItem>mi</DetailsSideItem> */}
+            332mi
             <DetailsSubItem>Range (est.)</DetailsSubItem>
             </DetailsItem>
             <DetailsItem>
-            155 mph
-            {/* <DetailsSideItem>mph</DetailsSideItem> */}
+            155mph
             <DetailsSubItem>Top Speed</DetailsSubItem>
             </DetailsItem>
-            <DetailsItem>3.1sec
-            {/* <DetailsSideItem>sec</DetailsSideItem> */}
+            <DetailsItem>
+            3.8sec
             <DetailsSubItem>0-60 mph</DetailsSubItem>
             </DetailsItem>
         </WidgetCarDetails>
-        <DualMotor>
-            <DualMotorBtn>Model S</DualMotorBtn>
-            <DualMotorBtn>$89,490*</DualMotorBtn>
+        <DualMotor> Dual Motor All-Wheel Drive
+            <DualMotorBtn>Model X</DualMotorBtn>
+            <DualMotorBtn>$99,690*</DualMotorBtn>
         </DualMotor>
-        <TriMotor>
-            <TriMotorBtn>Model S Plaid</TriMotorBtn>
-            <TriMotorBtn>$124,490*</TriMotorBtn>
+        <TriMotor> Tri Motor All-Wheel Drive
+            <TriMotorBtn>Model X Plaid</TriMotorBtn>
+            <TriMotorBtn>$114,690*</TriMotorBtn>
         </TriMotor>
         <PriceDesc>*Prices above include potential incentives and gas savings of $5,500.<p>Learn More</p></PriceDesc>
         <MotorFeatureBtn>Feature Details</MotorFeatureBtn>
         <Paint>Paint</Paint>
         <PaintBtn></PaintBtn>
-        <PaintDesc>Solid Black</PaintDesc>
-        <TriMotorBtn>$1,500</TriMotorBtn>
+        <PaintDesc>Pearl White Multi-Coat Included</PaintDesc>
         <Wheels>Wheels</Wheels>
         <WheelBtn></WheelBtn>
-        <WheelDesc>21" Arachnid Wheels</WheelDesc>
-        <WheelDesc>$4,500</WheelDesc>
-        <WheelsRange>Range (est.): 375mi</WheelsRange>
+        <WheelDesc>22'' Turbine Wheels</WheelDesc>
+        <WheelDesc>$5,500</WheelDesc>
+        <WheelsRange>Range (est.): 332mi</WheelsRange>
         <Interior>Interior</Interior>
         <InteriorBtn></InteriorBtn>
         <InteriorDesc>All Black</InteriorDesc>
         <InteriorDesc>Included</InteriorDesc>
         <InteriorColor>Ebony Décor</InteriorColor>
+        <Seating>Seating Layout</Seating>
+        <SeatingBtn></SeatingBtn>
+        <SeatingLayouts>Five Seats Included</SeatingLayouts>
+        <SeatingRange>Range (est.): 332mi</SeatingRange>
+        <ViewSeats>View Seating Layouts</ViewSeats>
+        <SeatingDetails>Feature Details</SeatingDetails>
         <InteriorFeatureBtn>Feature Details</InteriorFeatureBtn>
         <SelfDriving>Full Self-Driving Capability</SelfDriving>
         <SelfDrivingPrice>$10,000</SelfDrivingPrice>
@@ -90,14 +92,14 @@ const ModelXDesign = ({backgroundImg}) => {
             <SelfDrivingAddBtn>Add</SelfDrivingAddBtn>
             <SelfDrivingFeatureBtn>Feature Details</SelfDrivingFeatureBtn>
         </SelfDrivingBtns>
-        <OrderModel>Order Your Model S</OrderModel>
+        <OrderModel>Order Your Model X</OrderModel>
         <OrderModelDelivery>Est. Delivery: June</OrderModelDelivery>
         <PaymentBtn>Continue Payment</PaymentBtn>
         </WidgetNav>
         <FooterItemBox>
             <FooterBtn>*</FooterBtn>
-            <FooterItem>$100,990 Purchase price</FooterItem>
-            <FooterItem>$95,490 After potential savings</FooterItem>
+            <FooterItem>$110,490 Purchase price</FooterItem>
+            <FooterItem>$105,190 After potential savings</FooterItem>
         </FooterItemBox>
         </Wrap>
     )
@@ -260,6 +262,30 @@ const InteriorColor = styled.div`
 `
 
 const InteriorFeatureBtn = styled.div`
+
+`
+
+const Seating = styled.div`
+
+`
+
+const SeatingBtn = styled.div`
+
+`
+
+const SeatingLayouts = styled.div`
+
+`
+
+const SeatingRange = styled.div`
+
+`
+
+const ViewSeats = styled.div`
+
+`
+
+const SeatingDetails = styled.div`
 
 `
 

@@ -28,12 +28,12 @@ const Model3Design = ({backgroundImg}) => {
         </WidgetPriceTab>
         <WidgetCarDetails>
             <DetailsItem>
-            334 mi
+            334mi
             {/* <DetailsSideItem>mi</DetailsSideItem> */}
             <DetailsSubItem>Range (est.)</DetailsSubItem>
             </DetailsItem>
             <DetailsItem>
-            145 mph
+            145mph
             {/* <DetailsSideItem>mph</DetailsSideItem> */}
             <DetailsSubItem>Top Speed</DetailsSubItem>
             </DetailsItem>
@@ -43,11 +43,11 @@ const Model3Design = ({backgroundImg}) => {
             <DetailsSubItem>0-60 mph</DetailsSubItem>
             </DetailsItem>
         </WidgetCarDetails>
-        <RearMotor>
+        <RearMotor> Rear-Wheel Drive
             <RearMotorBtn>Model 3</RearMotorBtn>
             <RearMotorBtn>$40,690*</RearMotorBtn>
         </RearMotor>
-        <DualMotor>
+        <DualMotor> Dual Motor All-Wheel Drive
             <DualMotorBtn>Model 3 Long Range</DualMotorBtn>
             <DualMotorBtn>$46,690*</DualMotorBtn>
             <DualMotorBtn>Model 3 Performance</DualMotorBtn>

@@ -28,12 +28,12 @@ const ModelSDesign = ({backgroundImg}) => {
         </WidgetPriceTab>
         <WidgetCarDetails>
             <DetailsItem>
-            375 mi
+            375mi
             {/* <DetailsSideItem>mi</DetailsSideItem> */}
             <DetailsSubItem>Range (est.)</DetailsSubItem>
             </DetailsItem>
             <DetailsItem>
-            155 mph
+            155mph
             {/* <DetailsSideItem>mph</DetailsSideItem> */}
             <DetailsSubItem>Top Speed</DetailsSubItem>
             </DetailsItem>
@@ -43,11 +43,11 @@ const ModelSDesign = ({backgroundImg}) => {
             <DetailsSubItem>0-60 mph</DetailsSubItem>
             </DetailsItem>
         </WidgetCarDetails>
-        <DualMotor>
+        <DualMotor> Dual Motor All-Wheel Drive
             <DualMotorBtn>Model S</DualMotorBtn>
             <DualMotorBtn>$89,490*</DualMotorBtn>
         </DualMotor>
-        <TriMotor>
+        <TriMotor> Tri Motor All-Wheel Drive
             <TriMotorBtn>Model S Plaid</TriMotorBtn>
             <TriMotorBtn>$124,490*</TriMotorBtn>
         </TriMotor>
