@@ -9,7 +9,13 @@ const ModelSDesign = () => {
     useEffect(() => {        
         console.log('im here')
       },[]);
-    const [widget, setWidget ] = useState(null)
+      
+    const [pricewidget, setPriceWidget] = useState(null)
+    const [allWheelDrive, setAllWheelDrive] = useState(null)
+    const [paint, setPaint] = useState(null)
+    const [wheels, setWheels] = useState(null)
+    const [interior, setInterior] = useState(null)
+
     return (
         <Wrap>
         <Logo />
@@ -36,7 +42,63 @@ const ModelSDesign = () => {
             <DetailsSubItem>0-60 mph</DetailsSubItem>
             </DetailsItem>
         </WidgetCarDetails>
+        <DualMotor>
+            <DualMotorBtn>Model S</DualMotorBtn>
+            <DualMotorBtn>$89,490*</DualMotorBtn>
+        </DualMotor>
+        <TriMotor>
+            <TriMotorBtn>Model S Plaid</TriMotorBtn>
+            <TriMotorBtn>$124,490*</TriMotorBtn>
+        </TriMotor>
+        <PriceDesc>*Prices above include potential incentives and gas savings of $5,500.<p>Learn More</p></PriceDesc>
+        <MotorFeatureBtn>Feature Details</MotorFeatureBtn>
+        <Paint>Paint</Paint>
+        <PaintBtn></PaintBtn>
+        <PaintDesc>Solid Black</PaintDesc>
+        <TriMotorBtn>$1,500</TriMotorBtn>
+        <Wheels>Wheels</Wheels>
+        <WheelBtn></WheelBtn>
+        <WheelDesc>21" Arachnid Wheels</WheelDesc>
+        <WheelDesc>$4,500</WheelDesc>
+        <WheelsRange>Range (est.): 375mi</WheelsRange>
+        <Interior>Interior</Interior>
+        <InteriorBtn></InteriorBtn>
+        <InteriorDesc>All Black</InteriorDesc>
+        <InteriorDesc>Included</InteriorDesc>
+        <InteriorColor>Ebony Décor</InteriorColor>
+        <InteriorFeatureBtn>Feature Details</InteriorFeatureBtn>
+        <SelfDriving>Full Self-Driving Capability</SelfDriving>
+        <SelfDrivingPrice>$10,000</SelfDrivingPrice>
+        <SelfDrivingList>
+            <SelfDrivingListItem>Navigate on Autopilot</SelfDrivingListItem>
+            <SelfDrivingListItem>Auto Lane Change</SelfDrivingListItem>
+            <SelfDrivingListItem>Autopark</SelfDrivingListItem>
+            <SelfDrivingListItem>Summon</SelfDrivingListItem>
+            <SelfDrivingListItem>Full Self-Driving Computer</SelfDrivingListItem>
+            <SelfDrivingListItem>Traffic Light and Stop Sign Control</SelfDrivingListItem>
+        </SelfDrivingList>
+        <ComingSoon>Coming Soon</ComingSoon>
+        <AutoSteer>Autosteer on city streets</AutoSteer>
+        <SelfDrivingDesc>The currently enabled features require active driver 
+        supervision and do not make the vehicle autonomous. The activation and use of these features 
+        are dependent on achieving reliability far in excess of human drivers as demonstrated by 
+        billions of miles of experience, as well as regulatory approval, which may take longer in 
+        some jurisdictions. As these self-driving features evolve, your car will be continuously 
+        upgraded through over-the-air software updates.</SelfDrivingDesc>
+        <SelfDrivingBtns>
+            <SelfDrivingAddBtn>Add</SelfDrivingAddBtn>
+            <SelfDrivingFeatureBtn>Feature Details</SelfDrivingFeatureBtn>
+        </SelfDrivingBtns>
+        <OrderModel>Order Your Model S</OrderModel>
+        <OrderModelDelivery>Est. Delivery: June</OrderModelDelivery>
+        <PaymentBtn>Continue Payment</PaymentBtn>
         </WidgetNav>
+        <FooterItemBox>
+            <FooterBtn></FooterBtn>
+            <FooterItem>$100,990 Purchase price</FooterItem>
+                |
+            <FooterItem>$95,490 After potential savings</FooterItem>
+        </FooterItemBox>
         </Wrap>
     )
 }
@@ -107,6 +169,7 @@ const DetailsItem = styled.div`
     padding-top: 2vh;
     color: #393c41;
 `
+
 const DetailsSideItem = styled.div`
     color: #393c41;
 `
@@ -143,13 +206,16 @@ const PriceDesc = styled.div`
 
 `
 
-const FeatureBtn = styled.div`
+const MotorFeatureBtn = styled.div`
 
 `
 
 const Paint = styled.div`
-
+    padding-top: 15vh;
+    font-size: 40px;
+    color: #393c41;
 `
+
 const PaintBtn = styled.div`
 
 `
@@ -159,7 +225,9 @@ const PaintDesc = styled.div`
 `
 
 const Wheels = styled.div`
-
+    padding-top: 15vh;
+    font-size: 40px;
+    color: #393c41;
 `
 
 const WheelBtn = styled.div`
