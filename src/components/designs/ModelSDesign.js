@@ -101,7 +101,7 @@ const ModelSDesign = ({backgroundImg}) => {
 
 export default ModelSDesign
 
-
+// Container for the whole page
 const Wrap = styled.div`
     display: flex;
     flex-direction: column;
@@ -109,11 +109,12 @@ const Wrap = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
+    border-color: azure;
     /* background-position: center;
     background-repeat: no-repeat;
     background-image: url('/images/teslaModelSBlackDesign1.png') */
 `
-
+// Widget Container for the model details
 const WidgetNav = styled.div`
     display: flex;
     align-content: center;
@@ -124,158 +125,202 @@ const WidgetNav = styled.div`
     margin-right: 5%;
     width: 300px;
     padding: 20px;
+    border: solid green 5px;
 `
 
+// Model name
 const WidgetTitle = styled.div`
     padding-top: 5px;
     font-size: 40px;
     color: #393c41;
 `
 
+// Est. Devilvery: June
 const DeliveryTime = styled.div`
     padding-top: 9px;
     color: #393c41;
+    border: solid blue 5px;
 `
 
+// Model Price container
 const WidgetPriceTab = styled.div`
     display: flex;
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 8px;
+    border: solid coral 5px;
 `
 
+// Purchase Price & Potential Savings*
 const WidgetPrice = styled.div`
     padding-top: 9px;
     color: #393c41;
 `
-
+// Purchase Price & Potential Savings*
 const WidgetSavings = styled.div`
     padding-top: 9px;
     color: #393c41;
 `
-
+// Model 
 const WidgetCarDetails = styled.div`
     display: flex;
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 2px;
- 
+    border: solid black 4px;
 `
 
+// 375mi
 const DetailsItem = styled.div`
     padding-top: 2px;
     font-size: 15px;
     color: #393c41;
+    border: solid teal 4px;
 `
 
+// Range (est.)
 const DetailsSubItem = styled.div`
     padding-top: 2px;
     color: #393c41;
+    border: solid teal 4px;
 `
 
+// Dual Motor All-Wheel Drive
 const DualMotor = styled.div`
     display: flex;
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 10px;
+    border: solid tan 4px;
 `
 
 const DualMotorBtn = styled.div`
-
+    
 `
 
+// Tri Motor All-Wheel Drive
 const TriMotor = styled.div`
     display: flex;
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 10px;
+    border: solid navy 4px;
 `
 
 const TriMotorBtn = styled.div`
     padding-top: 10px;
+
 `
 
+// Prices above include potential incentives and gas savings of $5,500. Learn More
 const PriceDesc = styled.div`
     padding-top: 10px;
+    border: solid magenta 4px;
 `
-
+// Feature Details (Drive)
 const MotorFeatureBtn = styled.div`
     padding-top: 10px;
+    border: solid cadetblue 4px;
 `
 
+// Paint
 const Paint = styled.div`
     padding-top: 10px;
     font-size: 40px;
     color: #393c41;
+    border: solid green 5px;
 `
 
 const PaintBtn = styled.div`
     padding-top: 10px;
 `
 
+// Pearl White Multi-Coat Included
 const PaintDesc = styled.div`
     padding-top: 10px;
+    border: solid darkgreen 4px;
 `
 
+// Wheels
 const Wheels = styled.div`
     padding-top: 10px;
     font-size: 30px;
     color: #393c41;
+    border: solid palevioletred 4px;
 `
 
 const WheelBtn = styled.div`
 
 `
 
+// 21" Arachnid Wheels
 const WheelDesc = styled.div`
     padding-top: 10px;
+    border: solid hotpink 4px;
 `
 
+// Range (est.): 375mi
 const WheelsRange = styled.div`
     padding-top: 10px;
+    border: solid violet 4px;
 `
 
+// Interior
 const Interior = styled.div`
     font-size: 30px;
+    border: solid yellow 4px;
 `
 
 const InteriorBtn = styled.div`
 
 `
 
+// Included
 const InteriorDesc = styled.div`
     padding-top: 10px;
+    border: solid blue 4px;
 `
 
+// Ebony Décor
 const InteriorColor = styled.div`
     padding-top: 10px;
+    border: solid red 4px;
 `
 
+// Feature Details
 const InteriorFeatureBtn = styled.div`
-
+    border: solid pink 4px;
 `
 
+// Full Self-Driving Capability
 const SelfDriving = styled.div`
     padding-top: 10px;
     font-size: 30px;
+    border: solid gold 4px;
 `
 
+// $10,000
 const SelfDrivingPrice = styled.div`
     padding-top: 10px;
+    border: solid black 4px;
 `
 
+// 
 const SelfDrivingList = styled.div`
     padding-top: 10px;
 `
 
+// Navigate on Autopilot - Auto Lane Change - Autopark - Summon - Full Self-Driving Computer - Traffic Light and Stop Sign Control
 const SelfDrivingListItem = styled.div`
     padding-top: 10px;
+    height: 20px;
 `
 
+// Coming Soon 
 const ComingSoon = styled.div`
     padding-top: 10px;
 
@@ -308,12 +353,14 @@ const OrderModel = styled.div`
 
 const OrderModelDelivery = styled.div`
     padding-top: 10px;
+
 `
 
 const PaymentBtn = styled.div`
     padding-top: 10px;
 `
 
+// Bottom container 
 const FooterItemBox = styled.div`
     display: flex;
     align-content: center;
@@ -326,11 +373,13 @@ const FooterBtn = styled.div`
     padding-top: 2px;
     padding: 10px;
     color: #393c41;
+    border: solid green 4px;
 `
 
 const FooterItem = styled.div`
     padding-top: 2px;
     padding: 10px;
     color: #393c41;
+    border: solid green 4px;
 `
 
