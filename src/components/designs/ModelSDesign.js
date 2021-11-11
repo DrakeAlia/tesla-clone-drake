@@ -29,17 +29,14 @@ const ModelSDesign = ({backgroundImg}) => {
         <WidgetCarDetails>
             <DetailsItem>
             375mi
-            {/* <DetailsSideItem>mi</DetailsSideItem> */}
             <DetailsSubItem>Range (est.)</DetailsSubItem>
             </DetailsItem>
             <DetailsItem>
             155mph
-            {/* <DetailsSideItem>mph</DetailsSideItem> */}
             <DetailsSubItem>Top Speed</DetailsSubItem>
             </DetailsItem>
             <DetailsItem>
             3.1sec
-            {/* <DetailsSideItem>sec</DetailsSideItem> */}
             <DetailsSubItem>0-60 mph</DetailsSubItem>
             </DetailsItem>
         </WidgetCarDetails>
@@ -130,13 +127,13 @@ const WidgetNav = styled.div`
 `
 
 const WidgetTitle = styled.div`
-    padding-top: 5vh;
+    padding-top: 5px;
     font-size: 40px;
     color: #393c41;
 `
 
 const DeliveryTime = styled.div`
-    padding-top: 2vh;
+    padding-top: 9px;
     color: #393c41;
 `
 
@@ -145,16 +142,16 @@ const WidgetPriceTab = styled.div`
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 2vh;
+    padding-top: 8px;
 `
 
 const WidgetPrice = styled.div`
-    padding-top: 2vh;
+    padding-top: 9px;
     color: #393c41;
 `
 
 const WidgetSavings = styled.div`
-    padding-top: 2vh;
+    padding-top: 9px;
     color: #393c41;
 `
 
@@ -163,20 +160,18 @@ const WidgetCarDetails = styled.div`
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 2vh;
+    padding-top: 2px;
  
 `
 
 const DetailsItem = styled.div`
-    padding-top: 2vh;
+    padding-top: 2px;
+    font-size: 15px;
     color: #393c41;
 `
 
-// const DetailsSideItem = styled.div`
-//     color: #393c41;
-// `
-
 const DetailsSubItem = styled.div`
+    padding-top: 2px;
     color: #393c41;
 `
 
@@ -185,7 +180,7 @@ const DualMotor = styled.div`
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 2vh;
+    padding-top: 10px;
 `
 
 const DualMotorBtn = styled.div`
@@ -197,36 +192,38 @@ const TriMotor = styled.div`
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 2vh;
+    padding-top: 10px;
 `
 
 const TriMotorBtn = styled.div`
-
+    padding-top: 10px;
 `
 
 const PriceDesc = styled.div`
-
+    padding-top: 10px;
 `
 
 const MotorFeatureBtn = styled.div`
-
+    padding-top: 10px;
 `
 
 const Paint = styled.div`
+    padding-top: 10px;
     font-size: 40px;
     color: #393c41;
 `
 
 const PaintBtn = styled.div`
-
+    padding-top: 10px;
 `
 
 const PaintDesc = styled.div`
-
+    padding-top: 10px;
 `
 
 const Wheels = styled.div`
-    font-size: 40px;
+    padding-top: 10px;
+    font-size: 30px;
     color: #393c41;
 `
 
@@ -235,15 +232,15 @@ const WheelBtn = styled.div`
 `
 
 const WheelDesc = styled.div`
-
+    padding-top: 10px;
 `
 
 const WheelsRange = styled.div`
-
+    padding-top: 10px;
 `
 
 const Interior = styled.div`
-
+    font-size: 30px;
 `
 
 const InteriorBtn = styled.div`
@@ -251,11 +248,11 @@ const InteriorBtn = styled.div`
 `
 
 const InteriorDesc = styled.div`
-
+    padding-top: 10px;
 `
 
 const InteriorColor = styled.div`
-
+    padding-top: 10px;
 `
 
 const InteriorFeatureBtn = styled.div`
@@ -263,35 +260,37 @@ const InteriorFeatureBtn = styled.div`
 `
 
 const SelfDriving = styled.div`
-
+    padding-top: 10px;
+    font-size: 30px;
 `
 
 const SelfDrivingPrice = styled.div`
-
+    padding-top: 10px;
 `
 
 const SelfDrivingList = styled.div`
-
+    padding-top: 10px;
 `
 
 const SelfDrivingListItem = styled.div`
-
+    padding-top: 10px;
 `
 
 const ComingSoon = styled.div`
+    padding-top: 10px;
 
 `
 
 const AutoSteer = styled.div`
-
+    padding-top: 10px;
 `
 
 const SelfDrivingDesc = styled.div`
-
+    padding-top: 10px;
 `
 
 const SelfDrivingBtns = styled.div`
-
+    padding-top: 10px;
 `
 
 const SelfDrivingAddBtn = styled.div`
@@ -303,15 +302,16 @@ const SelfDrivingFeatureBtn = styled.div`
 `
 
 const OrderModel = styled.div`
-
+    padding-top: 10px;
+    font-size: 30px;
 `
 
 const OrderModelDelivery = styled.div`
-
+    padding-top: 10px;
 `
 
 const PaymentBtn = styled.div`
-
+    padding-top: 10px;
 `
 
 const FooterItemBox = styled.div`
@@ -319,17 +319,17 @@ const FooterItemBox = styled.div`
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 2vh;
+    padding-top: 2px;
 `
 
 const FooterBtn = styled.div`
-    padding-top: 2vh;
+    padding-top: 2px;
     padding: 10px;
     color: #393c41;
 `
 
 const FooterItem = styled.div`
-    padding-top: 2vh;
+    padding-top: 2px;
     padding: 10px;
     color: #393c41;
 `
