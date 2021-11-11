@@ -29,45 +29,55 @@ const ModelYDesign = ({backgroundImg}) => {
         </WidgetPriceTab>
         <WidgetCarDetails>
             <DetailsItem>
-            375 mi
-            {/* <DetailsSideItem>mi</DetailsSideItem> */}
+            318mi
             <DetailsSubItem>Range (est.)</DetailsSubItem>
             </DetailsItem>
             <DetailsItem>
-            155 mph
-            {/* <DetailsSideItem>mph</DetailsSideItem> */}
+            135mph
             <DetailsSubItem>Top Speed</DetailsSubItem>
             </DetailsItem>
-            <DetailsItem>3.1sec
-            {/* <DetailsSideItem>sec</DetailsSideItem> */}
+            <DetailsItem>
+            4.8sec
             <DetailsSubItem>0-60 mph</DetailsSubItem>
             </DetailsItem>
         </WidgetCarDetails>
-        <DualMotor>
-            <DualMotorBtn>Model S</DualMotorBtn>
-            <DualMotorBtn>$89,490*</DualMotorBtn>
+        <DualMotor> Dual Motor All-Wheel Drive
+            <DualMotorBtn>Model Y Long Range</DualMotorBtn>
+            <DualMotorBtn>$53,690*</DualMotorBtn>
+            <DualMotorBtn>Model Y Performance</DualMotorBtn>
+            <DualMotorBtn>$58,690*</DualMotorBtn>
         </DualMotor>
-        <TriMotor>
-            <TriMotorBtn>Model S Plaid</TriMotorBtn>
-            <TriMotorBtn>$124,490*</TriMotorBtn>
-        </TriMotor>
-        <PriceDesc>*Prices above include potential incentives and gas savings of $5,500.<p>Learn More</p></PriceDesc>
+        <PriceDesc>*Prices above include potential incentives and gas savings of $4,300.<p>Learn More</p></PriceDesc>
         <MotorFeatureBtn>Feature Details</MotorFeatureBtn>
         <Paint>Paint</Paint>
         <PaintBtn></PaintBtn>
-        <PaintDesc>Solid Black</PaintDesc>
-        <TriMotorBtn>$1,500</TriMotorBtn>
+        <PaintDesc>Pearl White Multi-Coat Included</PaintDesc>
         <Wheels>Wheels</Wheels>
         <WheelBtn></WheelBtn>
-        <WheelDesc>21" Arachnid Wheels</WheelDesc>
-        <WheelDesc>$4,500</WheelDesc>
-        <WheelsRange>Range (est.): 375mi</WheelsRange>
+        <WheelDesc>20’’ Induction Wheels</WheelDesc>
+        <WheelDesc>$2,000</WheelDesc>
+        <WheelsRange>Range (est.): 318mi</WheelsRange>
+        <Tow>Tow Hitch</Tow>
+        <TowPrice>$1,000</TowPrice>
+        <TowDesc>High strength, Class II steel tow bar capable of towing up to 3,500 lbs</TowDesc>
+        <TowBtn>Add</TowBtn>
         <Interior>Interior</Interior>
         <InteriorBtn></InteriorBtn>
         <InteriorDesc>All Black</InteriorDesc>
         <InteriorDesc>Included</InteriorDesc>
         <InteriorColor>Ebony Décor</InteriorColor>
         <InteriorFeatureBtn>Feature Details</InteriorFeatureBtn>
+        <Seating>Seating Layout</Seating>
+        <SeatingBtn></SeatingBtn>
+        <SeatingLayouts>Five Seats Included</SeatingLayouts>
+        <SeatingRange>Range (est.): 318mi</SeatingRange>
+        <SeatingDesc>
+            <SeatingItem>Second row with adjustable seatbacks</SeatingItem>
+            <SeatingItem>Fold-flat second row for maximum cargo storage</SeatingItem>
+            <SeatingItem>Electronic fold-flat releases in trunk</SeatingItem>
+        </SeatingDesc>
+        <ViewSeats>View Seating Layouts</ViewSeats>
+        <SeatingDetails>Feature Details</SeatingDetails>
         <SelfDriving>Full Self-Driving Capability</SelfDriving>
         <SelfDrivingPrice>$10,000</SelfDrivingPrice>
         <SelfDrivingList>
@@ -90,14 +100,14 @@ const ModelYDesign = ({backgroundImg}) => {
             <SelfDrivingAddBtn>Add</SelfDrivingAddBtn>
             <SelfDrivingFeatureBtn>Feature Details</SelfDrivingFeatureBtn>
         </SelfDrivingBtns>
-        <OrderModel>Order Your Model S</OrderModel>
+        <OrderModel>Order Your Model Y</OrderModel>
         <OrderModelDelivery>Est. Delivery: June</OrderModelDelivery>
         <PaymentBtn>Continue Payment</PaymentBtn>
         </WidgetNav>
         <FooterItemBox>
             <FooterBtn>*</FooterBtn>
-            <FooterItem>$100,990 Purchase price</FooterItem>
-            <FooterItem>$95,490 After potential savings</FooterItem>
+            <FooterItem>$59,990 Purchase price</FooterItem>
+            <FooterItem>$55,690 After potential savings</FooterItem>
         </FooterItemBox>
         </Wrap>
     )
@@ -193,17 +203,6 @@ const DualMotorBtn = styled.div`
 
 `
 
-const TriMotor = styled.div`
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 2vh;
-`
-
-const TriMotorBtn = styled.div`
-
-`
 
 const PriceDesc = styled.div`
 
@@ -243,6 +242,22 @@ const WheelsRange = styled.div`
 
 `
 
+const Tow = styled.div`
+
+`
+
+const TowPrice = styled.div`
+
+`
+
+const TowDesc = styled.div`
+
+`
+
+const TowBtn = styled.div`
+
+`
+
 const Interior = styled.div`
 
 `
@@ -260,6 +275,38 @@ const InteriorColor = styled.div`
 `
 
 const InteriorFeatureBtn = styled.div`
+
+`
+
+const Seating = styled.div`
+
+`
+
+const SeatingBtn = styled.div`
+
+`
+
+const SeatingLayouts = styled.div`
+
+`
+
+const SeatingRange = styled.div`
+
+`
+
+const SeatingDesc = styled.div`
+
+`
+
+const SeatingItem = styled.div`
+
+`
+
+const ViewSeats = styled.div`
+
+`
+
+const SeatingDetails = styled.div`
 
 `
 
