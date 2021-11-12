@@ -47,23 +47,23 @@ const ModelSDesign = ({backgroundImg}) => {
         <Feature>Feature Details</Feature>
 
         <SubTitle>Paint</SubTitle>
-        <SubSelector></SubSelector>
-        <SubSelectorDesc>Pearl White Multi-Coat Included</SubSelectorDesc>
+        <Selector></Selector>
+        <SelectorDesc>Pearl White Multi-Coat Included</SelectorDesc>
        
        <SubTitle>Wheels</SubTitle>
-       <SubSelector></SubSelector>
-       <SubSelectorDesc>21" Arachnid Wheels</SubSelectorDesc>
-       <SubSelectorDesc>$4,500</SubSelectorDesc>
-       <SubSelectorDesc>Range (est.): 375mi</SubSelectorDesc>
+       <Selector></Selector>
+       <SelectorDesc>21" Arachnid Wheels</SelectorDesc>
+       <SelectorDesc>$4,500</SelectorDesc>
+       <SelectorDesc>Range (est.): 375mi</SelectorDesc>
 
        <SubTitle>Interior</SubTitle>
-       <SubSelector></SubSelector>
-       <SubSelectorDesc>All Black Included</SubSelectorDesc>
-       <SubSelectorDesc>Ebony Décor</SubSelectorDesc>
+       <Selector></Selector>
+       <SelectorDesc>All Black Included</SelectorDesc>
+       <SelectorDesc>Ebony Décor</SelectorDesc>
        <Feature>Feature Details</Feature>
 
        <SubTitle>Full Self-Driving Capability</SubTitle>
-       <SubSelectorDesc>$10,000</SubSelectorDesc>
+       <SelectorDesc>$10,000</SelectorDesc>
        <SubDetails>
            <SubDetailsItem>Navigate on Autopilot</SubDetailsItem>
            <SubDetailsItem>Auto Lane Change</SubDetailsItem>
@@ -72,15 +72,15 @@ const ModelSDesign = ({backgroundImg}) => {
            <SubDetailsItem>Full Self-Driving Computer</SubDetailsItem>
            <SubDetailsItem>Traffic Light and Stop Sign Control</SubDetailsItem>
        </SubDetails>
-       <SubSelectorDesc>Coming Soon</SubSelectorDesc>
-       <SubDetailsItem>Autosteer on city streets</SubDetailsItem>
-       <SubSelectorP>The currently enabled features require active driver 
+       <SelectorDesc>Coming Soon</SelectorDesc>
+       <SelectorDesc>Autosteer on city streets</SelectorDesc>
+       <SelectorDesc>he currently enabled features require active driver 
         supervision and do not make the vehicle autonomous. The activation and use of these features 
         are dependent on achieving reliability far in excess of human drivers as demonstrated by 
         billions of miles of experience, as well as regulatory approval, which may take longer in 
         some jurisdictions. As these self-driving features evolve, your car will be continuously 
         upgraded through over-the-air software updates.
-        </SubSelectorP>
+        </SelectorDesc>
         <BtnGroup>
             <Btn>Add</Btn>
             <Feature>Feature Details</Feature>
@@ -133,8 +133,6 @@ const WidgetNav = styled.div`
 
 // Model name
 const ModelTitle = styled.div`
-    display: flex;
-    justify-content: center;
     padding-top: 5px;
     font-size: 40px;
     color: #393c41;
@@ -142,108 +140,99 @@ const ModelTitle = styled.div`
 
 // Est. Devilvery: June
 const DeliveryTime = styled.div`
-    display: flex;
-    justify-content: center;
+    padding-top: 9px;
     color: #393c41;
     border: solid blue 5px;
 `
 
 // Model Price/Savings container
 const ModelPriceTab = styled.div`
-    display: flex;
-    justify-content: space-between;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // Model Price/Savings
 const ModelPrice = styled.div`
-    display: flex;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // Model detail container
 const ModelDetails = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // Model detail
 const ModelDetailsItem = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // Model Second detail
 const ModelDetailsSubItem = styled.div`
-    display: flex;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // Motor type
 const Motor = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // Motor for type of model of car
 const MotorModel = styled.div`
-    display: flex;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // Description
 const Desc = styled.div`
-    display: flex;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // The sub title of the models
 const SubTitle = styled.div`
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    padding-top: 2px;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // choose wheels/paint/ect. options
-const SubSelector = styled.div`
-    display: flex;
-    justify-content: center;
+const Selector = styled.div`
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // Sub title description
-const SubSelectorDesc = styled.div`
-    display: flex;
-    justify-content: center;
+const SelectorDesc = styled.div`
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // Sub title secondary details container
 const SubDetails = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
 // Sub title secondary details
 const SubDetailsItem = styled.div`
-    display: flex;
-    color: #393c41;
-`
-// Sub title paragraph
-const SubSelectorP = styled.div`
-    display: flex;
-    justify-content: flex-start;
+    padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
 `
 
@@ -255,14 +244,13 @@ const BtnGroup = styled.div`
 // Button
 const Btn = styled.div`
     padding-top: 5px;
+    font-size: 40px;
     color: #393c41;
-    border: solid yellow 4px;
 `
 
 // Feature details container
 const Feature = styled.div`
-    display: flex;
-    justify-content: center;
+    padding-top: 9px;
     color: #393c41;
     border: solid blue 5px;
 `
