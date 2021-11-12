@@ -10,7 +10,7 @@ const ModelSDesign = ({backgroundImg}) => {
         console.log('im here')
       },[]);
       
-    const [pricewidget, setPriceWidget] = useState(null)
+    const [price, setPrice] = useState(null)
     const [allWheelDrive, setAllWheelDrive] = useState(null)
     const [paint, setPaint] = useState(null)
     const [wheels, setWheels] = useState(null)
@@ -74,13 +74,13 @@ const ModelSDesign = ({backgroundImg}) => {
        </SubDetails>
        <SubSelectorDesc>Coming Soon</SubSelectorDesc>
        <SubDetailsItem>Autosteer on city streets</SubDetailsItem>
-       <SubSelectorP>The currently enabled features require active driver 
+       {/* <SubSelectorP>The currently enabled features require active driver 
         supervision and do not make the vehicle autonomous. The activation and use of these features 
         are dependent on achieving reliability far in excess of human drivers as demonstrated by 
         billions of miles of experience, as well as regulatory approval, which may take longer in 
         some jurisdictions. As these self-driving features evolve, your car will be continuously 
         upgraded through over-the-air software updates.
-        </SubSelectorP>
+        </SubSelectorP> */}
         <BtnGroup>
             <Btn>Add</Btn>
             <Feature>Feature Details</Feature>
@@ -125,10 +125,10 @@ const WidgetNav = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    margin-right: 5%;
-    width: 300px;
-    padding: 20px;
-    border: solid green 5px;
+    width: 400px;
+    border: solid green 4px;
+    @media (max-width: 823px) {
+    }
 `
 
 // Model name
@@ -145,7 +145,7 @@ const DeliveryTime = styled.div`
     display: flex;
     justify-content: center;
     color: #393c41;
-    border: solid blue 5px;
+    border: solid turquoise 3px;
 `
 
 // Model Price/Savings container
@@ -153,6 +153,7 @@ const ModelPriceTab = styled.div`
     display: flex;
     justify-content: space-between;
     color: #393c41;
+    border: solid green 3px;
 `
 
 // Model Price/Savings
@@ -190,18 +191,23 @@ const Motor = styled.div`
     justify-content: center;
     align-items: flex-start;
     color: #393c41;
+    border: solid pink 3px;
 `
 
 // Motor for type of model of car
 const MotorModel = styled.div`
     display: flex;
     color: #393c41;
+    border: solid teal 3px;
 `
 
 // Description
 const Desc = styled.div`
     display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     color: #393c41;
+    border: solid midnightblue 3px;
 `
 
 // The sub title of the models
@@ -211,6 +217,7 @@ const SubTitle = styled.div`
     font-size: 20px;
     padding-top: 2px;
     color: #393c41;
+    border: solid lightgoldenrodyellow 3px;
 `
 
 // choose wheels/paint/ect. options
@@ -225,6 +232,7 @@ const SubSelectorDesc = styled.div`
     display: flex;
     justify-content: center;
     color: #393c41;
+    border: solid plum 3px;
 `
 
 // Sub title secondary details container
@@ -233,18 +241,23 @@ const SubDetails = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     color: #393c41;
+    border: solid orange 3px;
 `
 
 // Sub title secondary details
 const SubDetailsItem = styled.div`
     display: flex;
+    align-items: flex-start;
     color: #393c41;
+    border: solid red 3px;
 `
+
 // Sub title paragraph
 const SubSelectorP = styled.div`
     display: flex;
-    justify-content: flex-start;
+    align-content: flex-start;
     color: #393c41;
+    border: solid blue 3px;
 `
 
 // Buttons container
@@ -256,15 +269,19 @@ const BtnGroup = styled.div`
 const Btn = styled.div`
     padding-top: 5px;
     color: #393c41;
-    border: solid yellow 4px;
+    border: solid lemonchiffon 3px;
 `
 
 // Feature details container
 const Feature = styled.div`
     display: flex;
     justify-content: center;
+    background: #D3D3D3;
     color: #393c41;
-    border: solid blue 5px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    cursor: pointer;
+    border: solid yellow 3px;
 `
 
 // Bottom container 
@@ -274,6 +291,9 @@ const Footer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding-top: 2px;
+    @media (max-width: 800px) {
+        flex-direction: row;
+    }
 `
 
 // Footer button arrow
@@ -281,7 +301,7 @@ const FooterBtn = styled.div`
     padding-top: 2px;
     padding: 10px;
     color: #393c41;
-    border: solid green 4px;
+    border: solid green 3px;
 `
 
 // Footer items in container
@@ -289,6 +309,6 @@ const FooterItem = styled.div`
     padding-top: 2px;
     padding: 10px;
     color: #393c41;
-    border: solid green 4px;
+    border: solid green 3px;
 `
 
