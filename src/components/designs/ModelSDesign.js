@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { useEffect, useState } from 'react';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Logo from '../Logo';
 
 
@@ -37,12 +38,19 @@ const ModelSDesign = ({backgroundImg}) => {
             <ModelDetailsSubItem>0-60mph</ModelDetailsSubItem>
             </ModelDetailsItem>
         </ModelDetails>
-        <Motor>Dual Motor All-Wheel Drive
+
+        <Motor>
+        <MotorName>Dual Motor All-Wheel Drive</MotorName>
             <MotorModel>Model S</MotorModel>
+            <MotorModel>$89,490*</MotorModel>
         </Motor>
-        <Motor>Tri Motor All-Wheel Drive
+        <Motor>
+        <MotorName>Tri Motor All-Wheel Drive</MotorName>
             <MotorModel>Model S Plaid</MotorModel>
+            <MotorModel>$124,490*</MotorModel>
         </Motor>
+
+
         <Desc>*Prices above include potential incentives and gas savings of $5,500.<p>Learn More</p></Desc>
         <Feature>Feature Details</Feature>
 
@@ -93,7 +101,10 @@ const ModelSDesign = ({backgroundImg}) => {
 
         </WidgetNav>
         <Footer>
-            <FooterBtn>*</FooterBtn>
+            <FooterBtn>
+            <ExpandLessIcon></ExpandLessIcon>
+            {/* <UpArrow src="/images/Up-Arrow.svg" /> */}
+            </FooterBtn>
             <FooterItem>$100,990 Purchase price</FooterItem>
             <FooterItem>$95,490 After potential savings</FooterItem>
         </Footer>
@@ -152,6 +163,8 @@ const DeliveryTime = styled.div`
 const ModelPriceTab = styled.div`
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    border-radius: 100px;
     color: #393c41;
     border: solid green 3px;
 `
@@ -187,9 +200,18 @@ const ModelDetailsSubItem = styled.div`
 // Motor type
 const Motor = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+
+    justify-content: space-between;
+   
+    padding: 20px;
+    color: #393c41;
+    border: solid pink 3px;
+`
+
+// Name of the either Dual or Tri motor
+const MotorName = styled.div`
+    display: flex;
+    padding: 5px;
     color: #393c41;
     border: solid pink 3px;
 `
@@ -197,6 +219,8 @@ const Motor = styled.div`
 // Motor for type of model of car
 const MotorModel = styled.div`
     display: flex;
+    padding: 5px;
+    border-radius: 100px;
     color: #393c41;
     border: solid teal 3px;
 `
@@ -267,8 +291,13 @@ const BtnGroup = styled.div`
 
 // Button
 const Btn = styled.div`
-    padding-top: 5px;
-    color: #393c41;
+    display: flex;
+    justify-content: center;
+    background: #0000FF;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 100px;
+    cursor: pointer;
     border: solid lemonchiffon 3px;
 `
 
@@ -281,6 +310,7 @@ const Feature = styled.div`
     text-transform: uppercase;
     border-radius: 100px;
     cursor: pointer;
+    padding: 5px;
     border: solid yellow 3px;
 `
 
@@ -290,6 +320,7 @@ const Footer = styled.div`
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
+    
     padding-top: 2px;
     @media (max-width: 800px) {
         flex-direction: row;
@@ -300,6 +331,7 @@ const Footer = styled.div`
 const FooterBtn = styled.div`
     padding-top: 2px;
     padding: 10px;
+    cursor: pointer;
     color: #393c41;
     border: solid green 3px;
 `
@@ -308,7 +340,14 @@ const FooterBtn = styled.div`
 const FooterItem = styled.div`
     padding-top: 2px;
     padding: 10px;
+    cursor: pointer;
     color: #393c41;
     border: solid green 3px;
 `
+
+// const UpArrow = styled.img`
+//     height: 45px;
+//     animation: animateDown infinite 2.5s;
+//     overflow-x: hidden;
+// `
 
