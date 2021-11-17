@@ -34,7 +34,7 @@ const Home = () => {
             />
             <Section 
                 title='Solar Panels'
-                description='Lowesr Cost Solar Panels in America'
+                description='Lowest Cost Solar Panels in America'
                 backgroundImg='teslaPanels.png'
                 leftBtnText='Custom Order'
                 rightBtnText='Learn More'

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+// import { useState } from 'react';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Logo from '../Logo';
 
@@ -10,12 +11,12 @@ const ModelSDesign = ({backgroundImg}) => {
         console.log('im here')
       },[]);
       
-    const [details, setDestails] = useState(null)
-    const [price, setPrice] = useState(null)
-    const [allWheelDrive, setAllWheelDrive] = useState(null)
-    const [paint, setPaint] = useState(null)
-    const [wheels, setWheels] = useState(null)
-    const [interior, setInterior] = useState(null)
+    // const [details, setDestails] = useState(null)
+    // const [price, setPrice] = useState(null)
+    // const [allWheelDrive, setAllWheelDrive] = useState(null)
+    // const [paint, setPaint] = useState(null)
+    // const [wheels, setWheels] = useState(null)
+    // const [interior, setInterior] = useState(null)
 
     return (
         <Wrap bgImage={backgroundImg}>
@@ -39,26 +40,20 @@ const ModelSDesign = ({backgroundImg}) => {
             </ModelDetailsItem>
         </ModelDetails>
 
-        {/* <Motor>
-        <MotorName>Dual Motor All-Wheel Drive</MotorName>
-            <MotorModel>Model S</MotorModel>
-            <MotorModel>$89,490*</MotorModel>
-        </Motor>
-        <Motor>
-        <MotorName>Tri Motor All-Wheel Drive</MotorName>
-            <MotorModel>Model S Plaid</MotorModel>
-            <MotorModel>$124,490*</MotorModel>
-        </Motor> */}
-       
-        <MotorName>Dual Motor All-Wheel Drive
-            <MotorModel>Model S</MotorModel>
-            <MotorModel>$89,490*</MotorModel>
-            </MotorName>
-        <MotorName>Tri Motor All-Wheel drivers
-            <MotorModel>Model S Plaid</MotorModel>
-            <MotorModel>$124,490*</MotorModel>
-            </MotorName>
-        
+        <MotorDualBox>
+        <MotorTypeName>Dual Motor All-Wheel Drive</MotorTypeName>
+        <MotorBox>
+            <MotorItem>Model S</MotorItem>
+            <MotorItem>$89,490*</MotorItem>
+        </MotorBox>
+        </MotorDualBox>
+        <MotorDualBox>
+        <MotorTypeName>Tri Motor All-Wheel drivers</MotorTypeName>
+        <MotorBox>
+            <MotorItem>Model S Plaid</MotorItem>
+            <MotorItem>$124,490*</MotorItem>
+        </MotorBox>
+        </MotorDualBox>
 
         <Desc>*Prices above include potential incentives and gas savings of $5,500.<p>Learn More</p></Desc>
         <Feature>Feature Details</Feature>
@@ -140,8 +135,9 @@ const Wrap = styled.div`
 // Widget Container for the model details
 const WidgetNav = styled.div`
     display: flex;
-    align-content: center;
     flex-direction: column;
+    /* align-content: center; */
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
@@ -155,7 +151,7 @@ const WidgetNav = styled.div`
 const ModelTitle = styled.div`
     display: flex;
     justify-content: center;
-    padding-top: 5px;
+    padding-top: 25px;
     font-size: 40px;
     color: #393c41;
 `
@@ -165,7 +161,8 @@ const DeliveryTime = styled.div`
     display: flex;
     justify-content: center;
     color: #393c41;
-    border: solid turquoise 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 `
 
 // Model Price/Savings container
@@ -173,9 +170,10 @@ const ModelPriceTab = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    width: inherit;
     border-radius: 100px;
     color: #393c41;
-    border: solid green 3px;
+    border: solid grey 1px;
 `
 
 // Model Price/Savings
@@ -189,7 +187,8 @@ const ModelPrice = styled.div`
 const ModelDetails = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: inherit;
     color: #393c41;
 `
 
@@ -207,32 +206,39 @@ const ModelDetailsSubItem = styled.div`
     color: #393c41;
 `
 
-// Motor type
-const Motor = styled.div`
+// Container for the Motor section
+const MotorDualBox = styled.div`
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+    width: inherit;
     color: #393c41;
-    border: solid pink 3px;
 `
 
 // Name of the either Dual or Tri motor
-const MotorName = styled.div`
+const MotorTypeName = styled.div`
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
     color: #393c41;
-    border: solid pink 3px;
 `
 
-// Motor for type of model of car
-const MotorModel = styled.div`
+// Container for the model and price for motor button
+const MotorBox = styled.div`
     display: flex;
-    justify-content: space-evenly;
-    padding: 5px;
-    cursor: pointer;
-    color: #393c41;
+    justify-content: space-between;
+    padding: 10px;
     border-radius: 100px;
-    border: solid teal 3px;
+    color: #393c41;
+    border: solid grey 1px;
+`
+
+// Either model name or price 
+const MotorItem = styled.div`
+    display: flex;
+    justify-content: space-between;
+    color: #393c41;
+    
 `
 
 // Description
@@ -240,6 +246,7 @@ const Desc = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    width: inherit;
     color: #393c41;
     border: solid midnightblue 3px;
 `

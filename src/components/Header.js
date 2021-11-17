@@ -112,7 +112,7 @@ const MenuTab = styled.div`
     cursor: pointer;
 `
 
-// Container for the list of items inside the MenuTab
+// Container for the list of items inside the MenuNav
 const MenuNav = styled.div`
     display: flex;
     text-align: start;
