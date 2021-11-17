@@ -32,7 +32,7 @@ const Section = ({title, description, leftBtnText,  rightBtnText, backgroundImg}
 
 export default Section
 
-
+// Container for the Section page
 const Wrap = styled.div`
     display: flex;
     flex-direction: column;
@@ -50,6 +50,7 @@ const Wrap = styled.div`
     background-image: ${props => `url('/media/${props.bgImage}')`} */
 `
 
+// Container for the title and descriptions of the item being displayed
 const ItemText = styled.div`
     padding-top: 17vh;
 `
@@ -63,6 +64,7 @@ const ButtonGroup = styled.div`
     }
 `
 
+// Container for the LeftButton
 const LeftButton = styled.div`
     display: flex;
     justify-content: center;
@@ -79,18 +81,20 @@ const LeftButton = styled.div`
     margin: 8px;
 `
 
+// Container for the RightButton next to LeftButton
 const RightButton = styled(LeftButton)` 
     color: #393c41;
     background: #ffffff;
     opacity: 0.85;
 `
 
-// arrow icon at bootm page 
+// Arrow icon at bottom page 
 const DownArrow = styled.img`
     height: 45px;
     animation: animateDown infinite 2.5s;
     overflow-x: hidden;
 `
 
+// Container that has left and right button containers
 const Buttons = styled.div`
 `

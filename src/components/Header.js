@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import styled from 'styled-components'
 import CloseIcon from '@mui/icons-material/Close';
-import Logo from './Logo';
+// import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -65,6 +65,7 @@ const Header = () => {
 }
 export default Header
 
+// Container for the whole header page
 const Container = styled.div`
     display: flex;
     align-items: center;
@@ -78,6 +79,7 @@ const Container = styled.div`
     z-index: 1;
 `
 
+// Container for the navbar/menu tabs for the models and solor roof/panel
 const MainMenu = styled.div`
     display: flex;
     flex: 1;
@@ -92,6 +94,7 @@ const MainMenu = styled.div`
     } 
 `
 
+// Container for the side navbar on right side of the main navbar
 const RightMenu = styled.div`
     display: flex;
     a {
@@ -99,8 +102,17 @@ const RightMenu = styled.div`
         color: #393c41;
         margin-right: 15px;
     }
-    `
+`
 
+// Container for the menu button inside the RightMenu container
+const MenuTab = styled.div`
+    font-weight: 500;
+    color: #393c41;
+    margin-right: 10px;
+    cursor: pointer;
+`
+
+// Container for the list of items inside the MenuTab
 const MenuNav = styled.div`
     display: flex;
     text-align: start;
@@ -126,18 +138,14 @@ const MenuNav = styled.div`
     }
 `
 
-const CustomClose = styled(CloseIcon)`
-    cursor: pointer;
-`
-
+// Container for the Close (X) icon inside the MenuNav
 const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
 `
 
-const MenuTab = styled.div`
-    font-weight: 500;
-    color: #393c41;
-    margin-right: 10px;
+// The Close (X) icon inside the MenuNav
+const CustomClose = styled(CloseIcon)`
     cursor: pointer;
 `
+

@@ -13,7 +13,7 @@ const Logo = () => {
 
 export default Logo
 
-
+// Container for the logo 
 const Container = styled.div`
     display: flex;
     align-items: center;

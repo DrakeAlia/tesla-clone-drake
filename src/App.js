@@ -33,6 +33,7 @@ import Support from './components/Support';
 import Invenstor from './components/Invenstor';
 
 
+
 const App = () => {
   return (
     <Router>
@@ -67,8 +68,6 @@ const App = () => {
           <Route path='/googlemaps' component={FindUs} />
           <Route path='/support' component={Support} />
           <Route path='/tab-quarterly-disclosure' component={Invenstor} />
-
-
 
           <Route path='/energy/design' component={EnergyDesign} />
           <Route path='/modelSDesign' component={ModelSDesign} />

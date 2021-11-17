@@ -4,13 +4,13 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Logo from '../Logo';
 
 
-
 const ModelSDesign = ({backgroundImg}) => {
     useEffect(() => {
         // window.scrollTo(0, 0)        
         console.log('im here')
       },[]);
       
+    const [details, setDestails] = useState(null)
     const [price, setPrice] = useState(null)
     const [allWheelDrive, setAllWheelDrive] = useState(null)
     const [paint, setPaint] = useState(null)
@@ -39,7 +39,7 @@ const ModelSDesign = ({backgroundImg}) => {
             </ModelDetailsItem>
         </ModelDetails>
 
-        <Motor>
+        {/* <Motor>
         <MotorName>Dual Motor All-Wheel Drive</MotorName>
             <MotorModel>Model S</MotorModel>
             <MotorModel>$89,490*</MotorModel>
@@ -48,8 +48,17 @@ const ModelSDesign = ({backgroundImg}) => {
         <MotorName>Tri Motor All-Wheel Drive</MotorName>
             <MotorModel>Model S Plaid</MotorModel>
             <MotorModel>$124,490*</MotorModel>
-        </Motor>
-
+        </Motor> */}
+       
+        <MotorName>Dual Motor All-Wheel Drive
+            <MotorModel>Model S</MotorModel>
+            <MotorModel>$89,490*</MotorModel>
+            </MotorName>
+        <MotorName>Tri Motor All-Wheel drivers
+            <MotorModel>Model S Plaid</MotorModel>
+            <MotorModel>$124,490*</MotorModel>
+            </MotorName>
+        
 
         <Desc>*Prices above include potential incentives and gas savings of $5,500.<p>Learn More</p></Desc>
         <Feature>Feature Details</Feature>
@@ -82,13 +91,13 @@ const ModelSDesign = ({backgroundImg}) => {
        </SubDetails>
        <SubSelectorDesc>Coming Soon</SubSelectorDesc>
        <SubDetailsItem>Autosteer on city streets</SubDetailsItem>
-       {/* <SubSelectorP>The currently enabled features require active driver 
+       <SubSelectorP>The currently enabled features require active driver 
         supervision and do not make the vehicle autonomous. The activation and use of these features 
         are dependent on achieving reliability far in excess of human drivers as demonstrated by 
         billions of miles of experience, as well as regulatory approval, which may take longer in 
         some jurisdictions. As these self-driving features evolve, your car will be continuously 
         upgraded through over-the-air software updates.
-        </SubSelectorP> */}
+        </SubSelectorP>
         <BtnGroup>
             <Btn>Add</Btn>
             <Feature>Feature Details</Feature>
@@ -136,7 +145,7 @@ const WidgetNav = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    width: 400px;
+    width: 500px;
     border: solid green 4px;
     @media (max-width: 823px) {
     }
@@ -172,6 +181,7 @@ const ModelPriceTab = styled.div`
 // Model Price/Savings
 const ModelPrice = styled.div`
     display: flex;
+    cursor: pointer;
     color: #393c41;
 `
 
@@ -200,9 +210,7 @@ const ModelDetailsSubItem = styled.div`
 // Motor type
 const Motor = styled.div`
     display: flex;
-
     justify-content: space-between;
-   
     padding: 20px;
     color: #393c41;
     border: solid pink 3px;
@@ -211,7 +219,7 @@ const Motor = styled.div`
 // Name of the either Dual or Tri motor
 const MotorName = styled.div`
     display: flex;
-    padding: 5px;
+    flex-direction: column;
     color: #393c41;
     border: solid pink 3px;
 `
@@ -219,9 +227,11 @@ const MotorName = styled.div`
 // Motor for type of model of car
 const MotorModel = styled.div`
     display: flex;
+    justify-content: space-evenly;
     padding: 5px;
-    border-radius: 100px;
+    cursor: pointer;
     color: #393c41;
+    border-radius: 100px;
     border: solid teal 3px;
 `
 
@@ -286,7 +296,9 @@ const SubSelectorP = styled.div`
 
 // Buttons container
 const BtnGroup = styled.div`
-   
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
 `
 
 // Button
@@ -296,6 +308,7 @@ const Btn = styled.div`
     background: #0000FF;
     color: #ffffff;
     text-transform: uppercase;
+    padding: 10px;
     border-radius: 100px;
     cursor: pointer;
     border: solid lemonchiffon 3px;
@@ -320,7 +333,7 @@ const Footer = styled.div`
     align-content: center;
     flex-direction: row;
     justify-content: space-between;
-    
+    z-index: 1;
     padding-top: 2px;
     @media (max-width: 800px) {
         flex-direction: row;

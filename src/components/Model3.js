@@ -40,7 +40,7 @@ const Model3 = ({backgroundImg}) => {
 export default Model3
 
 
-// Container for the Model S page
+// Container for the Model 3 page
 const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -56,6 +56,7 @@ const Container = styled.div`
     /* background-image: url('/src/media/teslaModel3.png'); */
 `
 
+// text for the model and type
 const ItemText = styled.div`
     padding-top: 15vh;
     color: #ffffff;

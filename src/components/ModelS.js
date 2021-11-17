@@ -58,6 +58,7 @@ const Container = styled.div`
     background-image: url('/images/teslaModelS.png')
 `
 
+// text for the model and type
 const ItemText = styled.div`
     padding-top: 15vh;
 `
