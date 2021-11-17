@@ -24,10 +24,18 @@ const ModelSDesign = ({backgroundImg}) => {
         <WidgetNav>
         <ModelTitle>Model S</ModelTitle>
         <DeliveryTime>Est. Devilvery: June</DeliveryTime>
+        {/* <ModelPriceTab>
+            <ModelPrice>Purchase Price</ModelPrice>
+            <ModelPrice>Potential Savings*</ModelPrice>
+        </ModelPriceTab> */}
+
+        <ModelPriceContainer>
         <ModelPriceTab>
             <ModelPrice>Purchase Price</ModelPrice>
             <ModelPrice>Potential Savings*</ModelPrice>
         </ModelPriceTab>
+        </ModelPriceContainer>
+
         <ModelDetails>
             <ModelDetailsItem>375mi
             <ModelDetailsSubItem>Range (est.)</ModelDetailsSubItem>
@@ -165,12 +173,21 @@ const DeliveryTime = styled.div`
     padding-bottom: 10px;
 `
 
+// Container for all the model price boxes
+const ModelPriceContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 10px;
+    width: inherit;
+    color: #393c41;
+`
+
 // Model Price/Savings container
 const ModelPriceTab = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    width: inherit;
     border-radius: 100px;
     color: #393c41;
     border: solid grey 1px;
