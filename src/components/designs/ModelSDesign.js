@@ -5,7 +5,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Logo from '../Logo';
 
 
-const ModelSDesign = ({backgroundImg}) => {
+const ModelSDesign = () => {
     useEffect(() => {
         // window.scrollTo(0, 0)        
         console.log('im here')
@@ -19,16 +19,11 @@ const ModelSDesign = ({backgroundImg}) => {
     // const [interior, setInterior] = useState(null)
 
     return (
-        <Wrap bgImage={backgroundImg}>
+        <Wrap >
         <Logo />
         <WidgetNav>
         <ModelTitle>Model S</ModelTitle>
         <DeliveryTime>Est. Devilvery: June</DeliveryTime>
-        {/* <ModelPriceTab>
-            <ModelPrice>Purchase Price</ModelPrice>
-            <ModelPrice>Potential Savings*</ModelPrice>
-        </ModelPriceTab> */}
-
         <ModelPriceContainer>
         <ModelPriceTab>
             <ModelPrice>Purchase Price</ModelPrice>
@@ -36,34 +31,39 @@ const ModelSDesign = ({backgroundImg}) => {
         </ModelPriceTab>
         </ModelPriceContainer>
 
-        <ModelDetails>
-            <ModelDetailsItem>375mi
-            <ModelDetailsSubItem>Range (est.)</ModelDetailsSubItem>
-            </ModelDetailsItem>
-            <ModelDetailsItem>155mph
-            <ModelDetailsSubItem>Top Speed</ModelDetailsSubItem>
-            </ModelDetailsItem>
-            <ModelDetailsItem>3.1sec
-            <ModelDetailsSubItem>0-60mph</ModelDetailsSubItem>
-            </ModelDetailsItem>
-        </ModelDetails>
+        <ModelDetailsBox>
+            <ModelDetails>
+            <ModelStats>375mi</ModelStats>
+            <ModelDetailsItem>Range (est.)</ModelDetailsItem>
+            </ModelDetails>
+            <ModelDetails>
+            <ModelStats>155mph</ModelStats>
+            <ModelDetailsItem>Top Speed</ModelDetailsItem>
+            </ModelDetails>
+            <ModelDetails>
+            <ModelStats>3.1sec</ModelStats>
+            <ModelDetailsItem>0-60mph</ModelDetailsItem>
+            </ModelDetails>
+        </ModelDetailsBox>
 
-        <MotorDualBox>
+        <MotorTypeBox>
         <MotorTypeName>Dual Motor All-Wheel Drive</MotorTypeName>
         <MotorBox>
             <MotorItem>Model S</MotorItem>
             <MotorItem>$89,490*</MotorItem>
         </MotorBox>
-        </MotorDualBox>
-        <MotorDualBox>
+        </MotorTypeBox>
+        <MotorTypeBox>
         <MotorTypeName>Tri Motor All-Wheel drivers</MotorTypeName>
         <MotorBox>
             <MotorItem>Model S Plaid</MotorItem>
             <MotorItem>$124,490*</MotorItem>
         </MotorBox>
-        </MotorDualBox>
+        </MotorTypeBox>
 
-        <Desc>*Prices above include potential incentives and gas savings of $5,500.<p>Learn More</p></Desc>
+        <Desc>*Prices above include potential incentives and gas 
+        savings of $5,500.
+        <p>Learn More</p></Desc>
         <Feature>Feature Details</Feature>
 
         <SubTitle>Paint</SubTitle>
@@ -113,12 +113,14 @@ const ModelSDesign = ({backgroundImg}) => {
 
         </WidgetNav>
         <Footer>
+        <FooterBox>
             <FooterBtn>
             <ExpandLessIcon></ExpandLessIcon>
             {/* <UpArrow src="/images/Up-Arrow.svg" /> */}
             </FooterBtn>
             <FooterItem>$100,990 Purchase price</FooterItem>
             <FooterItem>$95,490 After potential savings</FooterItem>
+            </FooterBox>
         </Footer>
         </Wrap>
     )
@@ -130,29 +132,23 @@ export default ModelSDesign
 const Wrap = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+    justify-content: center;
+    /* width: 100vw;
+    height: 100vh; */
     border-color: azure;
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('/images/teslaModelSBlackDesign1.png') */
 `
 
 // Widget Container for the model details
 const WidgetNav = styled.div`
     display: flex;
     flex-direction: column;
-    /* align-content: center; */
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 500px;
+    align-self: flex-end;
+    overflow-y: scroll;
+    width: 600px;
     border: solid green 4px;
     @media (max-width: 823px) {
     }
+    border: solid green 5px;
 `
 
 // Model name
@@ -162,6 +158,7 @@ const ModelTitle = styled.div`
     padding-top: 25px;
     font-size: 40px;
     color: #393c41;
+    border: solid green 1px;
 `
 
 // Est. Devilvery: June
@@ -171,6 +168,7 @@ const DeliveryTime = styled.div`
     color: #393c41;
     padding-top: 10px;
     padding-bottom: 10px;
+    border: solid green 1px;
 `
 
 // Container for all the model price boxes
@@ -181,6 +179,7 @@ const ModelPriceContainer = styled.div`
     padding-bottom: 10px;
     width: inherit;
     color: #393c41;
+    border: solid green 1px;
 `
 
 // Model Price/Savings container
@@ -190,47 +189,63 @@ const ModelPriceTab = styled.div`
     padding: 10px;
     border-radius: 100px;
     color: #393c41;
-    border: solid grey 1px;
+    border: solid green 1px;
 `
+
 
 // Model Price/Savings
 const ModelPrice = styled.div`
     display: flex;
     cursor: pointer;
     color: #393c41;
+    border: solid green 1px;
 `
 
+
 // Model detail container
-const ModelDetails = styled.div`
+const ModelDetailsBox = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: inherit;
     color: #393c41;
+    border: solid green 1px;
 `
 
-// Model detail
-const ModelDetailsItem = styled.div`
+// Outer Container for model details
+const ModelDetails = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    color: #393c41;
+    border: solid green 1px;
+`
+
+// Inner Container for the model's stats
+const ModelStats = styled.div`
+    display: flex;
     justify-content: center;
     color: #393c41;
+    border: solid green 1px;
 `
 
 // Model Second detail
-const ModelDetailsSubItem = styled.div`
+const ModelDetailsItem = styled.div`
     display: flex;
     color: #393c41;
+    border: solid green 1px;
 `
 
 // Container for the Motor section
-const MotorDualBox = styled.div`
+const MotorTypeBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
     width: inherit;
     color: #393c41;
+    border: solid green 1px;
 `
 
 // Name of the either Dual or Tri motor
@@ -238,6 +253,7 @@ const MotorTypeName = styled.div`
     display: flex;
     justify-content: flex-start;
     color: #393c41;
+    border: solid green 1px;
 `
 
 // Container for the model and price for motor button
@@ -247,7 +263,7 @@ const MotorBox = styled.div`
     padding: 10px;
     border-radius: 100px;
     color: #393c41;
-    border: solid grey 1px;
+    border: solid green 1px;
 `
 
 // Either model name or price 
@@ -255,17 +271,23 @@ const MotorItem = styled.div`
     display: flex;
     justify-content: space-between;
     color: #393c41;
+    border: solid green 1px;
     
 `
 
 // Description
 const Desc = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     width: inherit;
     color: #393c41;
-    border: solid midnightblue 3px;
+    border: solid green 1px;
+    p {
+        display: flex;
+        width: inherit;
+    }
 `
 
 // The sub title of the models
@@ -275,7 +297,7 @@ const SubTitle = styled.div`
     font-size: 20px;
     padding-top: 2px;
     color: #393c41;
-    border: solid lightgoldenrodyellow 3px;
+    border: solid green 1px;
 `
 
 // choose wheels/paint/ect. options
@@ -283,6 +305,7 @@ const SubSelector = styled.div`
     display: flex;
     justify-content: center;
     color: #393c41;
+    border: solid green 1px;
 `
 
 // Sub title description
@@ -290,7 +313,7 @@ const SubSelectorDesc = styled.div`
     display: flex;
     justify-content: center;
     color: #393c41;
-    border: solid plum 3px;
+    border: solid green 1px;
 `
 
 // Sub title secondary details container
@@ -299,7 +322,7 @@ const SubDetails = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     color: #393c41;
-    border: solid orange 3px;
+    border: solid green 1px;
 `
 
 // Sub title secondary details
@@ -307,7 +330,7 @@ const SubDetailsItem = styled.div`
     display: flex;
     align-items: flex-start;
     color: #393c41;
-    border: solid red 3px;
+    border: solid green 1px;
 `
 
 // Sub title paragraph
@@ -315,7 +338,7 @@ const SubSelectorP = styled.div`
     display: flex;
     align-content: flex-start;
     color: #393c41;
-    border: solid blue 3px;
+    border: solid green 1px;
 `
 
 // Buttons container
@@ -323,6 +346,7 @@ const BtnGroup = styled.div`
    display: flex;
    flex-direction: row;
    justify-content: space-evenly;
+   border: solid green 1px;
 `
 
 // Button
@@ -335,7 +359,7 @@ const Btn = styled.div`
     padding: 10px;
     border-radius: 100px;
     cursor: pointer;
-    border: solid lemonchiffon 3px;
+    border: solid green 1px;
 `
 
 // Feature details container
@@ -348,29 +372,36 @@ const Feature = styled.div`
     border-radius: 100px;
     cursor: pointer;
     padding: 5px;
-    border: solid yellow 3px;
+    border: solid yellow 4px;
 `
 
 // Bottom container 
 const Footer = styled.div`
     display: flex;
+    justify-content: center;
     align-content: center;
-    flex-direction: row;
-    justify-content: space-between;
-    z-index: 1;
     padding-top: 2px;
+    border: solid green 1px;
     @media (max-width: 800px) {
         flex-direction: row;
     }
 `
 
+// Bottom container 
+const FooterBox = styled.div`
+    display: flex;
+    justify-content: center;
+    border: solid green 1px;
+`
+
 // Footer button arrow
 const FooterBtn = styled.div`
+    display: flex;
     padding-top: 2px;
     padding: 10px;
     cursor: pointer;
     color: #393c41;
-    border: solid green 3px;
+    border: solid green 1px;
 `
 
 // Footer items in container
@@ -379,7 +410,7 @@ const FooterItem = styled.div`
     padding: 10px;
     cursor: pointer;
     color: #393c41;
-    border: solid green 3px;
+    border: solid green 1px;
 `
 
 // const UpArrow = styled.img`
