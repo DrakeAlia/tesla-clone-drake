@@ -6,8 +6,7 @@ import Logo from '../Logo';
 
 
 const ModelSDesign = () => {
-    useEffect(() => {
-        // window.scrollTo(0, 0)        
+    useEffect(() => {      
         console.log('im here')
       },[]);
       
@@ -19,11 +18,12 @@ const ModelSDesign = () => {
     // const [interior, setInterior] = useState(null)
 
     return (
-        <Wrap >
+        <Wrap>
         <Logo />
         <WidgetNav>
         <ModelTitle>Model S</ModelTitle>
         <DeliveryTime>Est. Devilvery: June</DeliveryTime>
+
         <ModelPriceContainer>
         <ModelPriceTab>
             <ModelPrice>Purchase Price</ModelPrice>
@@ -46,25 +46,41 @@ const ModelSDesign = () => {
             </ModelDetails>
         </ModelDetailsBox>
 
-        <MotorTypeBox>
-        <MotorTypeName>Dual Motor All-Wheel Drive</MotorTypeName>
+        <MotorContainer>
+        <MotorName>Dual Motor All-Wheel Drive</MotorName>
         <MotorBox>
             <MotorItem>Model S</MotorItem>
             <MotorItem>$89,490*</MotorItem>
         </MotorBox>
-        </MotorTypeBox>
-        <MotorTypeBox>
-        <MotorTypeName>Tri Motor All-Wheel drivers</MotorTypeName>
+        </MotorContainer>
+        <MotorContainer>
+        <MotorName>Tri Motor All-Wheel drivers</MotorName>
         <MotorBox>
             <MotorItem>Model S Plaid</MotorItem>
             <MotorItem>$124,490*</MotorItem>
         </MotorBox>
-        </MotorTypeBox>
+        </MotorContainer>
+
+{/* 
+        <MotorContainer>
+        <MotorName>D Motor All-Wheel Drive</MotorName>
+        <MotorBox>
+            <MotorItem>Model S</MotorItem>
+            <MotorItem>$89,490*</MotorItem>
+        </MotorBox>
+        <MotorName>T Motor All-Wheel drivers</MotorName>
+        <MotorBox>
+            <MotorItem>Model S Plaid</MotorItem>
+            <MotorItem>$124,490*</MotorItem>
+        </MotorBox>
+        </MotorContainer> */}
 
         <Desc>*Prices above include potential incentives and gas 
         savings of $5,500.
         <p>Learn More</p></Desc>
+        <FeatureContainer>
         <Feature>Feature Details</Feature>
+        </FeatureContainer>
 
         <SubTitle>Paint</SubTitle>
         <SubSelector></SubSelector>
@@ -80,7 +96,9 @@ const ModelSDesign = () => {
        <SubSelector></SubSelector>
        <SubSelectorDesc>All Black Included</SubSelectorDesc>
        <SubSelectorDesc>Ebony Décor</SubSelectorDesc>
+       <FeatureContainer>
        <Feature>Feature Details</Feature>
+       </FeatureContainer>
 
        <SubTitle>Full Self-Driving Capability</SubTitle>
        <SubSelectorDesc>$10,000</SubSelectorDesc>
@@ -105,7 +123,6 @@ const ModelSDesign = () => {
             <Btn>Add</Btn>
             <Feature>Feature Details</Feature>
         </BtnGroup>
-        
 
         <SubTitle>Order Your Model S</SubTitle>
         <DeliveryTime>Est. Delivery: June</DeliveryTime>
@@ -135,7 +152,7 @@ const Wrap = styled.div`
     justify-content: center;
     /* width: 100vw;
     height: 100vh; */
-    border-color: azure;
+    border-color: solid azure 1px;
 `
 
 // Widget Container for the model details
@@ -192,7 +209,6 @@ const ModelPriceTab = styled.div`
     border: solid green 1px;
 `
 
-
 // Model Price/Savings
 const ModelPrice = styled.div`
     display: flex;
@@ -201,13 +217,11 @@ const ModelPrice = styled.div`
     border: solid green 1px;
 `
 
-
 // Model detail container
 const ModelDetailsBox = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    width: inherit;
+    justify-content: center;
     color: #393c41;
     border: solid green 1px;
 `
@@ -238,18 +252,15 @@ const ModelDetailsItem = styled.div`
 `
 
 // Container for the Motor section
-const MotorTypeBox = styled.div`
+const MotorContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    width: inherit;
     color: #393c41;
     border: solid green 1px;
 `
 
 // Name of the either Dual or Tri motor
-const MotorTypeName = styled.div`
+const MotorName = styled.div`
     display: flex;
     justify-content: flex-start;
     color: #393c41;
@@ -360,6 +371,12 @@ const Btn = styled.div`
     border-radius: 100px;
     cursor: pointer;
     border: solid green 1px;
+`
+
+// Feature container
+const FeatureContainer = styled.div`
+    display: flex;
+    justify-content: center;
 `
 
 // Feature details container

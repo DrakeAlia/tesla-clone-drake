@@ -1,23 +1,22 @@
 import styled from 'styled-components'
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Logo from '../Logo';
 
 
 
-const Model3Design = ({backgroundImg}) => {
-    useEffect(() => {
-        // window.scrollTo(0, 0)        
+const Model3Design = () => {
+    useEffect(() => {      
         console.log('im here')
       },[]);
       
-    const [pricewidget, setPriceWidget] = useState(null)
-    const [allWheelDrive, setAllWheelDrive] = useState(null)
-    const [paint, setPaint] = useState(null)
-    const [wheels, setWheels] = useState(null)
-    const [interior, setInterior] = useState(null)
+    // const [pricewidget, setPriceWidget] = useState(null)
+    // const [allWheelDrive, setAllWheelDrive] = useState(null)
+    // const [paint, setPaint] = useState(null)
+    // const [wheels, setWheels] = useState(null)
+    // const [interior, setInterior] = useState(null)
 
     return (
-        <Wrap bgImage={backgroundImg}>
+        <Wrap>
         <Logo />
         <WidgetNav>
         <WidgetTitle>Model 3</WidgetTitle>
