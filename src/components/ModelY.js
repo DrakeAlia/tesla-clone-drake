@@ -6,33 +6,33 @@ import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
 
-const ModelY = ({backgroundImg}) => {
+const ModelY = ({ backgroundImg }) => {
     return (
         <Container bgImage={backgroundImg}>
-        <Logo />
-        <Header />
+            <Logo />
+            <Header />
             <Fade bottom>
-            <ItemText>
-            <h1>Model Y</h1>
-            </ItemText>
-        </Fade>
+                <ItemText>
+                    <h1>Model Y</h1>
+                </ItemText>
+            </Fade>
             <Fade bottom>
-            <ButtonGroup>
-            <Footer>
-            <FooterItem>76 cu ft
-            <p>Cargo Space</p></FooterItem>
-            <FooterItem>326
-            <p>Range (EPA est.)</p></FooterItem>
-            <FooterItem>AWD
-            <p>Dual Motor</p></FooterItem>
-            </Footer>
-                {/* <Link to='/modely/design'> */}
-                <Link to='/modelYDesign'>
-                <RightButton>
-                Order Now
-                </RightButton>
-                </Link>
-            </ButtonGroup>
+                <ButtonGroup>
+                    <Footer>
+                        <FooterItem>76 cu ft
+                            <p>Cargo Space</p></FooterItem>
+                        <FooterItem>326
+                            <p>Range (EPA est.)</p></FooterItem>
+                        <FooterItem>AWD
+                            <p>Dual Motor</p></FooterItem>
+                    </Footer>
+                    {/* <Link to='/modely/design'> */}
+                    <Link to='/modelYDesign'>
+                        <RightButton>
+                            Order Now
+                        </RightButton>
+                    </Link>
+                </ButtonGroup>
             </Fade>
         </Container>
     )

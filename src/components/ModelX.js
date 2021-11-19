@@ -6,36 +6,36 @@ import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
 
- const ModelX = ({backgroundImg}) => {
+const ModelX = ({ backgroundImg }) => {
     return (
         <Container bgImage={backgroundImg}>
-        <Logo />
-        <Header />
+            <Logo />
+            <Header />
             <Fade bottom>
-            <ItemText>
-            <h1>Model X</h1>
-            <p>Plaid</p>
-            </ItemText>
-        </Fade>
+                <ItemText>
+                    <h1>Model X</h1>
+                    <p>Plaid</p>
+                </ItemText>
+            </Fade>
             <Fade bottom>
-            <ButtonGroup>
-            <Footer>
-            <FooterItem>340 mi
-            <p>Range (est.)</p></FooterItem>
-            <FooterItem>2.5s
-            <p>0-60 mph*</p></FooterItem>
-            <FooterItem>9.9s
-            <p>1/4 Mile</p></FooterItem>
-            <FooterItem>1,020 hp
-            <p>Peak Power</p></FooterItem>
-            </Footer>
-                {/* <Link to='/modelx/design'> */}
-                <Link to='/modelXDesign'>
-                <RightButton>
-                Order Now
-                </RightButton>
-                </Link>
-            </ButtonGroup>
+                <ButtonGroup>
+                    <Footer>
+                        <FooterItem>340 mi
+                            <p>Range (est.)</p></FooterItem>
+                        <FooterItem>2.5s
+                            <p>0-60 mph*</p></FooterItem>
+                        <FooterItem>9.9s
+                            <p>1/4 Mile</p></FooterItem>
+                        <FooterItem>1,020 hp
+                            <p>Peak Power</p></FooterItem>
+                    </Footer>
+                    {/* <Link to='/modelx/design'> */}
+                    <Link to='/modelXDesign'>
+                        <RightButton>
+                            Order Now
+                        </RightButton>
+                    </Link>
+                </ButtonGroup>
             </Fade>
         </Container>
     )

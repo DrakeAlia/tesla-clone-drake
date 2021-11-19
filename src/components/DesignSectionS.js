@@ -4,49 +4,49 @@ import Section from './Section';
 const Home = () => {
     return (
         <Container>
-            <Section 
+            <Section
                 title='Model S'
                 description='Plaid'
                 backgroundImg='teslaModelS.png'
                 leftBtnText=''
                 rightBtnText=''
             />
-            <Section 
+            <Section
                 title='New Interior'
                 description=''
                 backgroundImg=''
                 leftBtnText=''
                 rightBtnText=''
             />
-            <Section 
+            <Section
                 title='Model 3'
                 description=''
                 backgroundImg=''
                 leftBtnText=''
                 rightBtnText=''
             />
-            <Section 
+            <Section
                 title='Electric Powertrain'
                 description=''
                 backgroundImg=''
                 leftBtnText=''
                 rightBtnText=''
             />
-            <Section 
+            <Section
                 title='Exer'
                 description=''
                 backgroundImg=''
                 leftBtnText=''
                 rightBtnText=''
             />
-            <Section 
+            <Section
                 title='Solar Roof'
                 description=''
                 backgroundImg=''
                 leftBtnText=''
                 rightBtnText=''
             />
-            <Section 
+            <Section
                 title='Accessories'
                 backgroundImg=''
                 leftBtnText=''

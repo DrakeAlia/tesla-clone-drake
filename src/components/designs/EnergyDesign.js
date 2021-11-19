@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const EnergyDesign = () => {
     return (
         <Wrap>
-        <ItemText>Test</ItemText>
+            <ItemText>Test</ItemText>
         </Wrap>
     )
 }

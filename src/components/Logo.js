@@ -6,7 +6,7 @@ const Logo = () => {
         <Container>
             <Link to='/'>
                 <img src='/images/logo.svg' alt="" />
-            </Link>  
+            </Link>
         </Container>
     )
 }

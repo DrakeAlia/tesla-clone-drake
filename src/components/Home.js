@@ -4,49 +4,49 @@ import Section from './Section';
 const Home = () => {
     return (
         <Container>
-            <Section 
+            <Section
                 title='Model S'
                 description='Order Online for Touchless Delivery'
                 backgroundImg='teslaModelS.png'
                 leftBtnText='Custom Order'
                 rightBtnText='Existing Inventory'
             />
-            <Section 
+            <Section
                 title='Model Y'
                 description='Order Online for Touchless Delivery'
                 backgroundImg='teslaYBlue.png'
                 leftBtnText='Custom Order'
                 rightBtnText='Existing Inventory'
             />
-            <Section 
+            <Section
                 title='Model 3'
                 description='Order Online for Touchless Delivery'
                 backgroundImg='tesla3.png'
                 leftBtnText='Custom Order'
                 rightBtnText='Existing Inventory'
             />
-            <Section 
+            <Section
                 title='Model X'
                 description='Order Online for Touchless Delivery'
                 backgroundImg='teslaX.png'
                 leftBtnText='Custom Order'
                 rightBtnText='Existing Inventory'
             />
-            <Section 
+            <Section
                 title='Solar Panels'
                 description='Lowest Cost Solar Panels in America'
                 backgroundImg='teslaPanels.png'
                 leftBtnText='Custom Order'
                 rightBtnText='Learn More'
             />
-            <Section 
+            <Section
                 title='Solar Roof'
                 description='Produce Clean Energy From Your Roof'
                 backgroundImg='teslaRoof.png'
                 leftBtnText='Custom Order'
                 rightBtnText='Learn More'
             />
-            <Section 
+            <Section
                 title='Accessories'
                 backgroundImg='accessories.jpg'
                 leftBtnText='Shop Now'

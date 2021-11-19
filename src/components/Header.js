@@ -9,7 +9,7 @@ const Header = () => {
     const [menuStatus, setMenuStatus] = useState(false)
     return (
         <Container>
-        {/* <Logo /> */}
+            {/* <Logo /> */}
             {/* <Link to='/'>
                 <img src='/images/logo.svg' alt="" />
             </Link> */}
@@ -18,22 +18,22 @@ const Header = () => {
             </Link> */}
             <MainMenu>
                 <Link to='/models'>
-                Model S
+                    Model S
                 </Link>
                 <Link to='/model3'>
-                Model 3
+                    Model 3
                 </Link>
                 <Link to='/modelx'>
-                Model X
+                    Model X
                 </Link>
                 <Link to='/modely'>
-                Model Y
+                    Model Y
                 </Link>
                 <Link to='/solarroof'>
-                Solar Roof
+                    Solar Roof
                 </Link>
                 <Link to='/solarpanels'>
-                Solar Panels
+                    Solar Panels
                 </Link>
             </MainMenu>
             <RightMenu>
@@ -42,9 +42,9 @@ const Header = () => {
                 <MenuTab onClick={() => setMenuStatus(true)}>Menu</MenuTab>
             </RightMenu>
             <MenuNav show={menuStatus}>
-            <CloseWrapper>
-            <CustomClose onClick={() => setMenuStatus(false)}/>
-            </CloseWrapper>
+                <CloseWrapper>
+                    <CustomClose onClick={() => setMenuStatus(false)} />
+                </CloseWrapper>
                 <li><Link to="/inventory/new">Existing Inventory</Link></li>
                 <li><Link to="/inventory/used">Used Inventory</Link></li>
                 <li><Link to="/tradein">Trade-In</Link></li>
@@ -126,7 +126,7 @@ const MenuNav = styled.div`
     z-index: 1;
     list-style: none;
     padding: 20px;
-    transform: ${props => props.show ? 'translateX(0)': 'translateX(100%)'};
+    transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
     transition: transform 0.2s;
     li {
         padding: 15px 0;

@@ -6,10 +6,10 @@ import Logo from '../Logo';
 
 
 const ModelSDesign = () => {
-    useEffect(() => {      
+    useEffect(() => {
         console.log('im here')
-      },[]);
-      
+    }, []);
+
     // const [details, setDestails] = useState(null)
     // const [price, setPrice] = useState(null)
     // const [allWheelDrive, setAllWheelDrive] = useState(null)
@@ -19,55 +19,57 @@ const ModelSDesign = () => {
 
     return (
         <Wrap>
-        <Logo />
-        <WidgetNav>
-        <ModelTitle>Model S</ModelTitle>
-        <DeliveryTime>Est. Devilvery: June</DeliveryTime>
+            <Logo />
+            <WidgetNav>
+                <ModelTitle>Model S</ModelTitle>
+                <DeliveryTime>Est. Devilvery: June</DeliveryTime>
 
-        <ModelPriceContainer>
-        <ModelPriceTab>
-            <ModelPrice>Purchase Price</ModelPrice>
-            <ModelPrice>Potential Savings*</ModelPrice>
-        </ModelPriceTab>
-        </ModelPriceContainer>
+                <ModelPriceContainer>
+                    <ModelPriceTab>
+                        <ModelPrice>Purchase Price</ModelPrice>
+                        <ModelPrice>Potential Savings*</ModelPrice>
+                    </ModelPriceTab>
+                </ModelPriceContainer>
 
-        <ModelDetailsBox>
-            <ModelDetails>
-            <ModelStats>375mi</ModelStats>
-            <ModelDetailsItem>Range (est.)</ModelDetailsItem>
-            </ModelDetails>
-            <ModelDetails>
-            <ModelStats>155mph</ModelStats>
-            <ModelDetailsItem>Top Speed</ModelDetailsItem>
-            </ModelDetails>
-            <ModelDetails>
-            <ModelStats>3.1sec</ModelStats>
-            <ModelDetailsItem>0-60mph</ModelDetailsItem>
-            </ModelDetails>
-        </ModelDetailsBox>
+                <ModelDetailsBox>
+                    <ModelDetails>
+                        <ModelStats>375mi</ModelStats>
+                        <ModelDetailsItem>Range (est.)</ModelDetailsItem>
+                    </ModelDetails>
+                    <ModelDetails>
+                        <ModelStats>155mph</ModelStats>
+                        <ModelDetailsItem>Top Speed</ModelDetailsItem>
+                    </ModelDetails>
+                    <ModelDetails>
+                        <ModelStats>3.1sec</ModelStats>
+                        <ModelDetailsItem>0-60mph</ModelDetailsItem>
+                    </ModelDetails>
+                </ModelDetailsBox>
 
-        <MotorContainer>
-        <MotorName>Dual Motor All-Wheel Drive</MotorName>
-        <MotorBox>
-            <MotorItem>Model S</MotorItem>
-            <MotorItem>$89,490*</MotorItem>
-        </MotorBox>
-        </MotorContainer>
-        <MotorContainer>
-        <MotorName>Tri Motor All-Wheel drivers</MotorName>
-        <MotorBox>
-            <MotorItem>Model S Plaid</MotorItem>
-            <MotorItem>$124,490*</MotorItem>
-        </MotorBox>
-        </MotorContainer>
+                <MotorContainer>
+                    <MotorName>Dual Motor All-Wheel Drive</MotorName>
+                    <MotorBox>
+                        <MotorItem>Model S</MotorItem>
+                        <MotorItem>$89,490*</MotorItem>
+                    </MotorBox>
+                </MotorContainer>
+                <MotorContainer>
+                    <MotorName>Tri Motor All-Wheel drivers</MotorName>
+                    <MotorBox>
+                        <MotorItem>Model S Plaid</MotorItem>
+                        <MotorItem>$124,490*</MotorItem>
+                    </MotorBox>
+                </MotorContainer>
 
-{/* 
-        <MotorContainer>
+
+                {/* <MotorContainer>
         <MotorName>D Motor All-Wheel Drive</MotorName>
+        <MotorOuterBox>
         <MotorBox>
             <MotorItem>Model S</MotorItem>
             <MotorItem>$89,490*</MotorItem>
         </MotorBox>
+        </MotorOuterBox>
         <MotorName>T Motor All-Wheel drivers</MotorName>
         <MotorBox>
             <MotorItem>Model S Plaid</MotorItem>
@@ -75,70 +77,70 @@ const ModelSDesign = () => {
         </MotorBox>
         </MotorContainer> */}
 
-        <Desc>*Prices above include potential incentives and gas 
-        savings of $5,500.
-        <p>Learn More</p></Desc>
-        <FeatureContainer>
-        <Feature>Feature Details</Feature>
-        </FeatureContainer>
+                <Desc>*Prices above include potential incentives and gas
+                    savings of $5,500.
+                    <p>Learn More</p></Desc>
+                <FeatureContainer>
+                    <Feature>Feature Details</Feature>
+                </FeatureContainer>
 
-        <SubTitle>Paint</SubTitle>
-        <SubSelector></SubSelector>
-        <SubSelectorDesc>Pearl White Multi-Coat Included</SubSelectorDesc>
-       
-       <SubTitle>Wheels</SubTitle>
-       <SubSelector></SubSelector>
-       <SubSelectorDesc>21" Arachnid Wheels</SubSelectorDesc>
-       <SubSelectorDesc>$4,500</SubSelectorDesc>
-       <SubSelectorDesc>Range (est.): 375mi</SubSelectorDesc>
+                <SubTitle>Paint</SubTitle>
+                <SubSelector></SubSelector>
+                <SubSelectorDesc>Pearl White Multi-Coat Included</SubSelectorDesc>
 
-       <SubTitle>Interior</SubTitle>
-       <SubSelector></SubSelector>
-       <SubSelectorDesc>All Black Included</SubSelectorDesc>
-       <SubSelectorDesc>Ebony Décor</SubSelectorDesc>
-       <FeatureContainer>
-       <Feature>Feature Details</Feature>
-       </FeatureContainer>
+                <SubTitle>Wheels</SubTitle>
+                <SubSelector></SubSelector>
+                <SubSelectorDesc>21" Arachnid Wheels</SubSelectorDesc>
+                <SubSelectorDesc>$4,500</SubSelectorDesc>
+                <SubSelectorDesc>Range (est.): 375mi</SubSelectorDesc>
 
-       <SubTitle>Full Self-Driving Capability</SubTitle>
-       <SubSelectorDesc>$10,000</SubSelectorDesc>
-       <SubDetails>
-           <SubDetailsItem>Navigate on Autopilot</SubDetailsItem>
-           <SubDetailsItem>Auto Lane Change</SubDetailsItem>
-           <SubDetailsItem>Autopark</SubDetailsItem>
-           <SubDetailsItem>Summon</SubDetailsItem>
-           <SubDetailsItem>Full Self-Driving Computer</SubDetailsItem>
-           <SubDetailsItem>Traffic Light and Stop Sign Control</SubDetailsItem>
-       </SubDetails>
-       <SubSelectorDesc>Coming Soon</SubSelectorDesc>
-       <SubDetailsItem>Autosteer on city streets</SubDetailsItem>
-       <SubSelectorP>The currently enabled features require active driver 
-        supervision and do not make the vehicle autonomous. The activation and use of these features 
-        are dependent on achieving reliability far in excess of human drivers as demonstrated by 
-        billions of miles of experience, as well as regulatory approval, which may take longer in 
-        some jurisdictions. As these self-driving features evolve, your car will be continuously 
-        upgraded through over-the-air software updates.
-        </SubSelectorP>
-        <BtnGroup>
-            <Btn>Add</Btn>
-            <Feature>Feature Details</Feature>
-        </BtnGroup>
+                <SubTitle>Interior</SubTitle>
+                <SubSelector></SubSelector>
+                <SubSelectorDesc>All Black Included</SubSelectorDesc>
+                <SubSelectorDesc>Ebony Décor</SubSelectorDesc>
+                <FeatureContainer>
+                    <Feature>Feature Details</Feature>
+                </FeatureContainer>
 
-        <SubTitle>Order Your Model S</SubTitle>
-        <DeliveryTime>Est. Delivery: June</DeliveryTime>
-        <Btn>Continue Payment</Btn>
+                <SubTitle>Full Self-Driving Capability</SubTitle>
+                <SubSelectorDesc>$10,000</SubSelectorDesc>
+                <SubDetails>
+                    <SubDetailsItem>Navigate on Autopilot</SubDetailsItem>
+                    <SubDetailsItem>Auto Lane Change</SubDetailsItem>
+                    <SubDetailsItem>Autopark</SubDetailsItem>
+                    <SubDetailsItem>Summon</SubDetailsItem>
+                    <SubDetailsItem>Full Self-Driving Computer</SubDetailsItem>
+                    <SubDetailsItem>Traffic Light and Stop Sign Control</SubDetailsItem>
+                </SubDetails>
+                <SubSelectorDesc>Coming Soon</SubSelectorDesc>
+                <SubDetailsItem>Autosteer on city streets</SubDetailsItem>
+                <SubSelectorP>The currently enabled features require active driver
+                    supervision and do not make the vehicle autonomous. The activation and use of these features
+                    are dependent on achieving reliability far in excess of human drivers as demonstrated by
+                    billions of miles of experience, as well as regulatory approval, which may take longer in
+                    some jurisdictions. As these self-driving features evolve, your car will be continuously
+                    upgraded through over-the-air software updates.
+                </SubSelectorP>
+                <BtnGroup>
+                    <Btn>Add</Btn>
+                    <Feature>Feature Details</Feature>
+                </BtnGroup>
 
-        </WidgetNav>
-        <Footer>
-        <FooterBox>
-            <FooterBtn>
-            <ExpandLessIcon></ExpandLessIcon>
-            {/* <UpArrow src="/images/Up-Arrow.svg" /> */}
-            </FooterBtn>
-            <FooterItem>$100,990 Purchase price</FooterItem>
-            <FooterItem>$95,490 After potential savings</FooterItem>
-            </FooterBox>
-        </Footer>
+                <SubTitle>Order Your Model S</SubTitle>
+                <DeliveryTime>Est. Delivery: June</DeliveryTime>
+                <Btn>Continue Payment</Btn>
+
+            </WidgetNav>
+            <Footer>
+                <FooterBox>
+                    <FooterBtn>
+                        <ExpandLessIcon></ExpandLessIcon>
+                        {/* <UpArrow src="/images/Up-Arrow.svg" /> */}
+                    </FooterBtn>
+                    <FooterItem>$100,990 Purchase price</FooterItem>
+                    <FooterItem>$95,490 After potential savings</FooterItem>
+                </FooterBox>
+            </Footer>
         </Wrap>
     )
 }
@@ -258,6 +260,14 @@ const MotorContainer = styled.div`
     color: #393c41;
     border: solid green 1px;
 `
+
+
+// const MotorOuterBox = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     color: #393c41;
+//     border: solid green 1px;
+// `
 
 // Name of the either Dual or Tri motor
 const MotorName = styled.div`

@@ -5,35 +5,35 @@ import Header from './Header';
 import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
-const Model3 = ({backgroundImg}) => {
+const Model3 = ({ backgroundImg }) => {
     return (
         <Container bgImage={backgroundImg}>
-        <Logo />
-        <Header />
+            <Logo />
+            <Header />
             <Fade bottom>
-            <ItemText>
-            <h1>Model 3</h1>
-            </ItemText>
-        </Fade>
-            <Fade bottom>
-            <ButtonGroup>
-            <Footer>
-            <FooterItem>3.1 s            
-            <p>0-60 mph*</p></FooterItem>
-            <FooterItem>353
-            <p>Range (EPA est.)</p></FooterItem>
-            <FooterItem>AWD
-            <p>Dual Motor</p></FooterItem>
-            </Footer>
-                {/* <Link to='/model3/design'> */}
-                <Link to='/model3Design'>
-                <RightButton>
-                Order Now
-                </RightButton>
-                </Link>
-            </ButtonGroup>
+                <ItemText>
+                    <h1>Model 3</h1>
+                </ItemText>
             </Fade>
-        </Container> 
+            <Fade bottom>
+                <ButtonGroup>
+                    <Footer>
+                        <FooterItem>3.1 s
+                            <p>0-60 mph*</p></FooterItem>
+                        <FooterItem>353
+                            <p>Range (EPA est.)</p></FooterItem>
+                        <FooterItem>AWD
+                            <p>Dual Motor</p></FooterItem>
+                    </Footer>
+                    {/* <Link to='/model3/design'> */}
+                    <Link to='/model3Design'>
+                        <RightButton>
+                            Order Now
+                        </RightButton>
+                    </Link>
+                </ButtonGroup>
+            </Fade>
+        </Container>
     )
 }
 

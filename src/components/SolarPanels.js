@@ -5,35 +5,35 @@ import Header from './Header';
 import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
-const SolarPanels = ({backgroundImg}) => {
+const SolarPanels = ({ backgroundImg }) => {
     return (
         <Container bgImage={backgroundImg}>
-        <Logo />
-        <Header />
+            <Logo />
+            <Header />
             <Fade bottom>
-            <ItemText>
-            <h1>Solar for Existing Roofs</h1>
-            <p>Lowest Cost Solar Panels in America — Money-back guarantee</p>
-            </ItemText>
-        </Fade>
+                <ItemText>
+                    <h1>Solar for Existing Roofs</h1>
+                    <p>Lowest Cost Solar Panels in America — Money-back guarantee</p>
+                </ItemText>
+            </Fade>
             <Fade bottom>
-            <ButtonGroup>
-            <Footer>
-            <FooterItem>396 mi
-            <p>Range (EPA est)</p></FooterItem>
-            <FooterItem>1.99s
-            <p>0-60 mph</p></FooterItem>
-            <FooterItem>200 mph
-            <p>Top Speed</p></FooterItem>
-            <FooterItem>1,020 hp
-            <p>Peak Power</p></FooterItem>
-            </Footer>
-                <Link to='/energy/design'>
-                <RightButton>
-                Order Now
-                </RightButton>
-                </Link>
-            </ButtonGroup>
+                <ButtonGroup>
+                    <Footer>
+                        <FooterItem>396 mi
+                            <p>Range (EPA est)</p></FooterItem>
+                        <FooterItem>1.99s
+                            <p>0-60 mph</p></FooterItem>
+                        <FooterItem>200 mph
+                            <p>Top Speed</p></FooterItem>
+                        <FooterItem>1,020 hp
+                            <p>Peak Power</p></FooterItem>
+                    </Footer>
+                    <Link to='/energy/design'>
+                        <RightButton>
+                            Order Now
+                        </RightButton>
+                    </Link>
+                </ButtonGroup>
             </Fade>
         </Container>
     )

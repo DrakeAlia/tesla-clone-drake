@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Powerwall = () => {
     return (
         <Wrap>
-        <ItemText>Test</ItemText>
+            <ItemText>Test</ItemText>
         </Wrap>
     )
 }
