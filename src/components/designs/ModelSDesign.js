@@ -47,39 +47,31 @@ const ModelSDesign = () => {
                 </ModelDetailsBox>
 
                 <MotorContainer>
-                    <MotorName>Dual Motor All-Wheel Drive</MotorName>
-                    <MotorBox>
-                        <MotorItem>Model S</MotorItem>
-                        <MotorItem>$89,490*</MotorItem>
-                    </MotorBox>
+                    <MotorInnerContainer>
+                        <MotorName>Dual Motor All-Wheel Drive</MotorName>
+                        <MotorBox>
+                            <MotorItem>Model S</MotorItem>
+                            <MotorItem>$89,490*</MotorItem>
+                        </MotorBox>
+                    </MotorInnerContainer>
                 </MotorContainer>
+
                 <MotorContainer>
-                    <MotorName>Tri Motor All-Wheel drivers</MotorName>
-                    <MotorBox>
-                        <MotorItem>Model S Plaid</MotorItem>
-                        <MotorItem>$124,490*</MotorItem>
-                    </MotorBox>
+                    <MotorInnerContainer>
+                        <MotorName>Tri Motor All-Wheel drivers</MotorName>
+                        <MotorBox>
+                            <MotorItem>Model S Plaid</MotorItem>
+                            <MotorItem>$124,490*</MotorItem>
+                        </MotorBox>
+                    </MotorInnerContainer>
                 </MotorContainer>
 
+                <DescContainer>
+                    <DescBox>
+                        <Desc>The Prices above include potential incentives and gas savings of $5,500.<p>Learn More</p></Desc>
+                    </DescBox>
+                </DescContainer>
 
-                {/* <MotorContainer>
-        <MotorName>D Motor All-Wheel Drive</MotorName>
-        <MotorOuterBox>
-        <MotorBox>
-            <MotorItem>Model S</MotorItem>
-            <MotorItem>$89,490*</MotorItem>
-        </MotorBox>
-        </MotorOuterBox>
-        <MotorName>T Motor All-Wheel drivers</MotorName>
-        <MotorBox>
-            <MotorItem>Model S Plaid</MotorItem>
-            <MotorItem>$124,490*</MotorItem>
-        </MotorBox>
-        </MotorContainer> */}
-
-                <Desc>*Prices above include potential incentives and gas
-                    savings of $5,500.
-                    <p>Learn More</p></Desc>
                 <FeatureContainer>
                     <Feature>Feature Details</Feature>
                 </FeatureContainer>
@@ -166,11 +158,11 @@ const WidgetNav = styled.div`
     width: 600px;
     border: solid green 4px;
     @media (max-width: 823px) {
+        flex-direction: column;
     }
-    border: solid green 5px;
 `
 
-// Model name
+// Model name/title
 const ModelTitle = styled.div`
     display: flex;
     justify-content: center;
@@ -185,7 +177,7 @@ const DeliveryTime = styled.div`
     display: flex;
     justify-content: center;
     color: #393c41;
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 10px;
     border: solid green 1px;
 `
@@ -194,9 +186,9 @@ const DeliveryTime = styled.div`
 const ModelPriceContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-content: center;
     padding: 20px;
     padding-bottom: 10px;
-    width: inherit;
     color: #393c41;
     border: solid green 1px;
 `
@@ -257,17 +249,15 @@ const ModelDetailsItem = styled.div`
 const MotorContainer = styled.div`
     display: flex;
     flex-direction: column;
-    color: #393c41;
     border: solid green 1px;
 `
 
-
-// const MotorOuterBox = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     color: #393c41;
-//     border: solid green 1px;
-// `
+const MotorInnerContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+`
 
 // Name of the either Dual or Tri motor
 const MotorName = styled.div`
@@ -285,6 +275,7 @@ const MotorBox = styled.div`
     border-radius: 100px;
     color: #393c41;
     border: solid green 1px;
+    
 `
 
 // Either model name or price 
@@ -293,25 +284,41 @@ const MotorItem = styled.div`
     justify-content: space-between;
     color: #393c41;
     border: solid green 1px;
-    
+`
+
+// Container for Description
+const DescContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: #393c41;
+    border: solid red 1px;
+`
+
+const DescBox = styled.div`
+    display: flex;
+    padding: 10px;
+    color: #393c41;
+    border: solid orange 1px;
 `
 
 // Description
 const Desc = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: inherit;
+    font-size: 15px;
     color: #393c41;
-    border: solid green 1px;
+    border: solid purple 1px;
     p {
-        display: flex;
-        width: inherit;
+        text-decoration: underline;
+        border: solid teal 1px;
+    }
+    @media (max-width: 823px) {
+        flex-direction: column;
     }
 `
 
-// The sub title of the models
+// The Sub title of the models
 const SubTitle = styled.div`
     display: flex;
     justify-content: center;
@@ -321,7 +328,7 @@ const SubTitle = styled.div`
     border: solid green 1px;
 `
 
-// choose wheels/paint/ect. options
+// Choose wheels/paint/ect. options
 const SubSelector = styled.div`
     display: flex;
     justify-content: center;

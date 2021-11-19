@@ -8,6 +8,12 @@ const Logo = () => {
                 <img src='/images/logo.svg' alt="" />
             </Link>
         </Container>
+
+        // <Container2>
+        //     <Link to='/'>
+        //         <img src='/images/logo.svg' alt="" />
+        //     </Link>
+        // </Container2>
     )
 }
 
@@ -24,5 +30,19 @@ const Container = styled.div`
     left: 0;
     right: 0;
     z-index: 1;
-    cursor: pointer;
+    img {
+        cursor: pointer;
+    }
 `
+
+
+// const Container2 = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     padding-top: 15px;
+//     padding-left: 5px;
+//     img {
+//         cursor: pointer;
+//     }
+// `
