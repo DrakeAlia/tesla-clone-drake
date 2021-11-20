@@ -19,7 +19,7 @@ const Logo = () => {
 
 export default Logo
 
-// Container for the logo 
+// Container for the logo (Fix styling!!)
 const Container = styled.div`
     display: flex;
     align-items: center;
@@ -34,7 +34,6 @@ const Container = styled.div`
         cursor: pointer;
     }
 `
-
 
 // const Container2 = styled.div`
 //     display: flex;

@@ -65,7 +65,7 @@ const Header = () => {
 }
 export default Header
 
-// Container for the whole header page
+// Container for the whole header page (Fix styling!!)
 const Container = styled.div`
     display: flex;
     align-items: center;
@@ -112,7 +112,7 @@ const MenuTab = styled.div`
     cursor: pointer;
 `
 
-// Container for the list of items inside the MenuNav
+// Container for the list of items inside the MenuNav (Fix styling!!)
 const MenuNav = styled.div`
     display: flex;
     text-align: start;

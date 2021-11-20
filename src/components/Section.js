@@ -64,7 +64,7 @@ const ButtonGroup = styled.div`
     }
 `
 
-// Container for the LeftButton
+// Container for the LeftButton (Fix styling!!)
 const LeftButton = styled.div`
     display: flex;
     justify-content: center;

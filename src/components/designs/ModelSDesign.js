@@ -68,12 +68,16 @@ const ModelSDesign = () => {
 
                 <DescContainer>
                     <DescBox>
-                        <Desc>The Prices above include potential incentives and gas savings of $5,500.<p>Learn More</p></Desc>
+                        <Desc>The Prices above include potential incentives and gas
+                            savings of $5,500.
+                            <p>Learn More</p></Desc>
                     </DescBox>
                 </DescContainer>
 
                 <FeatureContainer>
-                    <Feature>Feature Details</Feature>
+                    <FeatureBox>
+                        <Feature>Feature Details</Feature>
+                    </FeatureBox>
                 </FeatureContainer>
 
                 <SubTitle>Paint</SubTitle>
@@ -90,8 +94,11 @@ const ModelSDesign = () => {
                 <SubSelector></SubSelector>
                 <SubSelectorDesc>All Black Included</SubSelectorDesc>
                 <SubSelectorDesc>Ebony Décor</SubSelectorDesc>
+
                 <FeatureContainer>
-                    <Feature>Feature Details</Feature>
+                    <FeatureBox>
+                        <Feature>Feature Details</Feature>
+                    </FeatureBox>
                 </FeatureContainer>
 
                 <SubTitle>Full Self-Driving Capability</SubTitle>
@@ -113,10 +120,16 @@ const ModelSDesign = () => {
                     some jurisdictions. As these self-driving features evolve, your car will be continuously
                     upgraded through over-the-air software updates.
                 </SubSelectorP>
+
                 <BtnGroup>
                     <Btn>Add</Btn>
-                    <Feature>Feature Details</Feature>
                 </BtnGroup>
+
+                <FeatureContainer>
+                    <FeatureBox>
+                        <Feature>Feature Details</Feature>
+                    </FeatureBox>
+                </FeatureContainer>
 
                 <SubTitle>Order Your Model S</SubTitle>
                 <DeliveryTime>Est. Delivery: June</DeliveryTime>
@@ -155,6 +168,7 @@ const WidgetNav = styled.div`
     flex-direction: column;
     align-self: flex-end;
     overflow-y: scroll;
+    padding: 24px;
     width: 600px;
     border: solid green 4px;
     @media (max-width: 823px) {
@@ -177,6 +191,7 @@ const DeliveryTime = styled.div`
     display: flex;
     justify-content: center;
     color: #393c41;
+    padding: 24px;
     padding-top: 5px;
     padding-bottom: 10px;
     border: solid green 1px;
@@ -225,7 +240,7 @@ const ModelDetails = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px;
+    padding: 24px;
     color: #393c41;
     border: solid green 1px;
 `
@@ -249,6 +264,7 @@ const ModelDetailsItem = styled.div`
 const MotorContainer = styled.div`
     display: flex;
     flex-direction: column;
+    padding: 24px;
     border: solid green 1px;
 `
 
@@ -293,14 +309,14 @@ const DescContainer = styled.div`
     padding: 20px;
     color: #393c41;
     border: solid red 1px;
-`
+    `
 
 const DescBox = styled.div`
     display: flex;
     padding: 10px;
     color: #393c41;
     border: solid orange 1px;
-`
+    `
 
 // Description
 const Desc = styled.div`
@@ -310,6 +326,7 @@ const Desc = styled.div`
     color: #393c41;
     border: solid purple 1px;
     p {
+        display: flex;
         text-decoration: underline;
         border: solid teal 1px;
     }
@@ -394,6 +411,13 @@ const Btn = styled.div`
 const FeatureContainer = styled.div`
     display: flex;
     justify-content: center;
+`
+
+// Feature Box containing the feature details
+const FeatureBox = styled.div`
+    display: flex;
+    justify-content: center;
+    padding: 24px;
 `
 
 // Feature details container
