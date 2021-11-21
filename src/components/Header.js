@@ -87,11 +87,15 @@ const MainMenu = styled.div`
     justify-content: center;
     padding-left: 15%;
     a {
-        font-weight: 500;
+        font-weight: 530;
         color: #393c41;
         padding: 0 10px;
         flex-wrap: nowrap;
     } 
+    /* :hover {
+        background-color: #393c41;
+        
+    } */
 `
 
 // Container for the side navbar on right side of the main navbar

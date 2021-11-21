@@ -110,9 +110,18 @@ const ModelSDesign = () => {
                     <SubDetailsItem>Summon</SubDetailsItem>
                     <SubDetailsItem>Full Self-Driving Computer</SubDetailsItem>
                     <SubDetailsItem>Traffic Light and Stop Sign Control</SubDetailsItem>
-                </SubDetails>
-                <SubSelectorDesc>Coming Soon</SubSelectorDesc>
+                    
+                    <li>Navigate on Autopilot</li>
+                    <li>Auto Lane Change</li>
+                    <li>Autopark</li>
+                    <li>Summon</li>
+                    <li>Full Self-Driving Computer</li>
+                    <li>Traffic Light and Stop Sign Control</li>
+                    
+                <SubSelectorDesc1>Coming Soon</SubSelectorDesc1>
                 <SubDetailsItem>Autosteer on city streets</SubDetailsItem>
+                    <li>Autosteer on city streets</li>
+                </SubDetails>
                 <SubSelectorP>The currently enabled features require active driver
                     supervision and do not make the vehicle autonomous. The activation and use of these features
                     are dependent on achieving reliability far in excess of human drivers as demonstrated by
@@ -121,19 +130,22 @@ const ModelSDesign = () => {
                     upgraded through over-the-air software updates.
                 </SubSelectorP>
 
-                <BtnGroup>
-                    <Btn>Add</Btn>
-                </BtnGroup>
-
+                <LowerContainer>
+                <BtnContainer>
+                    <BtnBox>
+                        <Btn>Add</Btn>
+                    </BtnBox>
+                </BtnContainer>
                 <FeatureContainer>
                     <FeatureBox>
                         <Feature>Feature Details</Feature>
                     </FeatureBox>
                 </FeatureContainer>
+                </LowerContainer>
 
                 <SubTitle>Order Your Model S</SubTitle>
                 <DeliveryTime>Est. Delivery: June</DeliveryTime>
-                <Btn>Continue Payment</Btn>
+                {/* <Btn>Continue Payment</Btn> */}
 
             </WidgetNav>
             <Footer>
@@ -328,6 +340,7 @@ const Desc = styled.div`
     p {
         display: flex;
         text-decoration: underline;
+        width: 95px;
         border: solid teal 1px;
     }
     @media (max-width: 823px) {
@@ -339,8 +352,8 @@ const Desc = styled.div`
 const SubTitle = styled.div`
     display: flex;
     justify-content: center;
-    font-size: 20px;
-    padding-top: 2px;
+    font-size: 25px;
+    padding-top: 30px;
     color: #393c41;
     border: solid green 1px;
 `
@@ -357,6 +370,15 @@ const SubSelector = styled.div`
 const SubSelectorDesc = styled.div`
     display: flex;
     justify-content: center;
+    padding-top: 10px;
+    color: #393c41;
+    border: solid green 1px;
+`
+
+// Sub title description
+const SubSelectorDesc1 = styled.div`
+    display: flex;
+    justify-content: flex-start;
     color: #393c41;
     border: solid green 1px;
 `
@@ -368,6 +390,9 @@ const SubDetails = styled.div`
     justify-content: flex-start;
     color: #393c41;
     border: solid green 1px;
+    li {
+        /* display: flex; */
+    }
 `
 
 // Sub title secondary details
@@ -387,30 +412,36 @@ const SubSelectorP = styled.div`
 `
 
 // Buttons container
-const BtnGroup = styled.div`
+const BtnContainer = styled.div`
    display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   border: solid green 1px;
+   justify-content: center;
+   border: solid green 5px;
+`
+
+const BtnBox = styled.div`
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    border: solid pink 2px;
 `
 
 // Button
 const Btn = styled.div`
     display: flex;
-    justify-content: center;
     background: #0000FF;
     color: #ffffff;
     text-transform: uppercase;
     padding: 10px;
     border-radius: 100px;
     cursor: pointer;
-    border: solid green 1px;
+    border: solid green 4px;
 `
 
 // Feature container
 const FeatureContainer = styled.div`
     display: flex;
     justify-content: center;
+    border: solid teal 5px;
 `
 
 // Feature Box containing the feature details
@@ -418,19 +449,25 @@ const FeatureBox = styled.div`
     display: flex;
     justify-content: center;
     padding: 24px;
+    border: solid red 2px;
 `
 
 // Feature details container
 const Feature = styled.div`
     display: flex;
-    justify-content: center;
     background: #D3D3D3;
     color: #393c41;
     text-transform: uppercase;
+    padding: 10px;
     border-radius: 100px;
     cursor: pointer;
-    padding: 5px;
     border: solid yellow 4px;
+`
+
+// 
+const LowerContainer = styled.div`
+    display: flex;
+    justify-content: space-evenly;
 `
 
 // Bottom container 
@@ -476,4 +513,6 @@ const FooterItem = styled.div`
 //     animation: animateDown infinite 2.5s;
 //     overflow-x: hidden;
 // `
+
+
 
