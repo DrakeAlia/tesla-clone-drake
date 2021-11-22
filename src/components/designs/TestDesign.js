@@ -5,7 +5,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Logo from '../Logo';
 
 
-const ModelSDesign = () => {
+const TestDesign = () => {
     useEffect(() => {
         console.log('im here')
     }, []);
@@ -21,95 +21,95 @@ const ModelSDesign = () => {
         <Wrap>
             <Logo />
             <WidgetNav>
-                <ModelTitle>Model S</ModelTitle>
+                <Title>Model S</Title>
                 <DeliveryTime>Est. Devilvery: June</DeliveryTime>
 
-                <ModelPriceContainer>
+                <Container>
                     <ModelPriceTab>
                         <ModelPrice>Purchase Price</ModelPrice>
                         <ModelPrice>Potential Savings*</ModelPrice>
                     </ModelPriceTab>
-                </ModelPriceContainer>
+                </Container>
 
-                <ModelDetailsBox>
-                    <ModelDetails>
-                        <ModelStats>375mi</ModelStats>
-                        <ModelDetailsItem>Range (est.)</ModelDetailsItem>
-                    </ModelDetails>
-                    <ModelDetails>
-                        <ModelStats>155mph</ModelStats>
-                        <ModelDetailsItem>Top Speed</ModelDetailsItem>
-                    </ModelDetails>
-                    <ModelDetails>
-                        <ModelStats>3.1sec</ModelStats>
-                        <ModelDetailsItem>0-60mph</ModelDetailsItem>
-                    </ModelDetails>
-                </ModelDetailsBox>
+                <Container>
+                    <Details>
+                        <Stats>375mi</Stats>
+                        <Item>Range (est.)</Item>
+                    </Details>
+                    <Details>
+                        <Stats>155mph</Stats>
+                        <Item>Top Speed</Item>
+                    </Details>
+                    <Details>
+                        <Stats>3.1sec</Stats>
+                        <Item>0-60mph</Item>
+                    </Details>
+                </Container>
 
-                <MotorContainer>
-                    <MotorInnerContainer>
+                <Container>
+                    <InnerContainer>
                         <MotorName>Dual Motor All-Wheel Drive</MotorName>
                         <MotorBox>
                             <MotorItem>Model S</MotorItem>
                             <MotorItem>$89,490*</MotorItem>
                         </MotorBox>
-                    </MotorInnerContainer>
-                </MotorContainer>
+                    </InnerContainer>
+                </Container>
 
-                <MotorContainer>
-                    <MotorInnerContainer>
+                <Container>
+                    <InnerContainer>
                         <MotorName>Tri Motor All-Wheel drivers</MotorName>
                         <MotorBox>
                             <MotorItem>Model S Plaid</MotorItem>
                             <MotorItem>$124,490*</MotorItem>
                         </MotorBox>
-                    </MotorInnerContainer>
-                </MotorContainer>
+                    </InnerContainer>
+                </Container>
 
-                <DescContainer>
+                <Container>
                     <DescBox>
                         <Desc>The Prices above include potential incentives and gas
                             savings of $5,500.
                             <p>Learn More</p></Desc>
                     </DescBox>
-                </DescContainer>
+                </Container>
 
-                <FeatureContainer>
+                <Container>
                     <FeatureBox>
                         <Feature>Feature Details</Feature>
                     </FeatureBox>
-                </FeatureContainer>
+                </Container>
 
-                <SubTitle>Paint</SubTitle>
-                <SubSelector></SubSelector>
-                <SubSelectorDesc>Pearl White Multi-Coat Included</SubSelectorDesc>
+                <Title>Paint</Title>
+                <Selector></Selector>
+                <Desc>Pearl White Multi-Coat Included</Desc>
 
-                <SubTitle>Wheels</SubTitle>
-                <SubSelector></SubSelector>
-                <SubSelectorDesc>21" Arachnid Wheels</SubSelectorDesc>
-                <SubSelectorDesc>$4,500</SubSelectorDesc>
-                <SubSelectorDesc>Range (est.): 375mi</SubSelectorDesc>
+                <Title>Wheels</Title>
+                <Selector></Selector>
+                <Desc>21" Arachnid Wheels</Desc>
+                <Desc>$4,500</Desc>
+                <Desc>Range (est.): 375mi</Desc>
 
-                <SubTitle>Interior</SubTitle>
-                <SubSelector></SubSelector>
-                <SubSelectorDesc>All Black Included</SubSelectorDesc>
-                <SubSelectorDesc>Ebony Décor</SubSelectorDesc>
+                <Title>Interior</Title>
+                <Selector></Selector>
+                <Desc>All Black Included</Desc>
+                <Desc>Ebony Décor</Desc>
 
-                <FeatureContainer>
+                <Container>
                     <FeatureBox>
                         <Feature>Feature Details</Feature>
                     </FeatureBox>
-                </FeatureContainer>
+                </Container>
 
-                <SubTitle>Full Self-Driving Capability</SubTitle>
-                <SubSelectorDesc>$10,000</SubSelectorDesc>
-                <SubDetails>
-                    <SubDetailsItem>Navigate on Autopilot</SubDetailsItem>
-                    <SubDetailsItem>Auto Lane Change</SubDetailsItem>
-                    <SubDetailsItem>Autopark</SubDetailsItem>
-                    <SubDetailsItem>Summon</SubDetailsItem>
-                    <SubDetailsItem>Full Self-Driving Computer</SubDetailsItem>
-                    <SubDetailsItem>Traffic Light and Stop Sign Control</SubDetailsItem>
+                <Title>Full Self-Driving Capability</Title>
+                <Desc>$10,000</Desc>
+                <Details>
+                    <Item>Navigate on Autopilot</Item>
+                    <Item>Auto Lane Change</Item>
+                    <Item>Autopark</Item>
+                    <Item>Summon</Item>
+                    <Item>Full Self-Driving Computer</Item>
+                    <Item>Traffic Light and Stop Sign Control</Item>
 
                     <li>Navigate on Autopilot</li>
                     <li>Auto Lane Change</li>
@@ -118,32 +118,32 @@ const ModelSDesign = () => {
                     <li>Full Self-Driving Computer</li>
                     <li>Traffic Light and Stop Sign Control</li>
 
-                    <SubSelectorDesc1>Coming Soon</SubSelectorDesc1>
-                    <SubDetailsItem>Autosteer on city streets</SubDetailsItem>
+                    <Desc>Coming Soon</Desc>
+                    <Item>Autosteer on city streets</Item>
                     <li>Autosteer on city streets</li>
-                </SubDetails>
-                <SubSelectorP>The currently enabled features require active driver
+                </Details>
+                <Desc>The currently enabled features require active driver
                     supervision and do not make the vehicle autonomous. The activation and use of these features
                     are dependent on achieving reliability far in excess of human drivers as demonstrated by
                     billions of miles of experience, as well as regulatory approval, which may take longer in
                     some jurisdictions. As these self-driving features evolve, your car will be continuously
                     upgraded through over-the-air software updates.
-                </SubSelectorP>
+                </Desc>
 
-                <LowerContainer>
-                    <BtnContainer>
+                <Container>
+                    <Container>
                         <BtnBox>
                             <Btn>Add</Btn>
                         </BtnBox>
-                    </BtnContainer>
-                    <FeatureContainer>
+                    </Container>
+                    <Container>
                         <FeatureBox>
                             <Feature>Feature Details</Feature>
                         </FeatureBox>
-                    </FeatureContainer>
-                </LowerContainer>
+                    </Container>
+                </Container>
 
-                <SubTitle>Order Your Model S</SubTitle>
+                <Title>Order Your Model S</Title>
                 <DeliveryTime>Est. Delivery: June</DeliveryTime>
                 {/* <Btn>Continue Payment</Btn> */}
 
@@ -162,7 +162,7 @@ const ModelSDesign = () => {
     )
 }
 
-export default ModelSDesign
+export default TestDesign
 
 // Container for the whole page
 const Wrap = styled.div`
@@ -189,7 +189,7 @@ const WidgetNav = styled.div`
 `
 
 // Model name/title
-const ModelTitle = styled.div`
+const Title = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 25px;
@@ -210,7 +210,7 @@ const DeliveryTime = styled.div`
 `
 
 // Container for all the model price boxes
-const ModelPriceContainer = styled.div`
+const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -238,17 +238,9 @@ const ModelPrice = styled.div`
     border: solid green 1px;
 `
 
-// Model detail container
-const ModelDetailsBox = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: #393c41;
-    border: solid green 1px;
-`
 
 // Outer Container for model details
-const ModelDetails = styled.div`
+const Details = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -258,7 +250,7 @@ const ModelDetails = styled.div`
 `
 
 // Inner Container for the model's stats
-const ModelStats = styled.div`
+const Stats = styled.div`
     display: flex;
     justify-content: center;
     color: #393c41;
@@ -266,21 +258,14 @@ const ModelStats = styled.div`
 `
 
 // Model Second detail
-const ModelDetailsItem = styled.div`
+const Item = styled.div`
     display: flex;
     color: #393c41;
     border: solid green 1px;
 `
 
-// Container for the Motor section
-const MotorContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    border: solid green 1px;
-`
 
-const MotorInnerContainer = styled.div`
+const InnerContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding-left: 30px;
@@ -314,14 +299,6 @@ const MotorItem = styled.div`
     border: solid green 1px;
 `
 
-// Container for Description
-const DescContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    color: #393c41;
-    border: solid red 1px;
-    `
 
 const DescBox = styled.div`
     display: flex;
@@ -348,77 +325,15 @@ const Desc = styled.div`
     }
 `
 
-// The Sub title of the models
-const SubTitle = styled.div`
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
-    font-size: 25px;
-    padding-top: 30px;
-    color: #393c41;
-    border: solid green 1px;
-`
 
 // Choose wheels/paint/ect. options
-const SubSelector = styled.div`
+const Selector = styled.div`
     display: flex;
     justify-content: center;
     color: #393c41;
     border: solid green 1px;
 `
 
-// 
-const SubSelectorDesc = styled.div`
-    display: flex;
-    justify-content: center;
-    font-weight: 400;
-    padding-top: 10px;
-    color: #393c41;
-    border: solid green 1px;
-`
-
-// Sub title description
-const SubSelectorDesc1 = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    color: #393c41;
-    border: solid green 1px;
-`
-
-// Sub title secondary details container
-const SubDetails = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    color: #393c41;
-    border: solid green 1px;
-    li {
-        /* display: flex; */
-    }
-`
-
-// Sub title secondary details
-const SubDetailsItem = styled.div`
-    display: flex;
-    align-items: flex-start;
-    color: #393c41;
-    border: solid green 1px;
-`
-
-// Sub title paragraph
-const SubSelectorP = styled.div`
-    display: flex;
-    align-content: flex-start;
-    color: #393c41;
-    border: solid green 1px;
-`
-
-// Buttons container
-const BtnContainer = styled.div`
-   display: flex;
-   justify-content: center;
-   border: solid green 5px;
-`
 
 const BtnBox = styled.div`
     display: flex;
@@ -439,12 +354,6 @@ const Btn = styled.div`
     border: solid green 4px;
 `
 
-// Feature container
-const FeatureContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    border: solid teal 5px;
-`
 
 // Feature Box containing the feature details
 const FeatureBox = styled.div`
@@ -466,11 +375,6 @@ const Feature = styled.div`
     border: solid yellow 4px;
 `
 
-// 
-const LowerContainer = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-`
 
 // Bottom container 
 const Footer = styled.div`
