@@ -410,9 +410,6 @@
 
 
 
-
-
-
 import styled from 'styled-components'
 import { useEffect } from 'react';
 // import { useState } from 'react';
@@ -430,7 +427,7 @@ const ModelSDesign = () => {
             <Logo />
             <SideBar>
                 <Container>
-                        <Title>Model S</Title>
+                    <Title>Model S</Title>
                 </Container>
 
                 <DeliveryTime>Est. Devilvery: June</DeliveryTime>
@@ -438,12 +435,12 @@ const ModelSDesign = () => {
                 <Container>
                     <Box2>
                         <PriceGroup>
-                        <PriceBox>
-                            <Item>Purchase Price</Item>
-                        </PriceBox>
-                        <PriceBox>
-                            <Item>Potential Savings*</Item>
-                        </PriceBox>
+                            <PriceBox>
+                                <Item>Purchase Price</Item>
+                            </PriceBox>
+                            <PriceBox>
+                                <Item>Potential Savings*</Item>
+                            </PriceBox>
                         </PriceGroup>
                     </Box2>
                 </Container>
@@ -475,8 +472,12 @@ const ModelSDesign = () => {
                     <Name>Dual Motor All-Wheel Drive</Name>
                     <Box4>
                         <ModelGroup>
+                        <ModelBox>
                             <Item>Model S</Item>
+                        </ModelBox>
+                        <ModelBox>
                             <Item>$89,490*</Item>
+                        </ModelBox>
                         </ModelGroup>
                     </Box4>
                 </Container>
@@ -485,18 +486,23 @@ const ModelSDesign = () => {
                     <Name>Tri Motor All-Wheel drivers</Name>
                     <Box4>
                         <ModelGroup>
+                        <ModelBox>
                             <Item>Model S Plaid</Item>
+                        </ModelBox>
+                        <ModelBox>
                             <Item>$124,490*</Item>
+                        </ModelBox>
                         </ModelGroup>
                     </Box4>
                 </Container>
 
                 <Container>
-                    <Box>
-                        <Desc>The Prices above include potential incentives
-                            and gas savings of $5,500.
-                            <p>Learn More</p></Desc>
-                    </Box>
+                    <Box5>
+                        <Desc>* Prices above include potential incentives and </Desc>
+                        <Desc>gas savings of $5,500.</Desc>
+                        <Learn>Learn More</Learn>
+                        
+                    </Box5>
                 </Container>
 
                 <Container>
@@ -602,6 +608,7 @@ export default ModelSDesign
 // Container for the whole page
 const Wrap = styled.div`
     display: flex;
+    /* width: 100%; */
     flex-direction: column;
     justify-content: center;
 `
@@ -614,9 +621,12 @@ const SideBar = styled.div`
     align-self: flex-end;
     overflow-y: scroll;
     padding: 24px;
-    width: 600px;
+    width: 425px;
     @media (max-width: 823px) {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        
     }
 `
 
@@ -641,14 +651,13 @@ const DeliveryTime = styled.div`
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    align-content: center;
-    padding: 20px;
+    padding: 5px;
 `
 
 // 
 const Box = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     padding: 20px;
 `
@@ -661,6 +670,7 @@ const Box2 = styled(Box)`
 const PriceBox = styled.div`
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 `
 
 const Box3 = styled(Box)`
@@ -680,6 +690,16 @@ const Box4 = styled(Box)`
     padding: 20px;
 `
 
+const ModelBox = styled.div`
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+`
+
+const Box5 = styled(Box)`
+    flex-direction: column;
+    padding: 32px;
+`
 
 // 
 const Stats = styled.div`
@@ -707,17 +727,21 @@ const BtnGroup = styled.div`
 // 
 const PriceGroup = styled(BtnGroup)`
     flex-direction: row;
-    justify-content: space-evenly;
-    width: 413px;
+    justify-content: space-between;
+    width: 376px;
+    padding: 15px;
     border-radius: 100px;
+    border: solid black 1px;
 `
 
 // 
 const ModelGroup = styled(BtnGroup)`
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 413px;
+    padding: 20px;
     border-radius: 100px;
+    border: solid black 1px;
 `
 
 // 
@@ -733,6 +757,7 @@ const Item = styled.div`
     display: flex;
 `
 
+
 // Name of the either Dual or Tri motor
 const Name = styled.div`
     display: flex;
@@ -746,15 +771,16 @@ const Desc = styled.div`
     align-items: center;
     font-size: 15px;
     color: #393c41;
-    p {
-        display: flex;
-        text-decoration: underline; 
-    }
     @media (max-width: 823px) {
         flex-direction: column;
     }
 `
 
+const Learn = styled(Desc)`
+    text-decoration: underline;
+    font-size: 15px;
+    cursor: pointer;
+`
 
 // Choose wheels/paint/ect. options
 const Selector = styled.div`
@@ -785,10 +811,10 @@ const Feature = styled.div`
     display: flex;
     background: #D3D3D3;
     color: #393c41;
-    text-transform: uppercase;
-    padding: 10px;
     border-radius: 100px;
     cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px;
 `
 
 
@@ -807,6 +833,7 @@ const Footer = styled.div`
 const FooterBox = styled.div`
     display: flex;
     justify-content: center;
+    border: solid black 1px;
 `
 
 // Footer button arrow
