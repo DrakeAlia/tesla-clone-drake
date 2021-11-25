@@ -101,6 +101,12 @@ const ModelSDesign = () => {
                     </Box>
                 </Container>
 
+
+                <Container>
+                    <Box>
+                    </Box>
+                </Container>
+
                 <Container>
                     <SubTitle>Paint</SubTitle>
                     <Selector></Selector>
@@ -194,9 +200,9 @@ export default ModelSDesign
 // Container for the whole page
 const Wrap = styled.div`
     display: flex;
-    /* width: 100%; */
     flex-direction: column;
     justify-content: center;
+    /* width: 100%; */
 `
 
 // SideBar Container for the model details
@@ -207,12 +213,12 @@ const SideBar = styled.div`
     align-self: flex-end;
     overflow-y: scroll;
     padding: 24px;
+    padding-top: 63px;
     width: 425px;
     @media (max-width: 823px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
     }
 `
 
@@ -252,16 +258,19 @@ const Box = styled.div`
     padding: 20px;
 `
 
+
 const Box2 = styled(Box)`
     flex-direction: row;
     padding: 20px;
 `
+
 
 const PriceBox = styled.div`
     display: flex;
     justify-content: space-between;
     cursor: pointer;
 `
+
 
 const Box3 = styled(Box)`
     flex-direction: row;
