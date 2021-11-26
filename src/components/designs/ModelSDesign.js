@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { useEffect } from 'react';
-// import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Logo from '../Logo';
 
@@ -10,6 +9,7 @@ const ModelSDesign = () => {
         console.log('Im Here!!!')
     }, []);
 
+    const [modelStatus, setModelStatus] = useState(false)
     return (
         <Wrap>
             <Logo />
@@ -18,7 +18,7 @@ const ModelSDesign = () => {
                     <Title>Model S</Title>
                 </Container>
 
-                <DeliveryTime>Est. Devilvery: June</DeliveryTime>
+                <DeliveryTime>Est. Devilvery: June 2022</DeliveryTime>
 
                 <Container>
                     <Box2>
@@ -36,19 +36,22 @@ const ModelSDesign = () => {
                 <Container>
                     <Box3>
                         <Range>
-                            <Stats>375
+                            <Stats>
+                                <Stats1>375</Stats1>
                                 <Stats2>mi</Stats2>
                             </Stats>
                             <Stats3>Range (est.)</Stats3>
                         </Range>
                         <Range>
-                            <Stats>155
+                            <Stats>
+                                <Stats1>155</Stats1>
                                 <Stats2>mph</Stats2>
                             </Stats>
                             <Stats3>Top Speed</Stats3>
                         </Range>
                         <Range>
-                            <Stats>3.1
+                            <Stats>
+                                <Stats1>3.1</Stats1>
                                 <Stats2>sec</Stats2>
                             </Stats>
                             <Stats3>0-60mph</Stats3>
@@ -59,7 +62,8 @@ const ModelSDesign = () => {
                 <Container>
                     <Name>Dual Motor All-Wheel Drive</Name>
                     <Box4>
-                        <ModelGroup>
+                        {/* <ModelGroup onClick={() => setModelStatus(true)}> */}
+                        <ModelGroup onClick={() => setModelStatus(true)}>
                             <ModelBox>
                                 <Item>Model S</Item>
                             </ModelBox>
@@ -73,7 +77,7 @@ const ModelSDesign = () => {
                 <Container>
                     <Name>Tri Motor All-Wheel drivers</Name>
                     <Box4>
-                        <ModelGroup>
+                        <ModelGroup onClick={() => setModelStatus(true)}>
                             <ModelBox>
                                 <Item>Model S Plaid</Item>
                             </ModelBox>
@@ -86,10 +90,13 @@ const ModelSDesign = () => {
 
                 <Container>
                     <Box5>
-                        <Desc>* Prices above include potential incentives and
-                        gas savings of $5,500.</Desc>
-                        <Learn>Learn More</Learn>
-
+                        {/* <TextBox> */}
+                            <Text>* Prices above include potential incentives and
+                                gas savings of $5,500.
+                                <p>Learn More</p>
+                            {/* <Learn>Learn More</Learn> */}
+                            </Text>
+                        {/* </TextBox> */}
                     </Box5>
                 </Container>
 
@@ -172,7 +179,7 @@ const ModelSDesign = () => {
                 </Container>
 
                 <Container>
-                    <Title>Order Your Model S</Title>
+                    <BottomTitle>Order Your Model S</BottomTitle>
                     <DeliveryTime>Est. Delivery: June</DeliveryTime>
                     <BtnBox>
                         <Btn>Continue Payment</Btn>
@@ -214,7 +221,7 @@ const SideBar = styled.div`
     overflow-y: scroll;
     padding: 24px;
     padding-top: 63px;
-    width: 425px;
+    width: 393px;
     @media (max-width: 823px) {
         display: flex;
         flex-direction: column;
@@ -227,11 +234,16 @@ const Title = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 25px;
-    font-size: 40px;
+    font-size: 50px;
 `
 
 const SubTitle = styled(Title)`
-    font-size: 25px;
+    font-size: 35px;
+    padding: 30px;
+`
+
+const BottomTitle = styled(Title)`
+    font-size: 35px;
 `
 
 // Est. Devilvery: June
@@ -261,7 +273,7 @@ const Box = styled.div`
 
 const Box2 = styled(Box)`
     flex-direction: row;
-    padding: 20px;
+    padding: 9px;
 `
 
 
@@ -292,19 +304,30 @@ const Box4 = styled(Box)`
 const ModelBox = styled.div`
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
 `
 
 const Box5 = styled(Box)`
-    flex-direction: column;
-    padding: 32px;
+    flex-direction: row;
+    padding: 5px;
+`
+
+const TextBox = styled.div`
+    display: flex;
+    padding: 5px;
 `
 
 // 
 const Stats = styled.div`
     display: flex;
     justify-content: center;
+    align-items: baseline;
     color: #393c41;
+`
+
+// 
+const Stats1 = styled(Stats)`
+    font-size: 30px;
+    padding-bottom: 15px;
 `
 
 // 
@@ -327,7 +350,7 @@ const BtnGroup = styled.div`
 const PriceGroup = styled(BtnGroup)`
     flex-direction: row;
     justify-content: space-between;
-    width: 376px;
+    width: 310px;
     padding: 15px;
     border-radius: 100px;
     border: solid black 1px;
@@ -341,6 +364,7 @@ const ModelGroup = styled(BtnGroup)`
     padding: 20px;
     border-radius: 100px;
     border: solid black 1px;
+    cursor: pointer;
 `
 
 // 
@@ -368,23 +392,38 @@ const Desc = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     font-size: 15px;
-    color: #393c41;
     @media (max-width: 823px) {
         flex-direction: column;
     }
 `
 
-const Learn = styled(Desc)`
-    text-decoration: underline;
+// Description
+const Text = styled(Desc)`
+    flex-direction: row;
     font-size: 15px;
-    cursor: pointer;
+    @media (max-width: 723px) {
+        flex-direction: column;
+    }
+    p {
+        
+        cursor: pointer;
+        text-decoration: underline;
+    }
 `
+
+// const Learn = styled(Desc)`
+//     text-decoration: underline;
+//     font-size: 15px;
+//     cursor: pointer;
+// `
 
 // Choose wheels/paint/ect. options
 const Selector = styled.div`
     display: flex;
     justify-content: center;
+    padding: 10px;
 `
 
 // 
@@ -414,7 +453,8 @@ const Feature = styled.div`
     border-radius: 100px;
     cursor: pointer;
     text-transform: uppercase;
-    padding: 10px;
+    padding: 7px;
+    width: 156px;
 `
 
 
