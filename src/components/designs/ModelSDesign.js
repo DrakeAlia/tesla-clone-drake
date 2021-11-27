@@ -10,12 +10,15 @@ const ModelSDesign = () => {
     }, []);
 
     const [modelStatus, setModelStatus] = useState(false)
+    
     return (
         <Wrap>
             <Logo />
             <SideBar>
                 <Container>
-                    <Title>Model S</Title>
+                    <Box1>
+                        <Title>Model S</Title>
+                    </Box1>
                 </Container>
 
                 <DeliveryTime>Est. Devilvery: June 2022</DeliveryTime>
@@ -54,10 +57,36 @@ const ModelSDesign = () => {
                                 <Stats1>3.1</Stats1>
                                 <Stats2>sec</Stats2>
                             </Stats>
-                            <Stats3>0-60mph</Stats3>
+                            <Stats3>0-60 mph</Stats3>
                         </Range>
                     </Box3>
                 </Container>
+
+                {/* <Container>
+                    <Box3>
+                        <Range>
+                            <Stats>
+                                <Stats1>348</Stats1>
+                                <Stats2>mi</Stats2>
+                            </Stats>
+                            <Stats3>Range (EPA est.)</Stats3>
+                        </Range>
+                        <Range>
+                            <Stats>
+                                <Stats1>200</Stats1>
+                                <Stats2>mph</Stats2>
+                            </Stats>
+                            <Stats3>Top Speed</Stats3>
+                        </Range>
+                        <Range>
+                            <Stats>
+                                <Stats1>1.99</Stats1>
+                                <Stats2>sec</Stats2>
+                            </Stats>
+                            <Stats3>0-60 mph</Stats3>
+                        </Range>
+                    </Box3>
+                </Container> */}
 
                 <Container>
                     <Name>Dual Motor All-Wheel Drive</Name>
@@ -91,11 +120,11 @@ const ModelSDesign = () => {
                 <Container>
                     <Box5>
                         {/* <TextBox> */}
-                            <Text>* Prices above include potential incentives and
-                                gas savings of $5,500.
-                                <p>Learn More</p>
+                        <Text>* Prices above include potential incentives and
+                            gas savings of $5,500.
+                            <p>Learn More</p>
                             {/* <Learn>Learn More</Learn> */}
-                            </Text>
+                        </Text>
                         {/* </TextBox> */}
                     </Box5>
                 </Container>
@@ -115,13 +144,20 @@ const ModelSDesign = () => {
                 </Container>
 
                 <Container>
-                    <SubTitle>Paint</SubTitle>
+                    <Box1>
+                        <SubTitle>Paint</SubTitle>
+                    </Box1>
                     <Selector></Selector>
-                    <Desc>Pearl White Multi-Coat Included</Desc>
+                    <TextBox>
+                        <Desc>Pearl White Multi-Coat</Desc>
+                        <Desc>Included</Desc>
+                    </TextBox>
                 </Container>
 
                 <Container>
-                    <SubTitle>Wheels</SubTitle>
+                    <Box1>
+                        <SubTitle>Wheels</SubTitle>
+                    </Box1>
                     <Selector></Selector>
                     <Desc>21" Arachnid Wheels</Desc>
                     <Desc>$4,500</Desc>
@@ -129,7 +165,9 @@ const ModelSDesign = () => {
                 </Container>
 
                 <Container>
-                    <SubTitle>Interior</SubTitle>
+                    <Box1>
+                        <SubTitle>Interior</SubTitle>
+                    </Box1>
                     <Selector></Selector>
                     <Desc>All Black Included</Desc>
                     <Desc>Ebony Décor</Desc>
@@ -144,8 +182,10 @@ const ModelSDesign = () => {
                 </Container>
 
                 <Container>
-                    <SubTitle>Full Self-Driving Capability</SubTitle>
-                    <Desc>$10,000</Desc>
+                    <Box1>
+                        <SubTitle>Full Self-Driving Capability</SubTitle>
+                    </Box1>
+                    <Desc1>$10,000</Desc1>
                     <Details>
                         <li>Navigate on Autopilot</li>
                         <li>Auto Lane Change</li>
@@ -153,7 +193,7 @@ const ModelSDesign = () => {
                         <li>Summon</li>
                         <li>Full Self-Driving Computer</li>
                         <li>Traffic Light and Stop Sign Control</li>
-                        <Desc>Coming Soon</Desc>
+                        <Desc2>Coming Soon</Desc2>
                         <li>Autosteer on city streets</li>
                     </Details>
                     <Desc>The currently enabled features require active driver
@@ -170,8 +210,6 @@ const ModelSDesign = () => {
                         <BtnBox>
                             <Btn>Add</Btn>
                         </BtnBox>
-                    </Box>
-                    <Box>
                         <BtnGroup>
                             <Feature>Feature Details</Feature>
                         </BtnGroup>
@@ -220,7 +258,7 @@ const SideBar = styled.div`
     align-self: flex-end;
     overflow-y: scroll;
     padding: 24px;
-    padding-top: 63px;
+    padding-top: 100px;
     width: 393px;
     @media (max-width: 823px) {
         display: flex;
@@ -233,13 +271,14 @@ const SideBar = styled.div`
 const Title = styled.div`
     display: flex;
     justify-content: center;
-    padding-top: 25px;
+    padding-top: 5px;
     font-size: 50px;
 `
 
 const SubTitle = styled(Title)`
     font-size: 35px;
     padding: 30px;
+    text-align: center;
 `
 
 const BottomTitle = styled(Title)`
@@ -253,6 +292,7 @@ const DeliveryTime = styled.div`
     padding: 24px;
     padding-top: 5px;
     padding-bottom: 10px;
+    color: #767973;
 `
 
 // 
@@ -268,6 +308,11 @@ const Box = styled.div`
     flex-direction: row;
     justify-content: center;
     padding: 20px;
+`
+
+const Box1 = styled(Box)`
+    flex-direction: row;
+    justify-content: center;
 `
 
 
@@ -326,16 +371,20 @@ const Stats = styled.div`
 
 // 
 const Stats1 = styled(Stats)`
-    font-size: 30px;
+    font-size: 27px;
     padding-bottom: 15px;
+    font-weight: 550;
 `
 
 // 
 const Stats2 = styled(Stats)`
+    font-weight: 550;
 `
 
 // 
 const Stats3 = styled(Stats)`
+    font-weight: 500;
+    color: #90938C;
 `
 
 // 
@@ -399,6 +448,19 @@ const Desc = styled.div`
     }
 `
 
+const Desc1 = styled(Desc)`
+    @media (max-width: 823px) {
+        flex-direction: column;
+    }
+`
+
+const Desc2 = styled(Desc)`
+    justify-content: f;
+    @media (max-width: 823px) {
+        flex-direction: column;
+    }
+`
+
 // Description
 const Text = styled(Desc)`
     flex-direction: row;
@@ -418,6 +480,7 @@ const Text = styled(Desc)`
 //     font-size: 15px;
 //     cursor: pointer;
 // `
+
 
 // Choose wheels/paint/ect. options
 const Selector = styled.div`
