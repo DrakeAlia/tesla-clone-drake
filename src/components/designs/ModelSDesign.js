@@ -135,8 +135,8 @@ const ModelSDesign = () => {
                 </Container>
 
                 <Container>
-                    <Box>
-                    </Box>
+                    <EmptyBox>
+                    </EmptyBox>
                 </Container>
 
                 <Container>
@@ -146,12 +146,17 @@ const ModelSDesign = () => {
                     <Selector></Selector>
                     <DescBox>
                         <MiniBox>
-                            <Desc>Pearl White Multi-Coat</Desc>
+                            <DescText>Pearl White Multi-Coat</DescText>
                         </MiniBox>
                         <MiniBox>
                             <Desc>Included</Desc>
                         </MiniBox>
                     </DescBox>
+                </Container>
+
+                <Container>
+                    <EmptyBox>
+                    </EmptyBox>
                 </Container>
 
                 <Container>
@@ -161,7 +166,7 @@ const ModelSDesign = () => {
                     <Selector></Selector>
                     <DescBox>
                         <MiniBox>
-                            <Desc>21" Arachnid Wheels</Desc>
+                            <DescText>21" Arachnid Wheels</DescText>
                         </MiniBox>
                         <MiniBox>
                             <Desc>$4,500</Desc>
@@ -171,18 +176,26 @@ const ModelSDesign = () => {
                 </Container>
 
                 <Container>
+                    <EmptyBox>
+                    </EmptyBox>
+                </Container>
+
+                <Container>
                     <Box1>
                         <SubTitle>Interior</SubTitle>
                     </Box1>
                     <Selector></Selector>
                     <DescBox>
                         <MiniBox>
-                            <Desc>All Black Included</Desc>
+                            <DescText>All Black</DescText>
                         </MiniBox>
                         <MiniBox>
-                            <Desc>Ebony Décor</Desc>
+                            <Desc>Included</Desc>
                         </MiniBox>
                     </DescBox>
+                        <MiniBox>
+                            <Desc>Ebony Décor</Desc>
+                    </MiniBox>
                 </Container>
 
                 <Container>
@@ -191,6 +204,11 @@ const ModelSDesign = () => {
                             <Feature>Feature Details</Feature>
                         </BtnGroup>
                     </Box>
+                </Container>
+
+                <Container>
+                    <EmptyBox>
+                    </EmptyBox>
                 </Container>
 
                 <Container>
@@ -233,14 +251,25 @@ const ModelSDesign = () => {
                 </Container>
 
                 <Container>
+                    <EmptyBox>
+                    </EmptyBox>
+                </Container>
+
+                <Container>
                     <BottomTitle>Order Your Model S</BottomTitle>
                     <DeliveryTime>Est. Delivery: June</DeliveryTime>
-                    <BtnBox>
-                        <Btn>Continue Payment</Btn>
-                    </BtnBox>
+                    <BtnGroup2>
+                        <Btn2>Continue Payment</Btn2>
+                    </BtnGroup2>
+                </Container>
+
+                <Container>
+                    <EmptyBox>
+                    </EmptyBox>
                 </Container>
 
             </SideBar>
+            
 
             <Footer>
                 <FooterBox>
@@ -257,6 +286,7 @@ const ModelSDesign = () => {
 }
 
 export default ModelSDesign
+
 
 // Container for the whole page
 const Wrap = styled.div`
@@ -324,6 +354,11 @@ const Box = styled.div`
     flex-direction: row;
     justify-content: center;
     padding: 20px;
+`
+
+// 
+const EmptyBox = styled(Box)`
+    padding: 105px;
 `
 
 const Box1 = styled(Box)`
@@ -412,6 +447,10 @@ const BtnGroup = styled.div`
     padding-right: 30px; */
 `
 
+const BtnGroup2 = styled(BtnGroup)`
+   justify-content: center;
+`
+
 // 
 const PriceGroup = styled(BtnGroup)`
     flex-direction: row;
@@ -460,9 +499,14 @@ const Desc = styled.div`
     align-items: center;
     text-align: center;
     font-size: 15px;
+    color: #90938C ;
     @media (max-width: 823px) {
         flex-direction: column;
     }
+`
+
+const DescText = styled(Desc)`
+    color: black;
 `
 
 const DescBox = styled.div`
@@ -473,9 +517,8 @@ const DescBox = styled.div`
 `
 
 const Desc1 = styled(Desc)`
-    @media (max-width: 823px) {
-        flex-direction: column;
-    }
+    color: #000000;
+    font-size: 20px;
 `
 
 // const Desc2 = styled(Desc)`
@@ -486,6 +529,8 @@ const Desc1 = styled(Desc)`
 const Text = styled(Desc)`
     flex-direction: row;
     font-size: 15px;
+    text-align: start;
+    
     p {
         cursor: pointer;
         text-decoration: underline;
@@ -519,6 +564,7 @@ const BtnBox = styled.div`
 const MiniBox = styled.div`
     display: flex;
     padding: 5px;
+    justify-content: center;
 `
 
 // Button
@@ -532,6 +578,10 @@ const Btn = styled.div`
     padding: 10px;
     border-radius: 100px;
     cursor: pointer;
+`
+
+const Btn2 = styled(Btn)`
+   width: 310px;
 `
 
 // Feature details container
@@ -565,6 +615,7 @@ const FooterBox = styled.div`
     display: flex;
     justify-content: center;
     border: solid black 1px;
+    border-radius: 100px;
 `
 
 // Footer button arrow
