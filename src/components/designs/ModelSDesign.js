@@ -10,7 +10,7 @@ const ModelSDesign = () => {
     }, []);
 
     const [modelStatus, setModelStatus] = useState(false)
-    
+
     return (
         <Wrap>
             <Logo />
@@ -119,13 +119,10 @@ const ModelSDesign = () => {
 
                 <Container>
                     <Box5>
-                        {/* <TextBox> */}
                         <Text>* Prices above include potential incentives and
                             gas savings of $5,500.
                             <p>Learn More</p>
-                            {/* <Learn>Learn More</Learn> */}
                         </Text>
-                        {/* </TextBox> */}
                     </Box5>
                 </Container>
 
@@ -137,7 +134,6 @@ const ModelSDesign = () => {
                     </Box>
                 </Container>
 
-
                 <Container>
                     <Box>
                     </Box>
@@ -148,10 +144,14 @@ const ModelSDesign = () => {
                         <SubTitle>Paint</SubTitle>
                     </Box1>
                     <Selector></Selector>
-                    <TextBox>
-                        <Desc>Pearl White Multi-Coat</Desc>
-                        <Desc>Included</Desc>
-                    </TextBox>
+                    <DescBox>
+                        <MiniBox>
+                            <Desc>Pearl White Multi-Coat</Desc>
+                        </MiniBox>
+                        <MiniBox>
+                            <Desc>Included</Desc>
+                        </MiniBox>
+                    </DescBox>
                 </Container>
 
                 <Container>
@@ -159,8 +159,14 @@ const ModelSDesign = () => {
                         <SubTitle>Wheels</SubTitle>
                     </Box1>
                     <Selector></Selector>
-                    <Desc>21" Arachnid Wheels</Desc>
-                    <Desc>$4,500</Desc>
+                    <DescBox>
+                        <MiniBox>
+                            <Desc>21" Arachnid Wheels</Desc>
+                        </MiniBox>
+                        <MiniBox>
+                            <Desc>$4,500</Desc>
+                        </MiniBox>
+                    </DescBox>
                     <Desc>Range (est.): 375mi</Desc>
                 </Container>
 
@@ -169,8 +175,14 @@ const ModelSDesign = () => {
                         <SubTitle>Interior</SubTitle>
                     </Box1>
                     <Selector></Selector>
-                    <Desc>All Black Included</Desc>
-                    <Desc>Ebony Décor</Desc>
+                    <DescBox>
+                        <MiniBox>
+                            <Desc>All Black Included</Desc>
+                        </MiniBox>
+                        <MiniBox>
+                            <Desc>Ebony Décor</Desc>
+                        </MiniBox>
+                    </DescBox>
                 </Container>
 
                 <Container>
@@ -193,27 +205,31 @@ const ModelSDesign = () => {
                         <li>Summon</li>
                         <li>Full Self-Driving Computer</li>
                         <li>Traffic Light and Stop Sign Control</li>
-                        <Desc2>Coming Soon</Desc2>
+                        <TextBox>
+                            <Text1>Coming Soon</Text1>
+                        </TextBox>
                         <li>Autosteer on city streets</li>
                     </Details>
-                    <Desc>The currently enabled features require active driver
-                        supervision and do not make the vehicle autonomous. The activation and use of these features
-                        are dependent on achieving reliability far in excess of human drivers as demonstrated by
-                        billions of miles of experience, as well as regulatory approval, which may take longer in
-                        some jurisdictions. As these self-driving features evolve, your car will be continuously
-                        upgraded through over-the-air software updates.
-                    </Desc>
+                    <TextBox>
+                        <Text>The currently enabled features require active driver
+                            supervision and do not make the vehicle autonomous. The activation and use of these features
+                            are dependent on achieving reliability far in excess of human drivers as demonstrated by
+                            billions of miles of experience, as well as regulatory approval, which may take longer in
+                            some jurisdictions. As these self-driving features evolve, your car will be continuously
+                            upgraded through over-the-air software updates.
+                        </Text>
+                    </TextBox>
                 </Container>
 
                 <Container>
-                    <Box>
+                    <Box6>
                         <BtnBox>
                             <Btn>Add</Btn>
                         </BtnBox>
                         <BtnGroup>
                             <Feature>Feature Details</Feature>
                         </BtnGroup>
-                    </Box>
+                    </Box6>
                 </Container>
 
                 <Container>
@@ -356,8 +372,9 @@ const Box5 = styled(Box)`
     padding: 5px;
 `
 
-const TextBox = styled.div`
-    display: flex;
+const Box6 = styled(Box)`
+    flex-direction: row;
+    justify-content: space-between;
     padding: 5px;
 `
 
@@ -390,7 +407,7 @@ const Stats3 = styled(Stats)`
 // 
 const BtnGroup = styled.div`
     display: flex;
-    padding: 10px;
+    padding: 6px;
     /* padding-left: 30px;
     padding-right: 30px; */
 `
@@ -448,39 +465,42 @@ const Desc = styled.div`
     }
 `
 
+const DescBox = styled.div`
+    display: flex;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: center;
+`
+
 const Desc1 = styled(Desc)`
     @media (max-width: 823px) {
         flex-direction: column;
     }
 `
 
-const Desc2 = styled(Desc)`
-    justify-content: f;
-    @media (max-width: 823px) {
-        flex-direction: column;
-    }
-`
+// const Desc2 = styled(Desc)`
+//     justify-content: flex-start;
+// `
 
 // Description
 const Text = styled(Desc)`
     flex-direction: row;
     font-size: 15px;
-    @media (max-width: 723px) {
-        flex-direction: column;
-    }
     p {
-        
         cursor: pointer;
         text-decoration: underline;
     }
 `
 
-// const Learn = styled(Desc)`
-//     text-decoration: underline;
-//     font-size: 15px;
-//     cursor: pointer;
-// `
+const Text1 = styled(Text)`
+`
 
+const TextBox = styled.div`
+    display: flex;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    flex-direction: row;
+`
 
 // Choose wheels/paint/ect. options
 const Selector = styled.div`
@@ -493,15 +513,22 @@ const Selector = styled.div`
 const BtnBox = styled.div`
     display: flex;
     justify-content: center;
-    padding: 24px;
+    padding: 3px;
+`
+
+const MiniBox = styled.div`
+    display: flex;
+    padding: 5px;
 `
 
 // Button
 const Btn = styled.div`
     display: flex;
+    justify-content: center;
     background: #0000FF;
     color: #ffffff;
     text-transform: uppercase;
+    width: 162px;
     padding: 10px;
     border-radius: 100px;
     cursor: pointer;
@@ -514,6 +541,7 @@ const Feature = styled.div`
     background: #D3D3D3;
     color: #393c41;
     border-radius: 100px;
+    align-items: center;
     cursor: pointer;
     text-transform: uppercase;
     padding: 7px;
