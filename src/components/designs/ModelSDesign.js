@@ -143,7 +143,15 @@ const ModelSDesign = () => {
                     <Box1>
                         <SubTitle>Paint</SubTitle>
                     </Box1>
-                    <Selector></Selector>
+                    <Box>
+                        <Selector>
+                            <SelectorImg>*</SelectorImg>
+                            <SelectorImg>*</SelectorImg>
+                            <SelectorImg>*</SelectorImg>
+                            <SelectorImg>*</SelectorImg>
+                            <SelectorImg>*</SelectorImg>
+                            This is Where Images Will Go</Selector>
+                    </Box>
                     <DescBox>
                         <MiniBox>
                             <DescText>Pearl White Multi-Coat</DescText>
@@ -163,7 +171,12 @@ const ModelSDesign = () => {
                     <Box1>
                         <SubTitle>Wheels</SubTitle>
                     </Box1>
-                    <Selector></Selector>
+                    <Box>
+                        <Selector>
+                            <SelectorImg>*</SelectorImg>
+                            <SelectorImg>*</SelectorImg>
+                            This is Where Images Will Go</Selector>
+                    </Box>
                     <DescBox>
                         <MiniBox>
                             <DescText>21" Arachnid Wheels</DescText>
@@ -184,7 +197,13 @@ const ModelSDesign = () => {
                     <Box1>
                         <SubTitle>Interior</SubTitle>
                     </Box1>
-                    <Selector></Selector>
+                    <Box>
+                        <Selector>
+                            <SelectorImg>*</SelectorImg>
+                            <SelectorImg>*</SelectorImg>
+                            <SelectorImg>*</SelectorImg>
+                            This is Where Images Will Go</Selector>
+                    </Box>
                     <DescBox>
                         <MiniBox>
                             <DescText>All Black</DescText>
@@ -193,8 +212,8 @@ const ModelSDesign = () => {
                             <Desc>Included</Desc>
                         </MiniBox>
                     </DescBox>
-                        <MiniBox>
-                            <Desc>Ebony Décor</Desc>
+                    <MiniBox>
+                        <Desc>Ebony Décor</Desc>
                     </MiniBox>
                 </Container>
 
@@ -269,17 +288,18 @@ const ModelSDesign = () => {
                 </Container>
 
             </SideBar>
-            
+
 
             <Footer>
-                <FooterBox>
-                    <FooterBtn>
-                        <ExpandLessIcon></ExpandLessIcon>
-                        {/* <UpArrow src="/images/Up-Arrow.svg" /> */}
-                    </FooterBtn>
-                    <FooterItem>$100,990 Purchase price</FooterItem>
-                    <FooterItem>$95,490 After potential savings</FooterItem>
-                </FooterBox>
+                <FooterContainer>
+                    <FooterBox>
+                        <FooterBtn>
+                            <ExpandLessIcon></ExpandLessIcon>
+                        </FooterBtn>
+                        <FooterItem>$100,990 Purchase price</FooterItem>
+                        <FooterItem>$95,490 After potential savings</FooterItem>
+                    </FooterBox>
+                </FooterContainer>
             </Footer>
         </Wrap>
     )
@@ -496,9 +516,10 @@ const Name = styled.div`
 const Desc = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     color: #90938C ;
     @media (max-width: 823px) {
         flex-direction: column;
@@ -507,6 +528,7 @@ const Desc = styled.div`
 
 const DescText = styled(Desc)`
     color: black;
+    font-size: 20px;
 `
 
 const DescBox = styled.div`
@@ -530,7 +552,6 @@ const Text = styled(Desc)`
     flex-direction: row;
     font-size: 15px;
     text-align: start;
-    
     p {
         cursor: pointer;
         text-decoration: underline;
@@ -551,7 +572,13 @@ const TextBox = styled.div`
 const Selector = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10px;
+    cursor: pointer;
+`
+
+const SelectorImg = styled(Selector)`
+   
 `
 
 // 
@@ -571,7 +598,7 @@ const MiniBox = styled.div`
 const Btn = styled.div`
     display: flex;
     justify-content: center;
-    background: #0000FF;
+    background: #1E73DB;
     color: #ffffff;
     text-transform: uppercase;
     width: 162px;
@@ -581,7 +608,7 @@ const Btn = styled.div`
 `
 
 const Btn2 = styled(Btn)`
-   width: 310px;
+    width: 310px;
 `
 
 // Feature details container
@@ -610,12 +637,18 @@ const Footer = styled.div`
     }
 `
 
+const FooterContainer = styled(Footer)`
+`
+
 // Bottom container 
 const FooterBox = styled.div`
     display: flex;
     justify-content: center;
+    align-items: center;
     border: solid black 1px;
     border-radius: 100px;
+    width: 500px;
+    background: #F7F9FC;
 `
 
 // Footer button arrow
@@ -625,6 +658,8 @@ const FooterBtn = styled.div`
     padding: 10px;
     cursor: pointer;
     color: #393c41;
+    border-radius: 50px;
+    background: #ffffff
 `
 
 // Footer items in container
