@@ -1,16 +1,24 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Fade from 'react-reveal/Fade';
+import { Translate } from '@material-ui/icons';
 
 const Section = ({ title, description, leftBtnText, rightBtnText, backgroundImg }) => {
     return (
         <Wrap bgImage={backgroundImg}>
             <Fade bottom>
-                <ItemText>
-                    <h1>{title}</h1>
-                    <p>{description}</p>
-                </ItemText>
+                <Container>
+                    <ItemText>
+                        <Box>
+                            <h1>{title}</h1>
+                        </Box>
+                        <Box>
+                            <p>{description}</p>
+                        </Box>
+                    </ItemText>
+                </Container>
             </Fade>
+            <Container>
             <Buttons>
                 <Fade bottom>
                     <ButtonGroup>
@@ -24,8 +32,11 @@ const Section = ({ title, description, leftBtnText, rightBtnText, backgroundImg 
                         }
                     </ButtonGroup>
                 </Fade>
+                <ArrowBox>
                 <DownArrow src="/images/down-arrow.svg" />
+                </ArrowBox>
             </Buttons>
+            </Container>
         </Wrap>
     )
 }
@@ -50,15 +61,34 @@ const Wrap = styled.div`
     background-image: ${props => `url('/media/${props.bgImage}')`} */
 `
 
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+`
+
 // Container for the title and descriptions of the item being displayed
 const ItemText = styled.div`
-    padding-top: 17vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 19px;
+`
+
+const Box = styled.div`
+    display: flex;
+    justify-content: center;
+    height: 49px;
+`
+
+const ArrowBox = styled(Box)`
+    
 `
 
 // media for mobile/small screen 
 const ButtonGroup = styled.div`
     display: flex;
-    margin-bottom: 40px;
+    
     @media (max-width: 823px) {
         flex-direction: column;
     }
@@ -90,6 +120,8 @@ const RightButton = styled(LeftButton)`
 
 // Arrow icon at bottom page 
 const DownArrow = styled.img`
+    display: flex;
+    justify-content: center;
     height: 45px;
     animation: animateDown infinite 2.5s;
     overflow-x: hidden;
@@ -98,3 +130,16 @@ const DownArrow = styled.img`
 // Container that has left and right button containers
 const Buttons = styled.div`
 `
+
+// @keyframes animateDown {
+//     0%, 20%, 50%, 80%, 100% {
+//         transform: translateY(0);
+//     }
+//     40% {
+//         transform: translateY(5px);
+//     }
+
+//     60% {
+//         transform: translateY(3px);
+//     }
+// }

@@ -145,12 +145,22 @@ const ModelSDesign = () => {
                     </Box1>
                     <Box>
                         <Selector>
-                            <SelectorImg>*</SelectorImg>
-                            <SelectorImg>*</SelectorImg>
-                            <SelectorImg>*</SelectorImg>
-                            <SelectorImg>*</SelectorImg>
-                            <SelectorImg>*</SelectorImg>
-                            This is Where Images Will Go</Selector>
+                            <SelectorImg>
+                                <CustomBtn1></CustomBtn1>
+                            </SelectorImg>
+                            <SelectorImg>
+                                <CustomBtn2></CustomBtn2>
+                            </SelectorImg>
+                            <SelectorImg>
+                                <CustomBtn3></CustomBtn3>
+                            </SelectorImg>
+                            <SelectorImg>
+                                <CustomBtn4></CustomBtn4>
+                            </SelectorImg>
+                            <SelectorImg>
+                                <CustomBtn5></CustomBtn5>
+                            </SelectorImg>
+                            </Selector>
                     </Box>
                     <DescBox>
                         <MiniBox>
@@ -173,9 +183,13 @@ const ModelSDesign = () => {
                     </Box1>
                     <Box>
                         <Selector>
-                            <SelectorImg>*</SelectorImg>
-                            <SelectorImg>*</SelectorImg>
-                            This is Where Images Will Go</Selector>
+                            <SelectorImg>
+                                <CustomBtn6></CustomBtn6>
+                            </SelectorImg>
+                            <SelectorImg>
+                                <CustomBtn7></CustomBtn7>
+                            </SelectorImg>
+                            </Selector>
                     </Box>
                     <DescBox>
                         <MiniBox>
@@ -199,10 +213,16 @@ const ModelSDesign = () => {
                     </Box1>
                     <Box>
                         <Selector>
-                            <SelectorImg>*</SelectorImg>
-                            <SelectorImg>*</SelectorImg>
-                            <SelectorImg>*</SelectorImg>
-                            This is Where Images Will Go</Selector>
+                            <SelectorImg>
+                                <CustomBtn8></CustomBtn8>
+                            </SelectorImg>
+                            <SelectorImg>
+                                <CustomBtn9></CustomBtn9>
+                            </SelectorImg>
+                            <SelectorImg>
+                                <CustomBtn10></CustomBtn10>
+                            </SelectorImg>
+                            </Selector>
                     </Box>
                     <DescBox>
                         <MiniBox>
@@ -276,15 +296,15 @@ const ModelSDesign = () => {
 
                 <Container>
                     <BottomTitle>Order Your Model S</BottomTitle>
-                    <DeliveryTime>Est. Delivery: June</DeliveryTime>
+                    <DeliveryTime>Est. Delivery: June 2022</DeliveryTime>
                     <BtnGroup2>
                         <Btn2>Continue Payment</Btn2>
                     </BtnGroup2>
                 </Container>
 
                 <Container>
-                    <EmptyBox>
-                    </EmptyBox>
+                    <LastEmptyBox>
+                    </LastEmptyBox>
                 </Container>
 
             </SideBar>
@@ -343,7 +363,7 @@ const Title = styled.div`
 
 const SubTitle = styled(Title)`
     font-size: 35px;
-    padding: 30px;
+    padding: 10px;
     text-align: center;
 `
 
@@ -365,7 +385,6 @@ const DeliveryTime = styled.div`
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 5px;
 `
 
 // 
@@ -373,25 +392,25 @@ const Box = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 20px;
+    padding: 2px;
 `
 
 // 
 const EmptyBox = styled(Box)`
-    padding: 105px;
+    padding-bottom: 176px;
+`
+
+const LastEmptyBox = styled(EmptyBox)`
+    padding-bottom: 343px;
 `
 
 const Box1 = styled(Box)`
-    flex-direction: row;
-    justify-content: center;
+    padding: 5px;
 `
-
 
 const Box2 = styled(Box)`
-    flex-direction: row;
     padding: 9px;
 `
-
 
 const PriceBox = styled.div`
     display: flex;
@@ -399,9 +418,7 @@ const PriceBox = styled.div`
     cursor: pointer;
 `
 
-
 const Box3 = styled(Box)`
-    flex-direction: row;
     justify-content: space-evenly;
     padding: 20px;
 `
@@ -412,7 +429,6 @@ const Range = styled(Box)`
 `
 
 const Box4 = styled(Box)`
-    flex-direction: row;
     justify-content: center;
     padding: 20px;
 `
@@ -423,7 +439,6 @@ const ModelBox = styled.div`
 `
 
 const Box5 = styled(Box)`
-    flex-direction: row;
     padding: 5px;
 `
 
@@ -543,10 +558,6 @@ const Desc1 = styled(Desc)`
     font-size: 20px;
 `
 
-// const Desc2 = styled(Desc)`
-//     justify-content: flex-start;
-// `
-
 // Description
 const Text = styled(Desc)`
     flex-direction: row;
@@ -573,12 +584,11 @@ const Selector = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
 `
 
 const SelectorImg = styled(Selector)`
-   
 `
 
 // 
@@ -643,7 +653,7 @@ const FooterContainer = styled(Footer)`
 // Bottom container 
 const FooterBox = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     border: solid black 1px;
     border-radius: 100px;
@@ -660,6 +670,49 @@ const FooterBtn = styled.div`
     color: #393c41;
     border-radius: 50px;
     background: #ffffff
+`
+
+
+const CustomBtn1 = styled(FooterBtn)`
+    border: 1px solid;
+    background: white;
+    padding: 20px;
+`
+
+const CustomBtn2 = styled(CustomBtn1)`
+    background: black;
+`
+
+const CustomBtn3 = styled(CustomBtn1)`
+    background: silver;
+`
+
+const CustomBtn4 = styled(CustomBtn1)`
+    background: blue;
+`
+
+const CustomBtn5 = styled(CustomBtn1)`
+    background: red;
+`
+
+const CustomBtn6 = styled(CustomBtn1)`
+    background: gray;
+`
+
+const CustomBtn7 = styled(CustomBtn1)`
+    background: gray;
+`
+
+const CustomBtn8 = styled(CustomBtn1)`
+    background: grey;
+`
+
+const CustomBtn9 = styled(CustomBtn1)`
+    background: silver;
+`
+
+const CustomBtn10 = styled(CustomBtn1)`
+    background: tan;
 `
 
 // Footer items in container
