@@ -346,9 +346,7 @@ const SideBar = styled.div`
     padding: 24px;
     padding-top: 100px;
     width: 393px;
-    @media (max-width: 823px) {
-        display: flex;
-        flex-direction: column;
+    @media (max-width: 623px) {
         justify-content: center;
     }
 `

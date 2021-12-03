@@ -5,7 +5,7 @@ import Section from './Section';
 
 export const ModelSSlider = [
     {
-
+            
     }
 
 ]

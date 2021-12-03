@@ -56,7 +56,7 @@ const Wrap = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('/images/teslaModelS.png');
-    background-image: ${props => `url('/images/${props.bgImage}')`}
+    background-image: ${props => `url('/images/${props.bgImage}')`};
     /* background-image: url('/media/teslaModelS.png');
     background-image: ${props => `url('/media/${props.bgImage}')`} */
 `
@@ -73,6 +73,7 @@ const ItemText = styled.div`
     display: flex;
     flex-direction: column;
     padding-top: 19px;
+    
 `
 
 const Box = styled.div`
