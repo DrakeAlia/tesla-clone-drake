@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { useEffect, useState } from 'react';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Logo from '../Logo';
+import ModelSSlider from '../ModelSSlider';
 
 
 const ModelSDesign = () => {
