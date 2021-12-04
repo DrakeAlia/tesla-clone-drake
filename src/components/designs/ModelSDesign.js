@@ -5,7 +5,7 @@ import Logo from '../Logo';
 import ModelSSlider from '../ModelSSlider';
 
 
-const ModelSDesign = () => {
+const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
     useEffect(() => {
         console.log('Im Here!!!')
     }, []);
@@ -15,6 +15,15 @@ const ModelSDesign = () => {
     return (
         <Wrap>
             <Logo />
+            <section>
+                {ModelSSlider.map((slide, index) => (
+                    <div
+                        key={index}
+                        classname={index === activeIndex ? "slides active" : "inactive"}>
+                        <img src="tesla" alt="" />
+                    </div>
+                ))}
+            </section>
             <SideBar>
                 <Container>
                     <Box1>
@@ -64,30 +73,30 @@ const ModelSDesign = () => {
                 </Container>
 
                 {/* <Container>
-                    <Box3>
-                        <Range>
-                            <Stats>
-                                <Stats1>348</Stats1>
-                                <Stats2>mi</Stats2>
-                            </Stats>
-                            <Stats3>Range (EPA est.)</Stats3>
-                        </Range>
-                        <Range>
-                            <Stats>
-                                <Stats1>200</Stats1>
-                                <Stats2>mph</Stats2>
-                            </Stats>
-                            <Stats3>Top Speed</Stats3>
-                        </Range>
-                        <Range>
-                            <Stats>
-                                <Stats1>1.99</Stats1>
-                                <Stats2>sec</Stats2>
-                            </Stats>
-                            <Stats3>0-60 mph</Stats3>
-                        </Range>
-                    </Box3>
-                </Container> */}
+                        <Box3>
+                            <Range>
+                                <Stats>
+                                    <Stats1>348</Stats1>
+                                    <Stats2>mi</Stats2>
+                                </Stats>
+                                <Stats3>Range (EPA est.)</Stats3>
+                            </Range>
+                            <Range>
+                                <Stats>
+                                    <Stats1>200</Stats1>
+                                    <Stats2>mph</Stats2>
+                                </Stats>
+                                <Stats3>Top Speed</Stats3>
+                            </Range>
+                            <Range>
+                                <Stats>
+                                    <Stats1>1.99</Stats1>
+                                    <Stats2>sec</Stats2>
+                                </Stats>
+                                <Stats3>0-60 mph</Stats3>
+                            </Range>
+                        </Box3>
+                    </Container> */}
 
                 <Container>
                     <Name>Dual Motor All-Wheel Drive</Name>
@@ -161,7 +170,7 @@ const ModelSDesign = () => {
                             <SelectorImg>
                                 <CustomBtn5></CustomBtn5>
                             </SelectorImg>
-                            </Selector>
+                        </Selector>
                     </Box>
                     <DescBox>
                         <MiniBox>
@@ -190,7 +199,7 @@ const ModelSDesign = () => {
                             <SelectorImg>
                                 <CustomBtn7></CustomBtn7>
                             </SelectorImg>
-                            </Selector>
+                        </Selector>
                     </Box>
                     <DescBox>
                         <MiniBox>
@@ -223,7 +232,7 @@ const ModelSDesign = () => {
                             <SelectorImg>
                                 <CustomBtn10></CustomBtn10>
                             </SelectorImg>
-                            </Selector>
+                        </Selector>
                     </Box>
                     <DescBox>
                         <MiniBox>
