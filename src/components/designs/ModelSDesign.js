@@ -2,7 +2,18 @@ import styled from 'styled-components'
 import { useEffect, useState } from 'react';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Logo from '../Logo';
+import Carousel from '../Carousel';
 import ModelSSlider from '../ModelSSlider';
+
+    // <section>
+    //     {ModelSSlider.map((slide, index) => (
+    //         <div
+    //             key={index}
+    //             classname={index === activeIndex ? "slides active" : "inactive"}>
+    //             <img src="tesla" alt="" />
+    //         </div>
+    //     ))}
+    // </section>
 
 
 const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
@@ -12,19 +23,14 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
 
     const [modelStatus, setModelStatus] = useState(false)
 
+    const [displayImg, setDisplayImg] = useState("")
+
     return (
         <Wrap>
-            <Logo />
-            <section>
-                {ModelSSlider.map((slide, index) => (
-                    <div
-                        key={index}
-                        classname={index === activeIndex ? "slides active" : "inactive"}>
-                        <img src="tesla" alt="" />
-                    </div>
-                ))}
-            </section>
+        
+        <Carousel />
             <SideBar>
+            <Logo />
                 <Container>
                     <Box1>
                         <Title>Model S</Title>
