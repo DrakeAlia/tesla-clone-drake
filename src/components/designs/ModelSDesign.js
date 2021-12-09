@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import { useEffect, useState } from 'react';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Logo from '../Logo';
-import Carousel from '../Carousel';
-import ModelSSlider from '../ModelSSlider';
+import Slider from '../Slider';
+// import ModelSSlider from '../ModelSSlider';
 
     // <section>
     //     {ModelSSlider.map((slide, index) => (
@@ -28,7 +28,7 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
     return (
         <Wrap>
         
-        <Carousel />
+        <Slider />
             <SideBar>
             <Logo />
                 <Container>
