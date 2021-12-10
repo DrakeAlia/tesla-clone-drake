@@ -6,7 +6,7 @@ import Logo from '../Logo';
 
 const ModelYDesign = () => {
     useEffect(() => {
-        console.log('im here')
+        // console.log('im here')
     }, []);
 
     // const [pricewidget, setPriceWidget] = useState(null)

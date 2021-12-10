@@ -5,20 +5,20 @@ import Logo from '../Logo';
 import Slider from '../Slider';
 // import ModelSSlider from '../ModelSSlider';
 
-    // <section>
-    //     {ModelSSlider.map((slide, index) => (
-    //         <div
-    //             key={index}
-    //             classname={index === activeIndex ? "slides active" : "inactive"}>
-    //             <img src="tesla" alt="" />
-    //         </div>
-    //     ))}
-    // </section>
+// <section>
+//     {ModelSSlider.map((slide, index) => (
+//         <div
+//             key={index}
+//             classname={index === activeIndex ? "slides active" : "inactive"}>
+//             <img src="tesla" alt="" />
+//         </div>
+//     ))}
+// </section>
 
 
 const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
     useEffect(() => {
-        console.log('Im Here!!!')
+        // console.log('Im Here!!!')
     }, []);
 
     const [modelStatus, setModelStatus] = useState(false)
@@ -27,10 +27,26 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
 
     return (
         <Wrap>
-        
-        <Slider />
+            <Slider />
             <SideBar>
-            <Logo />
+                {/* <Slider>
+                    <div className="image">
+                        <img src="/public/images/teslaModelSWhiteDesign2.png" alt="mobile" />
+                    </div>
+                    <div className="image">
+                        <img src="/public/images/teslaModelSWhiteDesign.png" alt="mobile" />
+                    </div>
+                    <div className="image">
+                        <img src="/public/images/teslaModelSWhiteDesign3.png" alt="mobile" />
+                    </div>
+                    <div className="image">
+                        <img src="/public/images/teslaModelSWhiteDesign4.png" alt="mobile" />
+                    </div>
+                    <div className="image">
+                        <img src="/public/images/teslaModelSBlackInterior.png" alt="mobile" />
+                    </div>
+                </Slider> */}
+                <Logo />
                 <Container>
                     <Box1>
                         <Title>Model S</Title>
@@ -77,32 +93,6 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                         </Range>
                     </Box3>
                 </Container>
-
-                {/* <Container>
-                        <Box3>
-                            <Range>
-                                <Stats>
-                                    <Stats1>348</Stats1>
-                                    <Stats2>mi</Stats2>
-                                </Stats>
-                                <Stats3>Range (EPA est.)</Stats3>
-                            </Range>
-                            <Range>
-                                <Stats>
-                                    <Stats1>200</Stats1>
-                                    <Stats2>mph</Stats2>
-                                </Stats>
-                                <Stats3>Top Speed</Stats3>
-                            </Range>
-                            <Range>
-                                <Stats>
-                                    <Stats1>1.99</Stats1>
-                                    <Stats2>sec</Stats2>
-                                </Stats>
-                                <Stats3>0-60 mph</Stats3>
-                            </Range>
-                        </Box3>
-                    </Container> */}
 
                 <Container>
                     <Name>Dual Motor All-Wheel Drive</Name>
@@ -351,6 +341,10 @@ const Wrap = styled.div`
     justify-content: center;
     /* width: 100%; */
 `
+
+// const Slider = styled.div`
+//     display: flex;
+// `
 
 // SideBar Container for the model details
 const SideBar = styled.div`
