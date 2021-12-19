@@ -70,13 +70,9 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     align-content: center;
-    min-height: 60px;
+    width: 917px;
     position: fixed;
     padding: 0 20px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
 `
 
 // Container for the navbar/menu tabs for the models and solor roof/panel

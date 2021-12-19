@@ -23,16 +23,9 @@ export default Logo
 const Container = styled.div`
     display: flex;
     align-items: center;
-    min-height: 60px;
     position: fixed;
     padding: 0 20px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    img {
-        cursor: pointer;
-    }
+    cursor: pointer;
 `
 
 // const Container2 = styled.div`

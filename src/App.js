@@ -1,19 +1,21 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './components/Header';
 import Home from './components/Home';
 import Logo from './components/Logo';
+
 import ModelS from './components/ModelS';
 import Model3 from './components/Model3';
 import ModelX from './components/ModelX';
 import ModelY from './components/ModelY';
+
 import ModelSDesign from './components/designs/ModelSDesign';
 import Model3Design from './components/designs/Model3Design';
 import ModelXDesign from './components/designs/ModelXDesign';
 import ModelYDesign from './components/designs/ModelYDesign';
+import EnergyDesign from './components/designs/EnergyDesign'
+
 import SolarRoof from './components/SolarRoof';
 import SolarPanels from './components/SolarPanels';
-import EnergyDesign from './components/designs/EnergyDesign'
 import Shop from './components/Shop'
 import Account from './components/Account';
 import NewInventory from './components/NewInventory';
@@ -30,7 +32,6 @@ import Utilities from './components/Utilities';
 import FindUs from './components/FindUs';
 import Support from './components/Support';
 import Invenstor from './components/Invenstor';
-
 
 
 const App = () => {

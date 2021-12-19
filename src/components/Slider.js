@@ -1,9 +1,7 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import BtnSlider from './BtnSlider';
 import DataSlider from './DataSlider';
-
-
 
 
 // const Slider = () => {

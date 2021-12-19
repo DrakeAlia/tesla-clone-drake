@@ -573,7 +573,7 @@ const Text = styled(Desc)`
     text-align: start;
     p {
         cursor: pointer;
-        text-decoration: underline;
+        
     }
 `
 
@@ -658,7 +658,6 @@ const Footer = styled.div`
 const FooterContainer = styled(Footer)`
 `
 
-// Bottom container 
 const FooterBox = styled.div`
     display: flex;
     justify-content: space-evenly;

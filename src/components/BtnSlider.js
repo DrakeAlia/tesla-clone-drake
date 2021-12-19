@@ -3,7 +3,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
  const BtnSlider = ({ direction, moveSlide }) => {
-    console.log(direction, moveSlide);
+    // console.log(direction, moveSlide);
     return (
         <button
             onClick={moveSlide}

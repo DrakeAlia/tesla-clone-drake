@@ -87,4 +87,5 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     padding: 10px;
+    
 `

@@ -65,7 +65,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
 `
 
 // Container for the title and descriptions of the item being displayed
