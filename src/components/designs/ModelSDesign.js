@@ -2,18 +2,9 @@ import styled from 'styled-components'
 import { useEffect, useState } from 'react';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import Logo from '../Logo';
-import Slider from '../Slider';
-// import ModelSSlider from '../ModelSSlider';
-
-// <section>
-//     {ModelSSlider.map((slide, index) => (
-//         <div
-//             key={index}
-//             classname={index === activeIndex ? "slides active" : "inactive"}>
-//             <img src="tesla" alt="" />
-//         </div>
-//     ))}
-// </section>
+import Carousel from '../Carousel';
+import Header from '../Header';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
@@ -26,36 +17,20 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
     const [displayImg, setDisplayImg] = useState("")
 
     return (
-        <Wrap>
-            <Slider />
+        <Container>
+        <Header />
+            <Carousel />
+            <Logo />
             <SideBar>
-                {/* <Slider>
-                    <div className="image">
-                        <img src="/public/images/teslaModelSWhiteDesign2.png" alt="mobile" />
-                    </div>
-                    <div className="image">
-                        <img src="/public/images/teslaModelSWhiteDesign.png" alt="mobile" />
-                    </div>
-                    <div className="image">
-                        <img src="/public/images/teslaModelSWhiteDesign3.png" alt="mobile" />
-                    </div>
-                    <div className="image">
-                        <img src="/public/images/teslaModelSWhiteDesign4.png" alt="mobile" />
-                    </div>
-                    <div className="image">
-                        <img src="/public/images/teslaModelSBlackInterior.png" alt="mobile" />
-                    </div>
-                </Slider> */}
-                <Logo />
-                <Container>
+                <Wrap>
                     <Box1>
                         <Title>Model S</Title>
                     </Box1>
-                </Container>
+                </Wrap>
 
                 <DeliveryTime>Est. Devilvery: June 2022</DeliveryTime>
 
-                <Container>
+                <Wrap>
                     <Box2>
                         <PriceGroup>
                             <PriceBox>
@@ -66,9 +41,9 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                             </PriceBox>
                         </PriceGroup>
                     </Box2>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Box3>
                         <Range>
                             <Stats>
@@ -92,9 +67,9 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                             <Stats3>0-60 mph</Stats3>
                         </Range>
                     </Box3>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Name>Dual Motor All-Wheel Drive</Name>
                     <Box4>
                         {/* <ModelGroup onClick={() => setModelStatus(true)}> */}
@@ -107,9 +82,9 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                             </ModelBox>
                         </ModelGroup>
                     </Box4>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Name>Tri Motor All-Wheel drivers</Name>
                     <Box4>
                         <ModelGroup onClick={() => setModelStatus(true)}>
@@ -121,31 +96,31 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                             </ModelBox>
                         </ModelGroup>
                     </Box4>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Box5>
                         <Text>* Prices above include potential incentives and
                             gas savings of $5,500.
                             <p>Learn More</p>
                         </Text>
                     </Box5>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Box>
                         <BtnGroup>
                             <Feature>Feature Details</Feature>
                         </BtnGroup>
                     </Box>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <EmptyBox>
                     </EmptyBox>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Box1>
                         <SubTitle>Paint</SubTitle>
                     </Box1>
@@ -176,14 +151,14 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                             <Desc>Included</Desc>
                         </MiniBox>
                     </DescBox>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <EmptyBox>
                     </EmptyBox>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Box1>
                         <SubTitle>Wheels</SubTitle>
                     </Box1>
@@ -206,14 +181,14 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                         </MiniBox>
                     </DescBox>
                     <Desc>Range (est.): 375mi</Desc>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <EmptyBox>
                     </EmptyBox>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Box1>
                         <SubTitle>Interior</SubTitle>
                     </Box1>
@@ -241,22 +216,22 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                     <MiniBox>
                         <Desc>Ebony Décor</Desc>
                     </MiniBox>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Box>
                         <BtnGroup>
                             <Feature>Feature Details</Feature>
                         </BtnGroup>
                     </Box>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <EmptyBox>
                     </EmptyBox>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Box1>
                         <SubTitle>Full Self-Driving Capability</SubTitle>
                     </Box1>
@@ -282,9 +257,9 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                             upgraded through over-the-air software updates.
                         </Text>
                     </TextBox>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <Box6>
                         <BtnBox>
                             <Btn>Add</Btn>
@@ -293,25 +268,25 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                             <Feature>Feature Details</Feature>
                         </BtnGroup>
                     </Box6>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <EmptyBox>
                     </EmptyBox>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <BottomTitle>Order Your Model S</BottomTitle>
                     <DeliveryTime>Est. Delivery: June 2022</DeliveryTime>
                     <BtnGroup2>
                         <Btn2>Continue Payment</Btn2>
                     </BtnGroup2>
-                </Container>
+                </Wrap>
 
-                <Container>
+                <Wrap>
                     <LastEmptyBox>
                     </LastEmptyBox>
-                </Container>
+                </Wrap>
 
             </SideBar>
 
@@ -327,7 +302,7 @@ const ModelSDesign = ({ activeIndex, ModelSSlider }) => {
                     </FooterBox>
                 </FooterContainer>
             </Footer>
-        </Wrap>
+        </Container>
     )
 }
 
@@ -335,7 +310,7 @@ export default ModelSDesign
 
 
 // Container for the whole page
-const Wrap = styled.div`
+const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -390,7 +365,7 @@ const DeliveryTime = styled.div`
 `
 
 // 
-const Container = styled.div`
+const Wrap = styled.div`
     display: flex;
     flex-direction: column;
 `

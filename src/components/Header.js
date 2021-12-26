@@ -63,6 +63,7 @@ const Header = () => {
         </Container>
     )
 }
+
 export default Header
 
 // Container for the whole header page (Fix styling!!)

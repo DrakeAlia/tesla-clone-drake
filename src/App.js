@@ -32,18 +32,19 @@ import Utilities from './components/Utilities';
 import FindUs from './components/FindUs';
 import Support from './components/Support';
 import Invenstor from './components/Invenstor';
+// import car from './media/accessories.jpg'
 
 
 const App = () => {
   return (
     <Router>
       <div className="App">
-      <Switch>
-        <Route exact path='/'>  
-      <Logo />   
-      <Header />
-          <Home />
-        </Route>
+        <Switch>
+          <Route exact path='/'>
+            <Logo />
+            <Header />
+            <Home />
+          </Route>
           <Route path='/models' component={ModelS} />
           <Route path='/model3' component={Model3} />
           <Route path='/modelx' component={ModelX} />
@@ -81,7 +82,7 @@ const App = () => {
           {/* <Route path='/model3/design' component={Model3Design} /> */}
           {/* <Route path='/modelx/design' component={ModelXDesign} /> */}
           {/* <Route path='/modely/design' component={ModelYDesign} /> */}
-      </Switch>
+        </Switch>
       </div>
     </Router>
   );
