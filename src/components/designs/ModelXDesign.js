@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { useEffect } from 'react';
 import Logo from '../Logo';
 
@@ -116,7 +116,7 @@ const Wrap = styled.div`
     height: 100vh;
     /* background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/images/teslaModelSBlackDesign1.png') */
+    background-image: url('../media/teslaModelSBlackDesign1.png') */
 `
 
 const WidgetNav = styled.div`

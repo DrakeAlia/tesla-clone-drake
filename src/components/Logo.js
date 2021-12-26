@@ -1,19 +1,16 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
+import teslaLogo from '../media/logo.svg'
 
 const Logo = () => {
     return (
         <Container>
             <Link to='/'>
-                <img src='/images/logo.svg' alt="" />
+                <img
+                    src={teslaLogo}
+                    alt="" />
             </Link>
         </Container>
-
-        // <Container2>
-        //     <Link to='/'>
-        //         <img src='/images/logo.svg' alt="" />
-        //     </Link>
-        // </Container2>
     )
 }
 
@@ -27,14 +24,3 @@ const Container = styled.div`
     padding: 0 20px;
     cursor: pointer;
 `
-
-// const Container2 = styled.div`
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     padding-top: 15px;
-//     padding-left: 5px;
-//     img {
-//         cursor: pointer;
-//     }
-// `

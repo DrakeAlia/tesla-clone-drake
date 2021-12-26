@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
 import Logo from './Logo';
 import { Link } from 'react-router-dom';
+// import carX from "../media/teslaModelXDesign.png"
 
 
 const ModelX = ({ backgroundImg }) => {
@@ -55,7 +56,7 @@ const Container = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/images/teslaModelXDesign.png');
+    background-image: url('../media/teslaModelXDesign.png');
 `
 
 // text for the model and type

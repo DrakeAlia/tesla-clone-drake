@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import CloseIcon from '@mui/icons-material/Close';
 // import Logo from './Logo';
 import { Link } from 'react-router-dom';
@@ -9,13 +9,6 @@ const Header = () => {
     const [menuStatus, setMenuStatus] = useState(false)
     return (
         <Container>
-            {/* <Logo /> */}
-            {/* <Link to='/'>
-                <img src='/images/logo.svg' alt="" />
-            </Link> */}
-            {/* <Link to='/'>
-                <Logo />
-            </Link> */}
             <MainMenu>
                 <Link to='/models'>
                     Model S
@@ -72,7 +65,6 @@ const Container = styled.div`
     align-items: center;
     align-content: center;
     width: 917px;
-    position: fixed;
     padding: 0 20px;
 `
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
 import Logo from './Logo';
@@ -54,7 +54,7 @@ const Container = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/images/teslaStormRoof.png');
+    background-image: url('../media/teslaStormRoof.png');
 `
 
 const ItemText = styled.div`

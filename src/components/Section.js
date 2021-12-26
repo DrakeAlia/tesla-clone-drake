@@ -1,13 +1,16 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components/macro'
+// import styled, { keyframes } from 'styled-components'
 import Fade from 'react-reveal/Fade';
-import { Translate } from '@material-ui/icons';
+import ModelS from '../media/teslaModelS.png'
+import ArrowDown from "../media/down-arrow.svg"
+
 
 const Section = ({ title, description, leftBtnText, rightBtnText, backgroundImg }) => {
     return (
-        <Wrap bgImage={backgroundImg}>
+        <Container bgImage={backgroundImg}>
             <Fade bottom>
-                <Container>
+                <Wrap>
                     <ItemText>
                         <Box>
                             <h1>{title}</h1>
@@ -16,35 +19,35 @@ const Section = ({ title, description, leftBtnText, rightBtnText, backgroundImg 
                             <p>{description}</p>
                         </Box>
                     </ItemText>
-                </Container>
+                </Wrap>
             </Fade>
-            <Container>
-            <Buttons>
-                <Fade bottom>
-                    <ButtonGroup>
-                        <LeftButton>
-                            {leftBtnText}
-                        </LeftButton>
-                        {rightBtnText &&
-                            <RightButton>
-                                {rightBtnText}
-                            </RightButton>
-                        }
-                    </ButtonGroup>
-                </Fade>
-                <ArrowBox>
-                <DownArrow src="/images/down-arrow.svg" />
-                </ArrowBox>
-            </Buttons>
-            </Container>
-        </Wrap>
+            <Wrap>
+                <Buttons>
+                    <Fade bottom>
+                        <ButtonGroup>
+                            <LeftButton>
+                                {leftBtnText}
+                            </LeftButton>
+                            {rightBtnText &&
+                                <RightButton>
+                                    {rightBtnText}
+                                </RightButton>
+                            }
+                        </ButtonGroup>
+                    </Fade>
+                    <ArrowBox>
+                        <DownArrow src="../media/down-arrow.svg" />
+                    </ArrowBox>
+                </Buttons>
+            </Wrap>
+        </Container>
     )
 }
 
 export default Section
 
 // Container for the Section page
-const Wrap = styled.div`
+const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -55,13 +58,11 @@ const Wrap = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('/images/teslaModelS.png');
-    background-image: ${props => `url('/images/${props.bgImage}')`};
-    /* background-image: url('/media/teslaModelS.png');
-    background-image: ${props => `url('/media/${props.bgImage}')`} */
+    background-image: url('../media/teslaModelS.png');
+    background-image: ${props => `url('../media/${props.bgImage}')`};
 `
 
-const Container = styled.div`
+const Wrap = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
