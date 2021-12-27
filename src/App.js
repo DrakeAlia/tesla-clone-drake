@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from './components/Header';
 import Home from './components/Home';
-import Logo from './components/Logo';
 
 import ModelS from './components/ModelS';
 import Model3 from './components/Model3';
@@ -32,7 +31,7 @@ import Utilities from './components/Utilities';
 import FindUs from './components/FindUs';
 import Support from './components/Support';
 import Invenstor from './components/Invenstor';
-// import car from './media/accessories.jpg'
+
 
 
 const App = () => {
@@ -41,7 +40,6 @@ const App = () => {
       <div className="App">
         <Switch>
           <Route exact path='/'>
-            <Logo />
             <Header />
             <Home />
           </Route>

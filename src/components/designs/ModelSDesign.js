@@ -1,8 +1,9 @@
 import styled from 'styled-components/macro'
 import ScrollFeature from '../ScrollFeature';
-import Carousel from '../Carousel';
+import CarouselContainer from '../CarouselContainer';
 import Header from '../Header';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import FooterContainer from './FooterContainer';
 
 
 const ModelSDesign = () => {
@@ -10,9 +11,10 @@ const ModelSDesign = () => {
         <Container>
             <Header />
             <ContentSection>
-                <Carousel />
+                <CarouselContainer />
                 <ScrollFeature />
             </ContentSection>
+            <FooterContainer />
         </Container>
     )
 }

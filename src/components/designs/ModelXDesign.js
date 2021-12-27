@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 import { useEffect } from 'react';
-import Logo from '../Logo';
+
 
 
 
@@ -17,7 +17,6 @@ const ModelXDesign = () => {
 
     return (
         <Wrap>
-            <Logo />
             <WidgetNav>
                 <WidgetTitle>Model X</WidgetTitle>
                 <DeliveryTime>Est. Devilvery: June</DeliveryTime>

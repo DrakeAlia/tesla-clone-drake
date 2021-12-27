@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro'
 import { useEffect } from 'react';
-import Logo from '../Logo';
+import Header from '../Header';
 
 
 
@@ -9,15 +9,17 @@ const Model3Design = () => {
         // console.log('im here')
     }, []);
 
-    // const [pricewidget, setPriceWidget] = useState(null)
-    // const [allWheelDrive, setAllWheelDrive] = useState(null)
-    // const [paint, setPaint] = useState(null)
-    // const [wheels, setWheels] = useState(null)
-    // const [interior, setInterior] = useState(null)
-
     return (
+        // <Container>
+        //     <Header />
+        //     <ContentSection>
+        //         <CarouselContainer />
+        //         <ScrollFeature />
+        //     </ContentSection>
+        //     <FooterContainer />
+        // </Container>
         <Wrap>
-            <Logo />
+        <Header />
             <WidgetNav>
                 <WidgetTitle>Model 3</WidgetTitle>
                 <DeliveryTime>Est. Devilvery: December</DeliveryTime>
@@ -109,13 +111,7 @@ export default Model3Design
 const Wrap = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    /* background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('../media/teslaModelSBlackDesign1.png') */
+    justify-content: center;
 `
 
 const WidgetNav = styled.div`

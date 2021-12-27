@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import Fade from 'react-reveal/Fade';
 import Header from './Header';
-import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
 
 const ModelS = ({ backgroundImg }) => {
     return (
         <Container bgImage={backgroundImg}>
-            <Logo />
             <Header />
             <Fade bottom>
                 <ItemText>

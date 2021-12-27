@@ -2,13 +2,14 @@ import React from 'react'
 import { useState } from 'react';
 import styled from 'styled-components/macro'
 import CloseIcon from '@mui/icons-material/Close';
-// import Logo from './Logo';
+import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [menuStatus, setMenuStatus] = useState(false)
     return (
         <Container>
+        <Logo />
             <MainMenu>
                 <Link to='/models'>
                     Model S
