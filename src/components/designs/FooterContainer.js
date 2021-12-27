@@ -4,15 +4,13 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 const FooterContainer = () => {
     return (
         <Footer>
-            <FooterOuter>
-                <FooterBox>
-                    <FooterBtn>
-                        <ExpandLessIcon></ExpandLessIcon>
-                    </FooterBtn>
-                    <FooterItem>$100,990 Purchase price</FooterItem>
-                    <FooterItem>$95,490 After potential savings</FooterItem>
-                </FooterBox>
-            </FooterOuter>
+            <FooterBox>
+                <FooterBtn>
+                    <ExpandLessIcon></ExpandLessIcon>
+                </FooterBtn>
+                <FooterItem>$100,990 Purchase price</FooterItem>
+                <FooterItem>$95,490 After potential savings</FooterItem>
+            </FooterBox>
         </Footer>
     )
 }
@@ -25,13 +23,9 @@ const Footer = styled.div`
     justify-content: center;
     align-content: center;
     padding-top: 2px;
-    @media (max-width: 800px) {
-        flex-direction: row;
-    }
 `
 
-const FooterOuter = styled(Footer)`
-`
+
 
 const FooterBox = styled.div`
     display: flex;

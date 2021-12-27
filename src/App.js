@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import styled from 'styled-components/macro';
+
 import Header from './components/Header';
 import Home from './components/Home';
 
@@ -37,7 +39,7 @@ import Invenstor from './components/Invenstor';
 const App = () => {
   return (
     <Router>
-      <div className="App">
+      <AppWithFont>
         <Switch>
           <Route exact path='/'>
             <Header />
@@ -76,12 +78,8 @@ const App = () => {
 
           <Route path='/inventory/new' component={NewInventory} />
 
-          {/* <Route path='/models/design' component={ModelSDesign} /> */}
-          {/* <Route path='/model3/design' component={Model3Design} /> */}
-          {/* <Route path='/modelx/design' component={ModelXDesign} /> */}
-          {/* <Route path='/modely/design' component={ModelYDesign} /> */}
         </Switch>
-      </div>
+      </AppWithFont>
     </Router>
   );
 }
@@ -89,3 +87,7 @@ const App = () => {
 export default App;
 
 
+
+const AppWithFont = styled.div`
+font-family: 'Montserrat', sans-serif;
+`

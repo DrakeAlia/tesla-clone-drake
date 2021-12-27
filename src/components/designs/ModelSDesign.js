@@ -8,14 +8,14 @@ import FooterContainer from './FooterContainer';
 
 const ModelSDesign = () => {
     return (
-        <Container>
+        <ContainerColumn>
             <Header />
             <ContentSection>
                 <CarouselContainer />
                 <ScrollFeature />
             </ContentSection>
             <FooterContainer />
-        </Container>
+        </ContainerColumn>
     )
 }
 
@@ -23,11 +23,11 @@ export default ModelSDesign
 
 
 // Container for the whole page
-const Container = styled.div`
+const ContainerColumn = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* width: 100%; */
+     
 `
 
 const ContentSection = styled.div`

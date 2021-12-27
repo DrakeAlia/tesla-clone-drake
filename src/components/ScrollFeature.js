@@ -13,7 +13,7 @@ const ScrollFeature = () => {
     const [displayImg, setDisplayImg] = useState("")
 
     return (
-        <Container>
+        <ContainerFixed>
             <SideBar>
                 <Wrap>
                     <Box1>
@@ -282,33 +282,22 @@ const ScrollFeature = () => {
                 </Wrap>
 
             </SideBar>
-        </Container>
+        </ContainerFixed>
     )
 }
 
 
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* width: 100%; */
+const ContainerFixed = styled.div`    
+    width: 350px;     
 `
-
-
 // SideBar Container for the model details
 const SideBar = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-self: flex-end;
+    justify-content: flex-start;    
     overflow-y: scroll;
-    padding: 24px;
-    padding-top: 100px;
-    width: 393px;
-    @media (max-width: 623px) {
-        justify-content: center;
-    }
+    height: 92vh;    
 `
 
 // Model name/title
