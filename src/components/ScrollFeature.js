@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const ScrollFeature = () => {
     useEffect(() => {
-        // console.log('Im Here!!!')
+        console.log('Im Here!!!')
     }, []);
 
     const [modelStatus, setModelStatus] = useState(false)
@@ -21,7 +21,7 @@ const ScrollFeature = () => {
                     </Box1>
                 </Wrap>
 
-                <DeliveryTime>Est. Devilvery: June 2022</DeliveryTime>
+                <DeliveryTime>Est. Devilvery: November 2022</DeliveryTime>
 
                 <Wrap>
                     <Box2>
@@ -40,10 +40,10 @@ const ScrollFeature = () => {
                     <Box3>
                         <Range>
                             <Stats>
-                                <Stats1>375</Stats1>
+                                <Stats1>405</Stats1>
                                 <Stats2>mi</Stats2>
                             </Stats>
-                            <Stats3>Range (est.)</Stats3>
+                            <Stats3>Range (EPA est.)</Stats3>
                         </Range>
                         <Range>
                             <Stats>
@@ -167,13 +167,13 @@ const ScrollFeature = () => {
                     </Box>
                     <DescBox>
                         <MiniBox>
-                            <DescText>21" Arachnid Wheels</DescText>
+                            <DescText>19" Tempest Wheels</DescText>
                         </MiniBox>
                         <MiniBox>
-                            <Desc>$4,500</Desc>
+                            <Desc>Included</Desc>
                         </MiniBox>
                     </DescBox>
-                    <Desc>Range (est.): 375mi</Desc>
+                    <Desc>Range (EPA est.) : 405mi</Desc>
                 </Wrap>
 
                 <Wrap>
@@ -289,7 +289,8 @@ const ScrollFeature = () => {
 
 
 const ContainerFixed = styled.div`    
-    width: 350px;     
+    width: 350px; 
+    z-index: 1;    
 `
 
 
@@ -414,6 +415,7 @@ const Stats2 = styled(Stats)`
 
 // 
 const Stats3 = styled(Stats)`
+    font-size: 12px;
     font-weight: 500;
     color: #90938C;
 `
@@ -457,7 +459,7 @@ const Details = styled.div`
     padding: 24px;
 `
 
-// 
+
 const Item = styled.div`
     display: flex;
 `
@@ -469,7 +471,7 @@ const Name = styled.div`
     justify-content: flex-start;
 `
 
-// Description
+
 const Desc = styled.div`
     display: flex;
     flex-direction: column;
@@ -500,10 +502,10 @@ const Desc1 = styled(Desc)`
     font-size: 20px;
 `
 
-// Description
+
 const Text = styled(Desc)`
     flex-direction: row;
-    font-size: 15px;
+    font-size: 11px;
     text-align: start;
     p {
         cursor: pointer;
@@ -546,7 +548,7 @@ const MiniBox = styled.div`
     justify-content: center;
 `
 
-// Button
+
 const Btn = styled.div`
     display: flex;
     justify-content: center;
@@ -563,7 +565,7 @@ const Btn2 = styled(Btn)`
     width: 310px;
 `
 
-// Feature details container
+
 const Feature = styled.div`
     display: flex;
     justify-content: center;

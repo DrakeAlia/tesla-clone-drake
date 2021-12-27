@@ -8,8 +8,9 @@ const FooterContainer = () => {
                 <FooterBtn>
                     <ExpandLessIcon></ExpandLessIcon>
                 </FooterBtn>
-                <FooterItem>$100,990 Purchase price</FooterItem>
-                <FooterItem>$95,490 After potential savings</FooterItem>
+                <FooterItem>$94,990 Vehicle Price</FooterItem>
+                |
+                <FooterItem2>$89,490 After potential savings</FooterItem2>
             </FooterBox>
         </Footer>
     )
@@ -21,20 +22,20 @@ export default FooterContainer
 const Footer = styled.div`
     display: flex;
     justify-content: center;
-    align-content: center;
-    padding-top: 2px;
 `
-
-
 
 const FooterBox = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: solid black 1px;
     border-radius: 100px;
-    width: 500px;
+    width: 626px;
     background: #F7F9FC;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 59px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 `
 
 // Footer button arrow
@@ -54,4 +55,9 @@ const FooterItem = styled.div`
     padding: 10px;
     cursor: pointer;
     color: #393c41;
+    font-weight: 600;
+`
+
+const FooterItem2 = styled(FooterItem)`
+   font-weight: 300;
 `
