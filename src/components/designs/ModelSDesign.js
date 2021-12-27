@@ -1,9 +1,9 @@
 import styled from 'styled-components/macro'
-import ScrollFeature from '../ScrollFeature';
-import CarouselContainer from '../CarouselContainer';
 import Header from '../Header';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import CarouselContainer from '../CarouselContainer';
+import ScrollFeature from '../ScrollFeature';
 import FooterContainer from './FooterContainer';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 const ModelSDesign = () => {
@@ -26,15 +26,11 @@ export default ModelSDesign
 const ContainerColumn = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
      
 `
 
 const ContentSection = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
 `
 
 

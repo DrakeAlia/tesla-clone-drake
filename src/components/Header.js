@@ -63,10 +63,6 @@ export default Header
 // Container for the whole header page (Fix styling!!)
 const Container = styled.div`
     display: flex;
-    align-items: center;
-    align-content: center;
-    width: 917px;
-    padding: 0 20px;
 `
 
 // Container for the navbar/menu tabs for the models and solor roof/panel

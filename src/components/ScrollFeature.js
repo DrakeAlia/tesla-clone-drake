@@ -291,7 +291,8 @@ const ScrollFeature = () => {
 const ContainerFixed = styled.div`    
     width: 350px;     
 `
-// SideBar Container for the model details
+
+
 const SideBar = styled.div`
     display: flex;
     flex-direction: column;
@@ -300,11 +301,10 @@ const SideBar = styled.div`
     height: 92vh;    
 `
 
-// Model name/title
 const Title = styled.div`
     display: flex;
     justify-content: center;
-    padding-top: 5px;
+    padding-top: 64px;
     font-size: 50px;
 `
 
@@ -322,7 +322,6 @@ const BottomTitle = styled(Title)`
 const DeliveryTime = styled.div`
     display: flex;
     justify-content: center;
-    padding: 24px;
     padding-top: 5px;
     padding-bottom: 10px;
     color: #767973;
@@ -337,9 +336,7 @@ const Wrap = styled.div`
 // 
 const Box = styled.div`
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    padding: 2px;
 `
 
 // 
@@ -425,8 +422,6 @@ const Stats3 = styled(Stats)`
 const BtnGroup = styled.div`
     display: flex;
     padding: 6px;
-    /* padding-left: 30px;
-    padding-right: 30px; */
 `
 
 const BtnGroup2 = styled(BtnGroup)`
@@ -628,14 +623,6 @@ const CustomBtn9 = styled(CustomBtn1)`
 
 const CustomBtn10 = styled(CustomBtn1)`
     background: tan;
-`
-
-// Footer items in container
-const FooterItem = styled.div`
-    padding-top: 2px;
-    padding: 10px;
-    cursor: pointer;
-    color: #393c41;
 `
 
 export default ScrollFeature

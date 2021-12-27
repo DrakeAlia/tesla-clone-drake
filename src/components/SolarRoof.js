@@ -44,8 +44,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    align-content: center;
     width: 100vw;
     height: 100vh;
     color: #ffffff;
@@ -57,7 +55,6 @@ const Container = styled.div`
 
 const ItemText = styled.div`
     padding-top: 15vh;
-    color: #ffffff;
 `
 
 // media for mobile/small screen 

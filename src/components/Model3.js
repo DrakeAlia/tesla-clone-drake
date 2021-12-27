@@ -10,7 +10,7 @@ const Model3 = ({ backgroundImg }) => {
             <Header />
             <Fade bottom>
                 <ItemText>
-                    <h1>Model 3</h1>
+                    <h1>Model S</h1>
                 </ItemText>
             </Fade>
             <Fade bottom>
@@ -43,21 +43,17 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    align-content: center;
     width: 100vw;
     height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('../media/teslaModel3Design.png');
-    /* background-image: url('/src/media/teslaModel3.png'); */
 `
 
 // text for the model and type
 const ItemText = styled.div`
     padding-top: 15vh;
-    color: #ffffff;
 `
 
 // media for mobile/small screen 
