@@ -1,5 +1,6 @@
 import styled from 'styled-components/macro'
-// import { useEffect } from 'react';
+import Switch from './Switch';
+import { useEffect, useState } from 'react';
 
 
 
@@ -8,9 +9,7 @@ const ScrollFeature = () => {
     //     console.log('Im Here!!!')
     // }, []);
 
-    // const [modelStatus, setModelStatus] = useState(false)
-
-    // const [displayImg, setDisplayImg] = useState("")
+    const [value, setValue] = useState(false)
 
     const handleClick = () => {
         console.log('You Clicked Here!!!!')
@@ -35,11 +34,21 @@ const ScrollFeature = () => {
                             <PriceBox>
                                 <ItemBtn onClick={handleClick}>
                                     Purchase Price
+                                    {/* <Switch 
+                                        onColor="#fff"
+                                        isOn={value}
+                                        handleToggle={() => setValue(!value)}
+                                    /> */}
                                 </ItemBtn>
                             </PriceBox>
                             <PriceBox>
                                 <ItemBtn onClick={handleClick}>
                                     Potential Savings*
+                                    {/* <Switch
+                                        onColor="#fff"
+                                        isOn={value}
+                                        handleToggle={() => setValue(!value)}
+                                    /> */}
                                 </ItemBtn>
                             </PriceBox>
                         </PriceGroup>
