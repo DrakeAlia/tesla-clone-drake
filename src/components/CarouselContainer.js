@@ -57,14 +57,6 @@ const CarouselContainer = () => {
 const Container = styled.div`
     display: flex;
     align-items: center;
-    
-`
-
-
-const ContentSection = styled.div`
-    display: flex;
-    justify-content: center;
-    padding-top: 20%;
 `
 
 export default CarouselContainer;

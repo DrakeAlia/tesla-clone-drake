@@ -8,9 +8,13 @@ const FooterContainer = () => {
                 <FooterBtn>
                     <ExpandLessIcon></ExpandLessIcon>
                 </FooterBtn>
-                <FooterItem>$94,990 Vehicle Price</FooterItem>
+                <FooterItem>
+                $94,990 Vehicle Price
+                </FooterItem>
                 |
-                <FooterItem2>$89,490 After potential savings</FooterItem2>
+                <FooterItem2>
+                $89,490 After potential savings
+                </FooterItem2>
             </FooterBox>
         </Footer>
     )
@@ -30,7 +34,7 @@ const FooterBox = styled.div`
     align-items: center;
     border-radius: 100px;
     width: 626px;
-    background: #F7F9FC;
+    background: #dfdfdf;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     height: 59px;

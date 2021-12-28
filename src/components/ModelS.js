@@ -19,13 +19,17 @@ const ModelS = ({ backgroundImg }) => {
                 <ButtonGroup>
                     <Footer>
                         <FooterItem>396 mi
-                            <p>Range (EPA est)</p></FooterItem>
+                            <p>Range (EPA est)</p>
+                            </FooterItem>
                         <FooterItem>1.99s
-                            <p>0-60 mph</p></FooterItem>
+                            <p>0-60 mph</p>
+                            </FooterItem>
                         <FooterItem>200 mph
-                            <p>Top Speed</p></FooterItem>
+                            <p>Top Speed</p>
+                            </FooterItem>
                         <FooterItem>1,020 hp
-                            <p>Peak Power</p></FooterItem>
+                            <p>Peak Power</p>
+                            </FooterItem>
                     </Footer>
                     {/* <Link to ='/models/design'> */}
                     <Link to='/modelSDesign'>
@@ -74,7 +78,7 @@ const RightButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    background: gray;
     height: 40px;
     width: 195px;
     color: #ffffff;
@@ -83,8 +87,6 @@ const RightButton = styled.div`
     text-transform: uppercase;
     font-size: 12px;
     cursor: pointer;
-    margin: 8px;
-    margin-left: 35px;
 `
 
 // Container at the bottom of the page

@@ -17,11 +17,14 @@ const Model3 = ({ backgroundImg }) => {
                 <ButtonGroup>
                     <Footer>
                         <FooterItem>3.1 s
-                            <p>0-60 mph*</p></FooterItem>
+                            <p>0-60 mph*</p>
+                            </FooterItem>
                         <FooterItem>353
-                            <p>Range (EPA est.)</p></FooterItem>
+                            <p>Range (EPA est.)</p>
+                            </FooterItem>
                         <FooterItem>AWD
-                            <p>Dual Motor</p></FooterItem>
+                            <p>Dual Motor</p>
+                            </FooterItem>
                     </Footer>
                     {/* <Link to='/model3/design'> */}
                     <Link to='/model3Design'>

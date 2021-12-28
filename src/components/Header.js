@@ -9,50 +9,93 @@ const Header = () => {
     const [menuStatus, setMenuStatus] = useState(false)
     return (
         <Container>
-        <Logo />
+            <Logo />
             <MainMenu>
                 <Link to='/models'>
-                    Model S
+                    <MenuItem>
+                        Model S
+                    </MenuItem>
                 </Link>
                 <Link to='/model3'>
-                    Model 3
+                    <MenuItem>
+                        Model 3
+                    </MenuItem>
                 </Link>
                 <Link to='/modelx'>
-                    Model X
+                    <MenuItem>
+                        Model X
+                    </MenuItem>
                 </Link>
                 <Link to='/modely'>
-                    Model Y
+                    <MenuItem>
+                        Model Y
+                    </MenuItem>
                 </Link>
                 <Link to='/solarroof'>
-                    Solar Roof
+                    <MenuItem>
+                        Solar Roof
+                    </MenuItem>
                 </Link>
                 <Link to='/solarpanels'>
-                    Solar Panels
+                    <MenuItem>
+                        Solar Panels
+                    </MenuItem>
                 </Link>
             </MainMenu>
             <RightMenu>
                 <Link to='/shop'>Shop</Link>
                 <Link to='/account'>Account</Link>
-                <MenuTab onClick={() => setMenuStatus(true)}>Menu</MenuTab>
+                <MenuTab
+                    onClick={() => setMenuStatus(true)}>
+                    Menu
+                </MenuTab>
             </RightMenu>
             <MenuNav show={menuStatus}>
                 <CloseWrapper>
                     <CustomClose onClick={() => setMenuStatus(false)} />
                 </CloseWrapper>
-                <li><Link to="/inventory/new">Existing Inventory</Link></li>
-                <li><Link to="/inventory/used">Used Inventory</Link></li>
-                <li><Link to="/tradein">Trade-In</Link></li>
-                <li><Link to="/drive">Test Drive</Link></li>
-                <li><Link to="/cybertruck">Cybertruck</Link></li>
-                <li><Link to="/roadster">Roadster</Link></li>
-                <li><Link to="/semi">Semi</Link></li>
-                <li><Link to="/charging">Charging</Link></li>
-                <li><Link to="/powerwall">Powerwall</Link></li>
-                <li><Link to="/commercial">Commercial Energy</Link></li>
-                <li><Link to="/utilities">Utilities</Link></li>
-                <li><Link to="/googlemaps">Find Us</Link></li>
-                <li><Link to="/support">Support</Link></li>
-                <li><Link to="/tab-quarterly-disclosure">Invenstor Relations</Link></li>
+                <li><Link to="/inventory/new">
+                    Existing Inventory
+                </Link></li>
+                <li><Link to="/inventory/used">
+                    Used Inventory
+                </Link></li>
+                <li><Link to="/tradein">
+                    Trade-In
+                </Link></li>
+                <li><Link to="/drive">
+                    Test Drive
+                </Link></li>
+                <li><Link to="/cybertruck">
+                    Cybertruck
+                </Link></li>
+                <li><Link to="/roadster">
+                    Roadster
+                </Link></li>
+                <li><Link to="/semi">
+                    Semi
+                </Link></li>
+                <li><Link to="/charging">
+                    Charging
+                </Link></li>
+                <li><Link to="/powerwall">
+                    Powerwall
+                </Link></li>
+                <li><Link to="/commercial">
+                    Commercial Energy
+                </Link></li>
+                <li><Link to="/utilities">
+                    Utilities
+                </Link></li>
+                <li><Link to="/googlemaps">
+                    Find Us
+                </Link></li>
+                <li><Link to="/support">
+                    Support
+                </Link></li>
+                <li><Link to="/tab-quarterly-disclosure">
+                    Invenstor Relations
+                </Link></li>
             </MenuNav>
         </Container>
     )
@@ -69,7 +112,6 @@ const Container = styled.div`
 const MainMenu = styled.div`
     display: flex;
     flex: 1;
-    align-items: center;
     justify-content: center;
     padding-left: 15%;
     a {
@@ -78,10 +120,11 @@ const MainMenu = styled.div`
         padding: 0 10px;
         flex-wrap: nowrap;
     } 
-    /* :hover {
-        background-color: #393c41;
-        
-    } */
+`
+
+const MenuItem = styled.div`
+    display: flex;
+    
 `
 
 // Container for the side navbar on right side of the main navbar

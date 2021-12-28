@@ -1,16 +1,20 @@
 import styled from 'styled-components/macro'
-import { useEffect, useState } from 'react';
+// import { useEffect } from 'react';
 
 
 
 const ScrollFeature = () => {
-    useEffect(() => {
-        console.log('Im Here!!!')
-    }, []);
+    // useEffect(() => {
+    //     console.log('Im Here!!!')
+    // }, []);
 
-    const [modelStatus, setModelStatus] = useState(false)
+    // const [modelStatus, setModelStatus] = useState(false)
 
-    const [displayImg, setDisplayImg] = useState("")
+    // const [displayImg, setDisplayImg] = useState("")
+
+    const handleClick = () => {
+        console.log('You Clicked Here!!!!')
+    }
 
     return (
         <ContainerFixed>
@@ -21,16 +25,22 @@ const ScrollFeature = () => {
                     </Box1>
                 </Wrap>
 
-                <DeliveryTime>Est. Devilvery: November 2022</DeliveryTime>
+                <DeliveryTime>
+                    Est. Devilvery: November 2022
+                </DeliveryTime>
 
                 <Wrap>
                     <Box2>
                         <PriceGroup>
                             <PriceBox>
-                                <Item>Purchase Price</Item>
+                                <ItemBtn onClick={handleClick}>
+                                    Purchase Price
+                                </ItemBtn>
                             </PriceBox>
                             <PriceBox>
-                                <Item>Potential Savings*</Item>
+                                <ItemBtn onClick={handleClick}>
+                                    Potential Savings*
+                                </ItemBtn>
                             </PriceBox>
                         </PriceGroup>
                     </Box2>
@@ -40,24 +50,40 @@ const ScrollFeature = () => {
                     <Box3>
                         <Range>
                             <Stats>
-                                <Stats1>405</Stats1>
-                                <Stats2>mi</Stats2>
+                                <Stats1>
+                                    405
+                                </Stats1>
+                                <Stats2>
+                                    mi
+                                </Stats2>
                             </Stats>
-                            <Stats3>Range (EPA est.)</Stats3>
+                            <Stats3>
+                                Range (EPA est.)
+                            </Stats3>
                         </Range>
                         <Range>
                             <Stats>
-                                <Stats1>155</Stats1>
-                                <Stats2>mph</Stats2>
+                                <Stats1>
+                                    155
+                                </Stats1>
+                                <Stats2>
+                                    mph
+                                </Stats2>
                             </Stats>
                             <Stats3>Top Speed</Stats3>
                         </Range>
                         <Range>
                             <Stats>
-                                <Stats1>3.1</Stats1>
-                                <Stats2>sec</Stats2>
+                                <Stats1>
+                                    3.1
+                                </Stats1>
+                                <Stats2>
+                                    sec
+                                </Stats2>
                             </Stats>
-                            <Stats3>0-60 mph</Stats3>
+                            <Stats3>
+                                0-60 mph
+                            </Stats3>
                         </Range>
                     </Box3>
                 </Wrap>
@@ -66,12 +92,16 @@ const ScrollFeature = () => {
                     <Name>Dual Motor All-Wheel Drive</Name>
                     <Box4>
                         {/* <ModelGroup onClick={() => setModelStatus(true)}> */}
-                        <ModelGroup onClick={() => setModelStatus(true)}>
+                        <ModelGroup onClick={handleClick}>
                             <ModelBox>
-                                <Item>Model S</Item>
+                                <ItemSelect>
+                                    Model S
+                                </ItemSelect>
                             </ModelBox>
                             <ModelBox>
-                                <Item>$89,490*</Item>
+                                <Item>
+                                    $89,490*
+                                </Item>
                             </ModelBox>
                         </ModelGroup>
                     </Box4>
@@ -80,12 +110,16 @@ const ScrollFeature = () => {
                 <Wrap>
                     <Name>Tri Motor All-Wheel drivers</Name>
                     <Box4>
-                        <ModelGroup onClick={() => setModelStatus(true)}>
+                        <ModelGroup onClick={handleClick}>
                             <ModelBox>
-                                <Item>Model S Plaid</Item>
+                                <ItemSelect>
+                                    Model S Plaid
+                                </ItemSelect>
                             </ModelBox>
                             <ModelBox>
-                                <Item>$124,490*</Item>
+                                <Item>
+                                    $124,490*
+                                </Item>
                             </ModelBox>
                         </ModelGroup>
                     </Box4>
@@ -93,8 +127,9 @@ const ScrollFeature = () => {
 
                 <Wrap>
                     <Box5>
-                        <Text>* Prices above include potential incentives and
-                            gas savings of $5,500.
+                        <Text>
+                            * Prices above include potential
+                            incentives and gas savings of $5,500.
                             <p>Learn More</p>
                         </Text>
                     </Box5>
@@ -103,7 +138,9 @@ const ScrollFeature = () => {
                 <Wrap>
                     <Box>
                         <BtnGroup>
-                            <Feature>Feature Details</Feature>
+                            <Feature onClick={handleClick}>
+                                Feature Details
+                            </Feature>
                         </BtnGroup>
                     </Box>
                 </Wrap>
@@ -120,25 +157,27 @@ const ScrollFeature = () => {
                     <Box>
                         <Selector>
                             <SelectorImg>
-                                <CustomBtn1></CustomBtn1>
+                                <CustomBtn1 onClick={handleClick}></CustomBtn1>
                             </SelectorImg>
                             <SelectorImg>
-                                <CustomBtn2></CustomBtn2>
+                                <CustomBtn2 onClick={handleClick}></CustomBtn2>
                             </SelectorImg>
                             <SelectorImg>
-                                <CustomBtn3></CustomBtn3>
+                                <CustomBtn3 onClick={handleClick}></CustomBtn3>
                             </SelectorImg>
                             <SelectorImg>
-                                <CustomBtn4></CustomBtn4>
+                                <CustomBtn4 onClick={handleClick}></CustomBtn4>
                             </SelectorImg>
                             <SelectorImg>
-                                <CustomBtn5></CustomBtn5>
+                                <CustomBtn5 onClick={handleClick}></CustomBtn5>
                             </SelectorImg>
                         </Selector>
                     </Box>
                     <DescBox>
                         <MiniBox>
-                            <DescText>Pearl White Multi-Coat</DescText>
+                            <DescText>
+                                Pearl White Multi-Coat
+                            </DescText>
                         </MiniBox>
                         <MiniBox>
                             <Desc>Included</Desc>
@@ -153,15 +192,17 @@ const ScrollFeature = () => {
 
                 <Wrap>
                     <Box1>
-                        <SubTitle>Wheels</SubTitle>
+                        <SubTitle>
+                            Wheels
+                        </SubTitle>
                     </Box1>
                     <Box>
                         <Selector>
                             <SelectorImg>
-                                <CustomBtn6></CustomBtn6>
+                                <CustomBtn6 onClick={handleClick}></CustomBtn6>
                             </SelectorImg>
                             <SelectorImg>
-                                <CustomBtn7></CustomBtn7>
+                                <CustomBtn7 onClick={handleClick}></CustomBtn7>
                             </SelectorImg>
                         </Selector>
                     </Box>
@@ -173,7 +214,9 @@ const ScrollFeature = () => {
                             <Desc>Included</Desc>
                         </MiniBox>
                     </DescBox>
-                    <Desc>Range (EPA est.) : 405mi</Desc>
+                    <Desc>
+                        Range (EPA est.) : 405mi
+                    </Desc>
                 </Wrap>
 
                 <Wrap>
@@ -188,13 +231,13 @@ const ScrollFeature = () => {
                     <Box>
                         <Selector>
                             <SelectorImg>
-                                <CustomBtn8></CustomBtn8>
+                                <CustomBtn8 onClick={handleClick}></CustomBtn8>
                             </SelectorImg>
                             <SelectorImg>
-                                <CustomBtn9></CustomBtn9>
+                                <CustomBtn9 onClick={handleClick}></CustomBtn9>
                             </SelectorImg>
                             <SelectorImg>
-                                <CustomBtn10></CustomBtn10>
+                                <CustomBtn10 onClick={handleClick}></CustomBtn10>
                             </SelectorImg>
                         </Selector>
                     </Box>
@@ -214,7 +257,9 @@ const ScrollFeature = () => {
                 <Wrap>
                     <Box>
                         <BtnGroup>
-                            <Feature>Feature Details</Feature>
+                            <Feature>
+                                Feature Details
+                            </Feature>
                         </BtnGroup>
                     </Box>
                 </Wrap>
@@ -226,7 +271,9 @@ const ScrollFeature = () => {
 
                 <Wrap>
                     <Box1>
-                        <SubTitle>Full Self-Driving Capability</SubTitle>
+                        <SubTitle>
+                            Full Self-Driving Capability
+                        </SubTitle>
                     </Box1>
                     <Desc1>$10,000</Desc1>
                     <Details>
@@ -258,7 +305,9 @@ const ScrollFeature = () => {
                             <Btn>Add</Btn>
                         </BtnBox>
                         <BtnGroup>
-                            <Feature>Feature Details</Feature>
+                            <Feature>
+                                Feature Details
+                            </Feature>
                         </BtnGroup>
                     </Box6>
                 </Wrap>
@@ -319,7 +368,7 @@ const BottomTitle = styled(Title)`
     font-size: 35px;
 `
 
-// Est. Devilvery: June
+
 const DeliveryTime = styled.div`
     display: flex;
     justify-content: center;
@@ -334,13 +383,13 @@ const Wrap = styled.div`
     flex-direction: column;
 `
 
-// 
+
 const Box = styled.div`
     display: flex;
     justify-content: center;
 `
 
-// 
+
 const EmptyBox = styled(Box)`
     padding-bottom: 176px;
 `
@@ -361,6 +410,7 @@ const PriceBox = styled.div`
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    
 `
 
 const Box3 = styled(Box)`
@@ -393,7 +443,7 @@ const Box6 = styled(Box)`
     padding: 5px;
 `
 
-// 
+
 const Stats = styled.div`
     display: flex;
     justify-content: center;
@@ -401,26 +451,26 @@ const Stats = styled.div`
     color: #393c41;
 `
 
-// 
+
 const Stats1 = styled(Stats)`
     font-size: 27px;
     padding-bottom: 15px;
     font-weight: 550;
 `
 
-// 
+
 const Stats2 = styled(Stats)`
     font-weight: 550;
 `
 
-// 
+
 const Stats3 = styled(Stats)`
     font-size: 12px;
     font-weight: 500;
     color: #90938C;
 `
 
-// 
+
 const BtnGroup = styled.div`
     display: flex;
     padding: 6px;
@@ -430,17 +480,18 @@ const BtnGroup2 = styled(BtnGroup)`
    justify-content: center;
 `
 
-// 
+
 const PriceGroup = styled(BtnGroup)`
     flex-direction: row;
     justify-content: space-between;
-    width: 310px;
-    padding: 15px;
+    width: 316px;
+    /* padding: 15px; */
     border-radius: 100px;
     border: solid black 1px;
+    background: #dfdfdf;
 `
 
-// 
+
 const ModelGroup = styled(BtnGroup)`
     flex-direction: row;
     justify-content: space-between;
@@ -451,7 +502,7 @@ const ModelGroup = styled(BtnGroup)`
     cursor: pointer;
 `
 
-// 
+
 const Details = styled.div`
     display: flex;
     flex-direction: column;
@@ -459,6 +510,19 @@ const Details = styled.div`
     padding: 24px;
 `
 
+
+const ItemBtn = styled.div`
+    display: flex;
+    background: #ffffff;
+    border-radius: 100px;
+    height: 23px;
+    width: 145px;
+    cursor: pointer;
+`
+
+const ItemSelect = styled(ItemBtn)`
+    
+`
 
 const Item = styled.div`
     display: flex;
@@ -480,9 +544,6 @@ const Desc = styled.div`
     text-align: center;
     font-size: 20px;
     color: #90938C ;
-    @media (max-width: 823px) {
-        flex-direction: column;
-    }
 `
 
 const DescText = styled(Desc)`
@@ -509,7 +570,6 @@ const Text = styled(Desc)`
     text-align: start;
     p {
         cursor: pointer;
-        
     }
 `
 
@@ -529,7 +589,7 @@ const Selector = styled.div`
     justify-content: center;
     align-items: center;
     padding: 8px;
-    cursor: pointer;
+    
 `
 
 const SelectorImg = styled(Selector)`

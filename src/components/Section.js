@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components/macro'
 // import styled, { keyframes } from 'styled-components'
 import Fade from 'react-reveal/Fade';
-import ModelS from '../media/teslaModelS.png'
-import ArrowDown from "../media/down-arrow.svg"
+// import ModelS from '../media/teslaModelS.png'
+// import ArrowDown from "../media/down-arrow.svg"
 
 
 const Section = ({ title, description, leftBtnText, rightBtnText, backgroundImg }) => {
