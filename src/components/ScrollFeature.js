@@ -1,15 +1,40 @@
-import styled from 'styled-components/macro'
-import Switch from './Switch';
+import styled from 'styled-components/macro';
 import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion'
 
+const containerVariants = {
+    hidden: {
+        opacity: 0,
+        x: '100vw'
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: { type: 'spring', delay: 0.5 }
+    },
+    exit: {
+        x: "-100vh",
+        transition: { ease: 'easeInOut' }
+    }
+};
 
+const buttonVariants = {
+    hover: {
+        scale: 1.1,
+        textShadow: "0px 0px 8px rgb(255,255,255)",
+        boxShadow: "0px 0px 8px rgb(255, 255, 255)",
+        transition: {
+            duration: 0.3,
+        }
+    }
+}
 
 const ScrollFeature = () => {
     // useEffect(() => {
     //     console.log('Im Here!!!')
     // }, []);
 
-    const [value, setValue] = useState(false)
+    const [isOn, setIsOn] = useState(false);
 
     const handleClick = () => {
         console.log('You Clicked Here!!!!')
@@ -32,24 +57,26 @@ const ScrollFeature = () => {
                     <Box2>
                         <PriceGroup>
                             <PriceBox>
-                                <ItemBtn onClick={handleClick}>
-                                    Purchase Price
-                                    {/* <Switch 
-                                        onColor="#fff"
-                                        isOn={value}
-                                        handleToggle={() => setValue(!value)}
-                                    /> */}
-                                </ItemBtn>
+                                <motion.ItemBtn onClick={handleClick}
+                                    variants={buttonVariants}
+                                    whileHover="hover"
+                                >
+                                    Purchase Price  
+                                </motion.ItemBtn>
+                                {/* <motion.ItemBtn key={topping} onClick={() => addTopping(topping)}
+                                    whileHover={{ scale: 1.3, originX: 0, color: '#f8e112' }}
+                                    transition={{ type: 'spring', stiffness: 300 }}
+                                >
+                                    <span className={spanClass}>{topping}</span>
+                                </motion.ItemBtn> */}
                             </PriceBox>
                             <PriceBox>
-                                <ItemBtn onClick={handleClick}>
+                                <motion.ItemBtn onClick={handleClick}
+                                    variants={buttonVariants}
+                                    whileHover="hover"
+                                >
                                     Potential Savings*
-                                    {/* <Switch
-                                        onColor="#fff"
-                                        isOn={value}
-                                        handleToggle={() => setValue(!value)}
-                                    /> */}
-                                </ItemBtn>
+                                </motion.ItemBtn>
                             </PriceBox>
                         </PriceGroup>
                     </Box2>
@@ -224,7 +251,7 @@ const ScrollFeature = () => {
                         </MiniBox>
                     </DescBox>
                     <Desc>
-                        Range (EPA est.) : 405mi
+                        Range (EPA est.) : mi
                     </Desc>
                 </Wrap>
 
